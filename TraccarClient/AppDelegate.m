@@ -12,6 +12,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Initialize device identifier
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults stringForKey:@"device_id_preference"])
+    {
+        srandomdev();
+        NSString *identifier = [NSString stringWithFormat:@"%ld", (random() % 900000) + 100000];
+        [userDefaults setValue:identifier forKey:@"device_id_preference"];
+    }
+
+    // Initialize other defaults
+    [self registerDefaultsFromSettingsBundle];
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -40,7 +52,30 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    // Change service status
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setValue:NO forKey:@"service_status_preference"];
+
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)registerDefaultsFromSettingsBundle
+{
+    NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"InAppSettings" ofType:@"bundle"];
+    NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@"Root.plist"]];
+    NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
+    
+    NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
+    for(NSDictionary *prefSpecification in preferences)
+    {
+        NSString *key = [prefSpecification objectForKey:@"Key"];
+        if(key && [[prefSpecification allKeys] containsObject:@"DefaultValue"])
+        {
+            [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
+        }
+    }
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
 }
 
 @end
