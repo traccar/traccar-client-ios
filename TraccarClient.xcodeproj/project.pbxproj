@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE8C3D9918D54188005EF1F4 /* Icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C3D9218D54188005EF1F4 /* Icon29.png */; };
+		CE8C3D9A18D54188005EF1F4 /* Icon40.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C3D9318D54188005EF1F4 /* Icon40.png */; };
+		CE8C3D9B18D54188005EF1F4 /* Icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C3D9418D54188005EF1F4 /* Icon58.png */; };
+		CE8C3D9C18D54188005EF1F4 /* Icon76.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C3D9518D54188005EF1F4 /* Icon76.png */; };
+		CE8C3D9D18D54188005EF1F4 /* Icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C3D9618D54188005EF1F4 /* Icon80.png */; };
+		CE8C3D9E18D54188005EF1F4 /* Icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C3D9718D54188005EF1F4 /* Icon120.png */; };
+		CE8C3D9F18D54188005EF1F4 /* Icon152.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8C3D9818D54188005EF1F4 /* Icon152.png */; };
 		CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871B17DB1BF6007FCF57 /* UIKit.framework */; };
 		CED4871E17DB1BF6007FCF57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871D17DB1BF6007FCF57 /* Foundation.framework */; };
 		CED4872017DB1BF6007FCF57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */; };
 		CED4872617DB1BF6007FCF57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED4872417DB1BF6007FCF57 /* InfoPlist.strings */; };
 		CED4872817DB1BF6007FCF57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4872717DB1BF6007FCF57 /* main.m */; };
 		CED4872C17DB1BF6007FCF57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4872B17DB1BF6007FCF57 /* AppDelegate.m */; };
-		CED4872E17DB1BF6007FCF57 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CED4872D17DB1BF6007FCF57 /* Default.png */; };
-		CED4873017DB1BF6007FCF57 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED4872F17DB1BF6007FCF57 /* Default@2x.png */; };
-		CED4873217DB1BF6007FCF57 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED4873117DB1BF6007FCF57 /* Default-568h@2x.png */; };
 		CED4873517DB1BF6007FCF57 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */; };
 		CED4873B17DB1BF6007FCF57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4873A17DB1BF6007FCF57 /* ViewController.m */; };
 		CED4878A17DB1CBF007FCF57 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4876C17DB1CBF007FCF57 /* IASKAppSettingsViewController.m */; };
@@ -34,10 +38,23 @@
 		CED4879717DB1CBF007FCF57 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4878917DB1CBF007FCF57 /* IASKTextField.m */; };
 		CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4879817DB1DF4007FCF57 /* MessageUI.framework */; };
 		CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */; };
+		CED5282818D82D5A006A4BB4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED5282218D82D5A006A4BB4 /* Default-568h@2x.png */; };
+		CED5282918D82D5A006A4BB4 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = CED5282318D82D5A006A4BB4 /* Default-Landscape.png */; };
+		CED5282A18D82D5A006A4BB4 /* Default-Landscape@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED5282418D82D5A006A4BB4 /* Default-Landscape@2x.png */; };
+		CED5282B18D82D5A006A4BB4 /* Default-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = CED5282518D82D5A006A4BB4 /* Default-Portrait.png */; };
+		CED5282C18D82D5A006A4BB4 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED5282618D82D5A006A4BB4 /* Default-Portrait@2x.png */; };
+		CED5282D18D82D5A006A4BB4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED5282718D82D5A006A4BB4 /* Default@2x.png */; };
 		CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB048617ED50C1000E7EDF /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE8C3D9218D54188005EF1F4 /* Icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon29.png; path = Images/Icon29.png; sourceTree = "<group>"; };
+		CE8C3D9318D54188005EF1F4 /* Icon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon40.png; path = Images/Icon40.png; sourceTree = "<group>"; };
+		CE8C3D9418D54188005EF1F4 /* Icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon58.png; path = Images/Icon58.png; sourceTree = "<group>"; };
+		CE8C3D9518D54188005EF1F4 /* Icon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon76.png; path = Images/Icon76.png; sourceTree = "<group>"; };
+		CE8C3D9618D54188005EF1F4 /* Icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon80.png; path = Images/Icon80.png; sourceTree = "<group>"; };
+		CE8C3D9718D54188005EF1F4 /* Icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon120.png; path = Images/Icon120.png; sourceTree = "<group>"; };
+		CE8C3D9818D54188005EF1F4 /* Icon152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon152.png; path = Images/Icon152.png; sourceTree = "<group>"; };
 		CED4871817DB1BF6007FCF57 /* TraccarClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraccarClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4871B17DB1BF6007FCF57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CED4871D17DB1BF6007FCF57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,9 +65,6 @@
 		CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClient-Prefix.pch"; sourceTree = "<group>"; };
 		CED4872A17DB1BF6007FCF57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CED4872B17DB1BF6007FCF57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CED4872D17DB1BF6007FCF57 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		CED4872F17DB1BF6007FCF57 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		CED4873117DB1BF6007FCF57 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CED4873417DB1BF6007FCF57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CED4873917DB1BF6007FCF57 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CED4873A17DB1BF6007FCF57 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -85,6 +99,12 @@
 		CED4878917DB1CBF007FCF57 /* IASKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKTextField.m; sourceTree = "<group>"; };
 		CED4879817DB1DF4007FCF57 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InAppSettings.bundle; sourceTree = "<group>"; };
+		CED5282218D82D5A006A4BB4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		CED5282318D82D5A006A4BB4 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape.png"; path = "Images/Default-Landscape.png"; sourceTree = "<group>"; };
+		CED5282418D82D5A006A4BB4 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x.png"; path = "Images/Default-Landscape@2x.png"; sourceTree = "<group>"; };
+		CED5282518D82D5A006A4BB4 /* Default-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait.png"; path = "Images/Default-Portrait.png"; sourceTree = "<group>"; };
+		CED5282618D82D5A006A4BB4 /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x.png"; path = "Images/Default-Portrait@2x.png"; sourceTree = "<group>"; };
+		CED5282718D82D5A006A4BB4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Images/Default@2x.png"; sourceTree = "<group>"; };
 		CEDB048617ED50C1000E7EDF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -150,13 +170,23 @@
 		CED4872217DB1BF6007FCF57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CED5282218D82D5A006A4BB4 /* Default-568h@2x.png */,
+				CED5282318D82D5A006A4BB4 /* Default-Landscape.png */,
+				CED5282418D82D5A006A4BB4 /* Default-Landscape@2x.png */,
+				CED5282518D82D5A006A4BB4 /* Default-Portrait.png */,
+				CED5282618D82D5A006A4BB4 /* Default-Portrait@2x.png */,
+				CED5282718D82D5A006A4BB4 /* Default@2x.png */,
+				CE8C3D9218D54188005EF1F4 /* Icon29.png */,
+				CE8C3D9318D54188005EF1F4 /* Icon40.png */,
+				CE8C3D9418D54188005EF1F4 /* Icon58.png */,
+				CE8C3D9518D54188005EF1F4 /* Icon76.png */,
+				CE8C3D9618D54188005EF1F4 /* Icon80.png */,
+				CE8C3D9718D54188005EF1F4 /* Icon120.png */,
+				CE8C3D9818D54188005EF1F4 /* Icon152.png */,
 				CED4872317DB1BF6007FCF57 /* TraccarClient-Info.plist */,
 				CED4872417DB1BF6007FCF57 /* InfoPlist.strings */,
 				CED4872717DB1BF6007FCF57 /* main.m */,
 				CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */,
-				CED4872D17DB1BF6007FCF57 /* Default.png */,
-				CED4872F17DB1BF6007FCF57 /* Default@2x.png */,
-				CED4873117DB1BF6007FCF57 /* Default-568h@2x.png */,
 				CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */,
 			);
 			name = "Supporting Files";
@@ -273,10 +303,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED5282D18D82D5A006A4BB4 /* Default@2x.png in Resources */,
 				CED4872617DB1BF6007FCF57 /* InfoPlist.strings in Resources */,
-				CED4872E17DB1BF6007FCF57 /* Default.png in Resources */,
-				CED4873017DB1BF6007FCF57 /* Default@2x.png in Resources */,
-				CED4873217DB1BF6007FCF57 /* Default-568h@2x.png in Resources */,
+				CED5282818D82D5A006A4BB4 /* Default-568h@2x.png in Resources */,
+				CE8C3D9E18D54188005EF1F4 /* Icon120.png in Resources */,
+				CE8C3D9F18D54188005EF1F4 /* Icon152.png in Resources */,
+				CE8C3D9A18D54188005EF1F4 /* Icon40.png in Resources */,
+				CED5282918D82D5A006A4BB4 /* Default-Landscape.png in Resources */,
+				CED5282B18D82D5A006A4BB4 /* Default-Portrait.png in Resources */,
+				CE8C3D9C18D54188005EF1F4 /* Icon76.png in Resources */,
+				CE8C3D9B18D54188005EF1F4 /* Icon58.png in Resources */,
+				CED5282A18D82D5A006A4BB4 /* Default-Landscape@2x.png in Resources */,
+				CE8C3D9D18D54188005EF1F4 /* Icon80.png in Resources */,
+				CE8C3D9918D54188005EF1F4 /* Icon29.png in Resources */,
+				CED5282C18D82D5A006A4BB4 /* Default-Portrait@2x.png in Resources */,
 				CED4873517DB1BF6007FCF57 /* MainStoryboard.storyboard in Resources */,
 				CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */,
 			);
