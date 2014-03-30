@@ -280,6 +280,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Traccar;
+				TargetAttributes = {
+					CED4871717DB1BF6007FCF57 = {
+						DevelopmentTeam = YW49KTJKFW;
+					};
+				};
 			};
 			buildConfigurationList = CED4871317DB1BF6007FCF57 /* Build configuration list for PBXProject "TraccarClient" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -432,6 +437,7 @@
 		CED4873F17DB1BF6007FCF57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
@@ -444,6 +450,7 @@
 		CED4874017DB1BF6007FCF57 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";

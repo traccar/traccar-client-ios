@@ -127,7 +127,9 @@
 {
     unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
     unitFlags |= NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:unitFlags fromDate:location.timestamp];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    [calendar setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
+    NSDateComponents *components = [calendar components:unitFlags fromDate:location.timestamp];
     
     double lat = location.coordinate.latitude;
     double lon = location.coordinate.longitude;
