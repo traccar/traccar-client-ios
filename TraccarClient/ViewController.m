@@ -96,7 +96,7 @@
 {
     // Establish network connection
     CFWriteStreamRef writeStream;
-    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef) address, port, NULL, &writeStream);
+    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef) address, (int) port, NULL, &writeStream);
     outputStream = (__bridge_transfer NSOutputStream *) writeStream;
     outputStream.delegate = self;
     [outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -135,12 +135,12 @@
     double lon = location.coordinate.longitude;
     
     return [NSString stringWithFormat:@"$GPRMC,%02d%02d%02d.000,A,%02d%07.4f,%@,%03d%07.4f,%@,%.2f,%.2f,%02d%02d%02d,,*00\r\n",
-            components.hour, components.minute, components.second,
+            (int) components.hour, (int) components.minute, (int) components.second,
             (int) trunc(fabs(lat)), fmod(fabs(lat), 1.0) * 60.0, (lat > 0) ? @"N" : @"S",
             (int) trunc(fabs(lon)), fmod(fabs(lon), 1.0) * 60.0, (lon > 0) ? @"E" : @"W",
             (location.speed > 0) ? location.speed * 1.943844 : 0.0,
             (location.course > 0) ? location.course : 0.0,
-            components.day, components.month, components.year % 100];
+            (int) components.day, (int) components.month, (int) components.year % 100];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -165,13 +165,18 @@
 
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode
 {
-    if (eventCode == NSStreamEventErrorOccurred)
+    if (eventCode == NSStreamEventErrorOccurred || eventCode == NSStreamEventEndEncountered)
     {
-        NSLog(@"Network error: %@", [outputStream streamError]);
+        if (eventCode == NSStreamEventErrorOccurred)
+        {
+            NSLog(@"Network error: %@", [outputStream streamError]);
+        }
         
         // Reconnect
         [self closeConnection];
-        [self openConnection];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 30 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [self openConnection];
+        });
     }
 }
 

@@ -18,7 +18,7 @@
 @property (nonatomic) CLLocationManager *locationManager;
 
 @property (nonatomic, copy) NSString *deviceId, *address;
-@property (nonatomic) int port, period;
+@property (nonatomic) long port, period;
 
 @property (nonatomic) NSOutputStream *outputStream;
 
