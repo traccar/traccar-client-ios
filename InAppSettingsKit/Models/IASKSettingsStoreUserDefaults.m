@@ -49,7 +49,7 @@
     [self.defaults setDouble:value forKey:key];
 }
 
-- (void)setInteger:(int)value forKey:(NSString*)key {
+- (void)setInteger:(NSInteger)value forKey:(NSString*)key {
     [self.defaults setInteger:value forKey:key];
 }
 
@@ -75,10 +75,6 @@
 
 - (id)objectForKey:(NSString*)key {
     return [self.defaults objectForKey:key];
-}
-
-- (void)removeObjectForKey:(NSString *)key {
-    [self.defaults removeObjectForKey:key];
 }
 
 - (BOOL)synchronize {
