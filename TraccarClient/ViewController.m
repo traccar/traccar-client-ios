@@ -76,6 +76,7 @@
             // Start location updates
             locationManager = [[CLLocationManager alloc] init];
             locationManager.delegate = self;
+            locationManager.pausesLocationUpdatesAutomatically = NO;
             locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
             [locationManager startUpdatingLocation];
         }
@@ -163,8 +164,44 @@
     }
 }
 
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"Location error: %@", [error localizedDescription]);
+}
+
+- (void)locationManagerDidPauseLocationUpdates:(CLLocationManager *)manager
+{
+    NSLog(@"LocationManager: pause");
+}
+
+- (void)locationManagerDidResumeLocationUpdates:(CLLocationManager *)manager
+{
+    NSLog(@"LocationManager: resume");
+}
+
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode
 {
+    switch (eventCode) {
+        case NSStreamEventNone:
+            NSLog(@"Event: NSStreamEventNone");
+            break;
+        case NSStreamEventOpenCompleted:
+            NSLog(@"Event: NSStreamEventOpenCompleted");
+            break;
+        case NSStreamEventHasBytesAvailable:
+            NSLog(@"Event: NSStreamEventHasBytesAvailable");
+            break;
+        case NSStreamEventHasSpaceAvailable:
+            NSLog(@"Event: NSStreamEventHasSpaceAvailable");
+            break;
+        case NSStreamEventErrorOccurred:
+            NSLog(@"Event: NSStreamEventErrorOccurred");
+            break;
+        case NSStreamEventEndEncountered:
+            NSLog(@"Event: NSStreamEventEndEncountered");
+            break;
+    }
+    
     if (eventCode == NSStreamEventErrorOccurred || eventCode == NSStreamEventEndEncountered)
     {
         if (eventCode == NSStreamEventErrorOccurred)
