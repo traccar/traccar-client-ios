@@ -45,6 +45,7 @@
 		CED5282C18D82D5A006A4BB4 /* Default-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED5282618D82D5A006A4BB4 /* Default-Portrait@2x.png */; };
 		CED5282D18D82D5A006A4BB4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED5282718D82D5A006A4BB4 /* Default@2x.png */; };
 		CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB048617ED50C1000E7EDF /* CoreLocation.framework */; };
+		CEDB302219BDD5DA0021E009 /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDB302119BDD5DA0021E009 /* StatusViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,8 @@
 		CED5282618D82D5A006A4BB4 /* Default-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x.png"; path = "Images/Default-Portrait@2x.png"; sourceTree = "<group>"; };
 		CED5282718D82D5A006A4BB4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Images/Default@2x.png"; sourceTree = "<group>"; };
 		CEDB048617ED50C1000E7EDF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CEDB302019BDD5DA0021E009 /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusViewController.h; sourceTree = "<group>"; };
+		CEDB302119BDD5DA0021E009 /* StatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 				CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */,
 				CED4873917DB1BF6007FCF57 /* ViewController.h */,
 				CED4873A17DB1BF6007FCF57 /* ViewController.m */,
+				CEDB302019BDD5DA0021E009 /* StatusViewController.h */,
+				CEDB302119BDD5DA0021E009 /* StatusViewController.m */,
 				CED4872217DB1BF6007FCF57 /* Supporting Files */,
 			);
 			path = TraccarClient;
@@ -338,6 +343,7 @@
 				CED4872C17DB1BF6007FCF57 /* AppDelegate.m in Sources */,
 				CED4873B17DB1BF6007FCF57 /* ViewController.m in Sources */,
 				CED4878A17DB1CBF007FCF57 /* IASKAppSettingsViewController.m in Sources */,
+				CEDB302219BDD5DA0021E009 /* StatusViewController.m in Sources */,
 				CED4878B17DB1CBF007FCF57 /* IASKAppSettingsWebViewController.m in Sources */,
 				CED4878C17DB1CBF007FCF57 /* IASKSpecifierValuesViewController.m in Sources */,
 				CED4878D17DB1CBF007FCF57 /* IASKSettingsReader.m in Sources */,

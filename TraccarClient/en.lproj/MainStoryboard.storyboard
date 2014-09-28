@@ -15,6 +15,11 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="mBp-pp-ezn">
+                        <barButtonItem key="leftBarButtonItem" title="Status" id="eKa-7m-jq1">
+                            <connections>
+                                <segue destination="LmD-5n-dPz" kind="push" id="iTl-2p-q5b"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="About" id="gEG-ov-HEk">
                             <connections>
                                 <segue destination="jRT-DT-Bqk" kind="push" id="uZ3-pe-KUK"/>
@@ -120,6 +125,41 @@ ponthieux</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3m-Yw-R8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1134" y="123"/>
+        </scene>
+        <!--Status View Controller-->
+        <scene sceneID="El5-px-WCe">
+            <objects>
+                <tableViewController id="LmD-5n-dPz" customClass="StatusViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fdn-aT-LfP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bOU-VM-Ej4">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bOU-VM-Ej4" id="jfy-rh-RFY">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LmD-5n-dPz" id="6o2-Hb-hz7"/>
+                            <outlet property="delegate" destination="LmD-5n-dPz" id="hkG-pc-QSu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="mzb-XD-7DL">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="He4-eJ-a31">
+                            <connections>
+                                <action selector="clear:" destination="LmD-5n-dPz" id="pZK-JC-IGX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="522-xf-AQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="784"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kvI-h8-0j0">

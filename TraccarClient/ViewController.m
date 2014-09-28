@@ -15,6 +15,7 @@
 //
 
 #import "ViewController.h"
+#import "StatusViewController.h"
 
 @interface ViewController ()
 
@@ -79,6 +80,8 @@
         
         if (newStatus)
         {
+            [StatusViewController addMessage:@"Service started"];
+            
             [self openConnection];
             
             // Start location updates
@@ -95,6 +98,8 @@
             locationManager = nil;
             
             [self closeConnection];
+
+            [StatusViewController addMessage:@"Service stopped"];
         }
         
         currentStatus = newStatus;
@@ -160,7 +165,8 @@
     if (!lastLocation || [location.timestamp timeIntervalSinceDate:lastLocation] > period)
     {
         NSLog(@"Send location update");
-        
+        [StatusViewController addMessage:@"Location update"];
+
         // Send location
         if (outputStream)
         {
@@ -195,6 +201,7 @@
             break;
         case NSStreamEventOpenCompleted:
             NSLog(@"Event: NSStreamEventOpenCompleted");
+            [StatusViewController addMessage:@"Connection succeeded"];
             break;
         case NSStreamEventHasBytesAvailable:
             NSLog(@"Event: NSStreamEventHasBytesAvailable");
@@ -204,9 +211,11 @@
             break;
         case NSStreamEventErrorOccurred:
             NSLog(@"Event: NSStreamEventErrorOccurred");
+            [StatusViewController addMessage:@"Network error"];
             break;
         case NSStreamEventEndEncountered:
             NSLog(@"Event: NSStreamEventEndEncountered");
+            [StatusViewController addMessage:@"Connection closed"];
             break;
     }
     
