@@ -60,6 +60,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    [StatusViewController addMessage:@"Low memory warning"];
 }
 
 - (void)defaultsChanged:(NSNotification *)notification
@@ -181,16 +182,19 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"Location error: %@", [error localizedDescription]);
+    [StatusViewController addMessage:@"Location error"];
 }
 
 - (void)locationManagerDidPauseLocationUpdates:(CLLocationManager *)manager
 {
     NSLog(@"LocationManager: pause");
+    [StatusViewController addMessage:@"LocationManager pause"];
 }
 
 - (void)locationManagerDidResumeLocationUpdates:(CLLocationManager *)manager
 {
     NSLog(@"LocationManager: resume");
+    [StatusViewController addMessage:@"LocationManager resume"];
 }
 
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode
