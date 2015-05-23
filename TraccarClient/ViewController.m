@@ -35,6 +35,7 @@
     [super viewDidLoad];
 
     self.title = NSLocalizedString(@"Traccar Client", @"");
+    self.showCreditsFooter = NO;
     currentStatus = NO;
 }
 
