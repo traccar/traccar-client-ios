@@ -142,7 +142,7 @@
 {
     unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
     unitFlags |= NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     [calendar setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
     NSDateComponents *components = [calendar components:unitFlags fromDate:location.timestamp];
     
