@@ -3,12 +3,6 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "iphone_29_1.png",
-      "scale" : "1x"
-    },
-    {
-      "size" : "29x29",
-      "idiom" : "iphone",
       "filename" : "iphone_29_2.png",
       "scale" : "2x"
     },
@@ -29,18 +23,6 @@
       "idiom" : "iphone",
       "filename" : "iphone_40_3.png",
       "scale" : "3x"
-    },
-    {
-      "size" : "57x57",
-      "idiom" : "iphone",
-      "filename" : "iphone_57_1.png",
-      "scale" : "1x"
-    },
-    {
-      "size" : "57x57",
-      "idiom" : "iphone",
-      "filename" : "iphone_57_2.png",
-      "scale" : "2x"
     },
     {
       "size" : "60x60",
@@ -79,30 +61,6 @@
       "scale" : "2x"
     },
     {
-      "size" : "50x50",
-      "idiom" : "ipad",
-      "filename" : "ipad_50_1.png",
-      "scale" : "1x"
-    },
-    {
-      "size" : "50x50",
-      "idiom" : "ipad",
-      "filename" : "ipad_50_2.png",
-      "scale" : "2x"
-    },
-    {
-      "size" : "72x72",
-      "idiom" : "ipad",
-      "filename" : "ipad_72_1.png",
-      "scale" : "1x"
-    },
-    {
-      "size" : "72x72",
-      "idiom" : "ipad",
-      "filename" : "ipad_72_2.png",
-      "scale" : "2x"
-    },
-    {
       "size" : "76x76",
       "idiom" : "ipad",
       "filename" : "ipad_76_1.png",
@@ -115,9 +73,59 @@
       "scale" : "2x"
     },
     {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "iphone_29_1.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "iphone_57_1.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "iphone_57_2.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "ipad",
+      "filename" : "ipad_50_1.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "ipad",
+      "filename" : "ipad_50_2.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "size" : "72x72",
+      "idiom" : "ipad",
+      "filename" : "ipad_72_1.png",
+      "unassigned" : true,
+      "scale" : "1x"
+    },
+    {
+      "size" : "72x72",
+      "idiom" : "ipad",
+      "filename" : "ipad_72_2.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
       "size" : "120x120",
       "idiom" : "car",
       "filename" : "carplay_120_1.png",
+      "unassigned" : true,
       "scale" : "1x"
     }
   ],
