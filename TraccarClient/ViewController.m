@@ -36,6 +36,7 @@
 
     self.title = NSLocalizedString(@"Traccar Client", @"");
     self.showCreditsFooter = NO;
+    self.neverShowPrivacySettings = YES;
     currentStatus = NO;
 }
 
@@ -89,6 +90,11 @@
             // Start location updates
             locationManager = [[CLLocationManager alloc] init];
             locationManager.delegate = self;
+
+            if ([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+                [locationManager requestAlwaysAuthorization];
+            }
+
             locationManager.pausesLocationUpdatesAutomatically = NO;
             locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
             [locationManager startUpdatingLocation];
