@@ -20,6 +20,7 @@
 		CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */; };
 		CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB048617ED50C1000E7EDF /* CoreLocation.framework */; };
 		CEDB302219BDD5DA0021E009 /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDB302119BDD5DA0021E009 /* StatusViewController.m */; };
+		CEE286D31B80839700AE7E83 /* TraccarClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE286D21B80839700AE7E83 /* TraccarClientTests.m */; };
 		CEE8A48A1A72E91E00BD6DB3 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE8A45B1A72E91E00BD6DB3 /* IASKAppSettingsViewController.m */; };
 		CEE8A48B1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE8A45D1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.m */; };
 		CEE8A48C1A72E91E00BD6DB3 /* IASKMultipleValueSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE8A45F1A72E91E00BD6DB3 /* IASKMultipleValueSelection.m */; };
@@ -36,6 +37,16 @@
 		CEE8A4971A72E91E00BD6DB3 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE8A4871A72E91E00BD6DB3 /* IASKSwitch.m */; };
 		CEE8A4981A72E91E00BD6DB3 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE8A4891A72E91E00BD6DB3 /* IASKTextField.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEE286D41B80839700AE7E83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CED4871017DB1BF6007FCF57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CED4871717DB1BF6007FCF57;
+			remoteInfo = TraccarClient;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CE5899C71B115C9100ED70D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -57,6 +68,9 @@
 		CEDB048617ED50C1000E7EDF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CEDB302019BDD5DA0021E009 /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusViewController.h; sourceTree = "<group>"; };
 		CEDB302119BDD5DA0021E009 /* StatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusViewController.m; sourceTree = "<group>"; };
+		CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraccarClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE286D11B80839700AE7E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEE286D21B80839700AE7E83 /* TraccarClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TraccarClientTests.m; sourceTree = "<group>"; };
 		CEE8A45A1A72E91E00BD6DB3 /* IASKAppSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsViewController.h; sourceTree = "<group>"; };
 		CEE8A45B1A72E91E00BD6DB3 /* IASKAppSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKAppSettingsViewController.m; sourceTree = "<group>"; };
 		CEE8A45C1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKAppSettingsWebViewController.h; sourceTree = "<group>"; };
@@ -116,6 +130,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEE286CB1B80839600AE7E83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -124,6 +145,7 @@
 			children = (
 				CED4872117DB1BF6007FCF57 /* TraccarClient */,
 				CEE8A4581A72E91E00BD6DB3 /* InAppSettingsKit */,
+				CEE286CF1B80839700AE7E83 /* TraccarClientTests */,
 				CED4871A17DB1BF6007FCF57 /* Frameworks */,
 				CED4871917DB1BF6007FCF57 /* Products */,
 			);
@@ -133,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				CED4871817DB1BF6007FCF57 /* TraccarClient.app */,
+				CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +196,23 @@
 				CED4872717DB1BF6007FCF57 /* main.m */,
 				CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */,
 				CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEE286CF1B80839700AE7E83 /* TraccarClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEE286D21B80839700AE7E83 /* TraccarClientTests.m */,
+				CEE286D01B80839700AE7E83 /* Supporting Files */,
+			);
+			path = TraccarClientTests;
+			sourceTree = "<group>";
+		};
+		CEE286D01B80839700AE7E83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEE286D11B80839700AE7E83 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -266,6 +306,24 @@
 			productReference = CED4871817DB1BF6007FCF57 /* TraccarClient.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CEE286CD1B80839600AE7E83 /* TraccarClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "TraccarClientTests" */;
+			buildPhases = (
+				CEE286CA1B80839600AE7E83 /* Sources */,
+				CEE286CB1B80839600AE7E83 /* Frameworks */,
+				CEE286CC1B80839600AE7E83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEE286D51B80839700AE7E83 /* PBXTargetDependency */,
+			);
+			name = TraccarClientTests;
+			productName = TraccarClientTests;
+			productReference = CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,6 +335,10 @@
 				TargetAttributes = {
 					CED4871717DB1BF6007FCF57 = {
 						DevelopmentTeam = YW49KTJKFW;
+					};
+					CEE286CD1B80839600AE7E83 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = CED4871717DB1BF6007FCF57;
 					};
 				};
 			};
@@ -307,6 +369,7 @@
 			projectRoot = "";
 			targets = (
 				CED4871717DB1BF6007FCF57 /* TraccarClient */,
+				CEE286CD1B80839600AE7E83 /* TraccarClientTests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,6 +384,13 @@
 				CED4873517DB1BF6007FCF57 /* MainStoryboard.storyboard in Resources */,
 				CEE8A4931A72E91E00BD6DB3 /* IASKLocalizable.strings in Resources */,
 				CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE286CC1B80839600AE7E83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +422,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEE286CA1B80839600AE7E83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE286D31B80839700AE7E83 /* TraccarClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEE286D51B80839700AE7E83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CED4871717DB1BF6007FCF57 /* TraccarClient */;
+			targetProxy = CEE286D41B80839700AE7E83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CED4872417DB1BF6007FCF57 /* InfoPlist.strings */ = {
@@ -488,6 +574,72 @@
 			};
 			name = Release;
 		};
+		CEE286D71B80839700AE7E83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = TraccarClientTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
+			};
+			name = Debug;
+		};
+		CEE286D81B80839700AE7E83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = TraccarClientTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -508,6 +660,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "TraccarClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE286D71B80839700AE7E83 /* Debug */,
+				CEE286D81B80839700AE7E83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
