@@ -16,33 +16,23 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "TCProtocolFormatter.h"
 
-@interface TraccarClientTests : XCTestCase
+@interface TCProtocolFormatterTests : XCTestCase
 
 @end
 
-@implementation TraccarClientTests
+@implementation TCProtocolFormatterTests
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testFormatPosition {
+    
+    TCPosition *position = [[TCPosition alloc] init];
+    position.deviceId = @"123456789012345";
+    position.time = [NSDate dateWithTimeIntervalSince1970:0];
+    
+    NSString *url = [TCProtocolFormatter formatPostion:position address:@"localhost" port:5055];
+    
+    XCTAssertEqualObjects(@"http://localhost:5055?id=123456789012345&timestamp=0&lat=0&lon=0&speed=0&bearing=0&altitude=0&batt=0", url);
 }
 
 @end
