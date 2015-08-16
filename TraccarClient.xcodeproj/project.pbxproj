@@ -15,7 +15,7 @@
 		CED4872817DB1BF6007FCF57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4872717DB1BF6007FCF57 /* main.m */; };
 		CED4872C17DB1BF6007FCF57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4872B17DB1BF6007FCF57 /* AppDelegate.m */; };
 		CED4873517DB1BF6007FCF57 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */; };
-		CED4873B17DB1BF6007FCF57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4873A17DB1BF6007FCF57 /* ViewController.m */; };
+		CED4873B17DB1BF6007FCF57 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4873A17DB1BF6007FCF57 /* MainViewController.m */; };
 		CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4879817DB1DF4007FCF57 /* MessageUI.framework */; };
 		CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */; };
 		CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB048617ED50C1000E7EDF /* CoreLocation.framework */; };
@@ -50,8 +50,8 @@
 		CED4872A17DB1BF6007FCF57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CED4872B17DB1BF6007FCF57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CED4873417DB1BF6007FCF57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CED4873917DB1BF6007FCF57 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CED4873A17DB1BF6007FCF57 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CED4873917DB1BF6007FCF57 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		CED4873A17DB1BF6007FCF57 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		CED4879817DB1DF4007FCF57 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InAppSettings.bundle; sourceTree = "<group>"; };
 		CEDB048617ED50C1000E7EDF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -155,8 +155,8 @@
 				CED4872A17DB1BF6007FCF57 /* AppDelegate.h */,
 				CED4872B17DB1BF6007FCF57 /* AppDelegate.m */,
 				CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */,
-				CED4873917DB1BF6007FCF57 /* ViewController.h */,
-				CED4873A17DB1BF6007FCF57 /* ViewController.m */,
+				CED4873917DB1BF6007FCF57 /* MainViewController.h */,
+				CED4873A17DB1BF6007FCF57 /* MainViewController.m */,
 				CEDB302019BDD5DA0021E009 /* StatusViewController.h */,
 				CEDB302119BDD5DA0021E009 /* StatusViewController.m */,
 				CE5899C71B115C9100ED70D2 /* Images.xcassets */,
@@ -342,7 +342,7 @@
 				CEE8A48B1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.m in Sources */,
 				CEE8A4921A72E91E00BD6DB3 /* IASKSpecifier.m in Sources */,
 				CEE8A48A1A72E91E00BD6DB3 /* IASKAppSettingsViewController.m in Sources */,
-				CED4873B17DB1BF6007FCF57 /* ViewController.m in Sources */,
+				CED4873B17DB1BF6007FCF57 /* MainViewController.m in Sources */,
 				CEE8A48E1A72E91E00BD6DB3 /* IASKSettingsReader.m in Sources */,
 				CEE8A4951A72E91E00BD6DB3 /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
 				CEDB302219BDD5DA0021E009 /* StatusViewController.m in Sources */,

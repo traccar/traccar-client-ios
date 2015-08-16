@@ -1,5 +1,5 @@
 //
-// Copyright 2013 - 2014 Anton Tananaev (anton.tananaev@gmail.com)
+// Copyright 2013 - 2015 Anton Tananaev (anton.tananaev@gmail.com)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,14 +14,10 @@
 // limitations under the License.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 #import "StatusViewController.h"
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
+@implementation MainViewController
 
 @synthesize currentStatus;
 @synthesize locationManager;
@@ -125,7 +121,7 @@
     [outputStream open];
     
     // Send identification
-    NSString *message = [ViewController createIdentificationMessage:deviceId];
+    NSString *message = [MainViewController createIdentificationMessage:deviceId];
     [outputStream write:(const uint8_t *)[message UTF8String] maxLength:message.length];
 }
 
@@ -178,7 +174,7 @@
         // Send location
         if (outputStream)
         {
-            NSString *message = [ViewController createLocationMessage:location];
+            NSString *message = [MainViewController createLocationMessage:location];
             [outputStream write:(const uint8_t *)[message UTF8String] maxLength:message.length];
         }
         
