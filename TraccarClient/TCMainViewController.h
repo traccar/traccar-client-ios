@@ -19,7 +19,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "IASKAppSettingsViewController.h"
 
-@interface MainViewController : IASKAppSettingsViewController <CLLocationManagerDelegate, NSStreamDelegate>
+@interface TCMainViewController : IASKAppSettingsViewController <CLLocationManagerDelegate, NSStreamDelegate>
 
 @property (nonatomic) BOOL currentStatus;
 

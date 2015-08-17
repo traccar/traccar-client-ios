@@ -16,7 +16,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StatusViewController : UITableViewController
+@interface TCStatusViewController : UITableViewController
 
 + (void)addMessage:(NSString *)message;
 + (void)clearMessages;

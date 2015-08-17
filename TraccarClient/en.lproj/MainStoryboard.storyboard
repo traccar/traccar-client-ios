@@ -8,7 +8,7 @@
         <!--Root View Controller-->
         <scene sceneID="Ejt-ia-q1N">
             <objects>
-                <tableViewController id="ZiV-Qa-hnE" customClass="MainViewController" sceneMemberID="viewController">
+                <tableViewController id="ZiV-Qa-hnE" customClass="TCMainViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="KcQ-JP-xCp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +136,7 @@ ponthieux</string>
         <!--Status View Controller-->
         <scene sceneID="El5-px-WCe">
             <objects>
-                <tableViewController id="LmD-5n-dPz" customClass="StatusViewController" sceneMemberID="viewController">
+                <tableViewController id="LmD-5n-dPz" customClass="TCStatusViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fdn-aT-LfP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

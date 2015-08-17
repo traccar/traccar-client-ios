@@ -14,9 +14,9 @@
 // limitations under the License.
 //
 
-#import "AppDelegate.h"
+#import "TCAppDelegate.h"
 
-@implementation AppDelegate
+@implementation TCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 

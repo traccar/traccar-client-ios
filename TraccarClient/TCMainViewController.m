@@ -14,10 +14,10 @@
 // limitations under the License.
 //
 
-#import "MainViewController.h"
-#import "StatusViewController.h"
+#import "TCMainViewController.h"
+#import "TCStatusViewController.h"
 
-@implementation MainViewController
+@implementation TCMainViewController
 
 @synthesize currentStatus;
 @synthesize locationManager;
@@ -58,7 +58,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    [StatusViewController addMessage:@"Low memory warning"];
+    [TCStatusViewController addMessage:@"Low memory warning"];
 }
 
 - (void)defaultsChanged:(NSNotification *)notification
@@ -79,7 +79,7 @@
         
         if (newStatus)
         {
-            [StatusViewController addMessage:@"Service started"];
+            [TCStatusViewController addMessage:@"Service started"];
             
             [self openConnection];
             
@@ -103,7 +103,7 @@
             
             [self closeConnection];
 
-            [StatusViewController addMessage:@"Service stopped"];
+            [TCStatusViewController addMessage:@"Service stopped"];
         }
         
         currentStatus = newStatus;
@@ -121,7 +121,7 @@
     [outputStream open];
     
     // Send identification
-    NSString *message = [MainViewController createIdentificationMessage:deviceId];
+    NSString *message = [TCMainViewController createIdentificationMessage:deviceId];
     [outputStream write:(const uint8_t *)[message UTF8String] maxLength:message.length];
 }
 
@@ -169,12 +169,12 @@
     if (!lastLocation || [location.timestamp timeIntervalSinceDate:lastLocation] > period)
     {
         NSLog(@"Send location update");
-        [StatusViewController addMessage:@"Location update"];
+        [TCStatusViewController addMessage:@"Location update"];
 
         // Send location
         if (outputStream)
         {
-            NSString *message = [MainViewController createLocationMessage:location];
+            NSString *message = [TCMainViewController createLocationMessage:location];
             [outputStream write:(const uint8_t *)[message UTF8String] maxLength:message.length];
         }
         
@@ -185,19 +185,19 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"Location error: %@", [error localizedDescription]);
-    [StatusViewController addMessage:@"Location error"];
+    [TCStatusViewController addMessage:@"Location error"];
 }
 
 - (void)locationManagerDidPauseLocationUpdates:(CLLocationManager *)manager
 {
     NSLog(@"LocationManager: pause");
-    [StatusViewController addMessage:@"LocationManager pause"];
+    [TCStatusViewController addMessage:@"LocationManager pause"];
 }
 
 - (void)locationManagerDidResumeLocationUpdates:(CLLocationManager *)manager
 {
     NSLog(@"LocationManager: resume");
-    [StatusViewController addMessage:@"LocationManager resume"];
+    [TCStatusViewController addMessage:@"LocationManager resume"];
 }
 
 - (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode
@@ -208,7 +208,7 @@
             break;
         case NSStreamEventOpenCompleted:
             NSLog(@"Event: NSStreamEventOpenCompleted");
-            [StatusViewController addMessage:@"Connection succeeded"];
+            [TCStatusViewController addMessage:@"Connection succeeded"];
             break;
         case NSStreamEventHasBytesAvailable:
             NSLog(@"Event: NSStreamEventHasBytesAvailable");
@@ -218,11 +218,11 @@
             break;
         case NSStreamEventErrorOccurred:
             NSLog(@"Event: NSStreamEventErrorOccurred");
-            [StatusViewController addMessage:@"Network error"];
+            [TCStatusViewController addMessage:@"Network error"];
             break;
         case NSStreamEventEndEncountered:
             NSLog(@"Event: NSStreamEventEndEncountered");
-            [StatusViewController addMessage:@"Connection closed"];
+            [TCStatusViewController addMessage:@"Connection closed"];
             break;
     }
     

@@ -15,13 +15,13 @@
 		CED4872017DB1BF6007FCF57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */; };
 		CED4872617DB1BF6007FCF57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED4872417DB1BF6007FCF57 /* InfoPlist.strings */; };
 		CED4872817DB1BF6007FCF57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4872717DB1BF6007FCF57 /* main.m */; };
-		CED4872C17DB1BF6007FCF57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4872B17DB1BF6007FCF57 /* AppDelegate.m */; };
+		CED4872C17DB1BF6007FCF57 /* TCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4872B17DB1BF6007FCF57 /* TCAppDelegate.m */; };
 		CED4873517DB1BF6007FCF57 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */; };
-		CED4873B17DB1BF6007FCF57 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4873A17DB1BF6007FCF57 /* MainViewController.m */; };
+		CED4873B17DB1BF6007FCF57 /* TCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */; };
 		CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4879817DB1DF4007FCF57 /* MessageUI.framework */; };
 		CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */; };
 		CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB048617ED50C1000E7EDF /* CoreLocation.framework */; };
-		CEDB302219BDD5DA0021E009 /* StatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDB302119BDD5DA0021E009 /* StatusViewController.m */; };
+		CEDB302219BDD5DA0021E009 /* TCStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDB302119BDD5DA0021E009 /* TCStatusViewController.m */; };
 		CEE286D31B80839700AE7E83 /* TCProtocolFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE286D21B80839700AE7E83 /* TCProtocolFormatterTests.m */; };
 		CEE8A48A1A72E91E00BD6DB3 /* IASKAppSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE8A45B1A72E91E00BD6DB3 /* IASKAppSettingsViewController.m */; };
 		CEE8A48B1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE8A45D1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.m */; };
@@ -64,16 +64,16 @@
 		CED4872517DB1BF6007FCF57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CED4872717DB1BF6007FCF57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClient-Prefix.pch"; sourceTree = "<group>"; };
-		CED4872A17DB1BF6007FCF57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CED4872B17DB1BF6007FCF57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CED4872A17DB1BF6007FCF57 /* TCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAppDelegate.h; sourceTree = "<group>"; };
+		CED4872B17DB1BF6007FCF57 /* TCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
 		CED4873417DB1BF6007FCF57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CED4873917DB1BF6007FCF57 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		CED4873A17DB1BF6007FCF57 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		CED4873917DB1BF6007FCF57 /* TCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMainViewController.h; sourceTree = "<group>"; };
+		CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMainViewController.m; sourceTree = "<group>"; };
 		CED4879817DB1DF4007FCF57 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InAppSettings.bundle; sourceTree = "<group>"; };
 		CEDB048617ED50C1000E7EDF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		CEDB302019BDD5DA0021E009 /* StatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusViewController.h; sourceTree = "<group>"; };
-		CEDB302119BDD5DA0021E009 /* StatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusViewController.m; sourceTree = "<group>"; };
+		CEDB302019BDD5DA0021E009 /* TCStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCStatusViewController.h; sourceTree = "<group>"; };
+		CEDB302119BDD5DA0021E009 /* TCStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCStatusViewController.m; sourceTree = "<group>"; };
 		CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraccarClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE286D11B80839700AE7E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEE286D21B80839700AE7E83 /* TCProtocolFormatterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCProtocolFormatterTests.m; sourceTree = "<group>"; };
@@ -181,13 +181,13 @@
 		CED4872117DB1BF6007FCF57 /* TraccarClient */ = {
 			isa = PBXGroup;
 			children = (
-				CED4872A17DB1BF6007FCF57 /* AppDelegate.h */,
-				CED4872B17DB1BF6007FCF57 /* AppDelegate.m */,
+				CED4872A17DB1BF6007FCF57 /* TCAppDelegate.h */,
+				CED4872B17DB1BF6007FCF57 /* TCAppDelegate.m */,
 				CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */,
-				CED4873917DB1BF6007FCF57 /* MainViewController.h */,
-				CED4873A17DB1BF6007FCF57 /* MainViewController.m */,
-				CEDB302019BDD5DA0021E009 /* StatusViewController.h */,
-				CEDB302119BDD5DA0021E009 /* StatusViewController.m */,
+				CED4873917DB1BF6007FCF57 /* TCMainViewController.h */,
+				CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */,
+				CEDB302019BDD5DA0021E009 /* TCStatusViewController.h */,
+				CEDB302119BDD5DA0021E009 /* TCStatusViewController.m */,
 				CE5899C71B115C9100ED70D2 /* Images.xcassets */,
 				CED4872217DB1BF6007FCF57 /* Supporting Files */,
 				CE4968231B80A1C200A4964A /* TCProtocolFormatter.h */,
@@ -420,14 +420,14 @@
 				CEE8A48C1A72E91E00BD6DB3 /* IASKMultipleValueSelection.m in Sources */,
 				CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */,
 				CEE8A4971A72E91E00BD6DB3 /* IASKSwitch.m in Sources */,
-				CED4872C17DB1BF6007FCF57 /* AppDelegate.m in Sources */,
+				CED4872C17DB1BF6007FCF57 /* TCAppDelegate.m in Sources */,
 				CEE8A48B1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.m in Sources */,
 				CEE8A4921A72E91E00BD6DB3 /* IASKSpecifier.m in Sources */,
 				CEE8A48A1A72E91E00BD6DB3 /* IASKAppSettingsViewController.m in Sources */,
-				CED4873B17DB1BF6007FCF57 /* MainViewController.m in Sources */,
+				CED4873B17DB1BF6007FCF57 /* TCMainViewController.m in Sources */,
 				CEE8A48E1A72E91E00BD6DB3 /* IASKSettingsReader.m in Sources */,
 				CEE8A4951A72E91E00BD6DB3 /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
-				CEDB302219BDD5DA0021E009 /* StatusViewController.m in Sources */,
+				CEDB302219BDD5DA0021E009 /* TCStatusViewController.m in Sources */,
 				CEE8A4981A72E91E00BD6DB3 /* IASKTextField.m in Sources */,
 				CEE8A48D1A72E91E00BD6DB3 /* IASKSpecifierValuesViewController.m in Sources */,
 				CEE8A4911A72E91E00BD6DB3 /* IASKSettingsStoreUserDefaults.m in Sources */,

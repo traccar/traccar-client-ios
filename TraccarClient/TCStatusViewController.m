@@ -14,16 +14,16 @@
 // limitations under the License.
 //
 
-#import "StatusViewController.h"
+#import "TCStatusViewController.h"
 
-@interface StatusViewController ()
+@interface TCStatusViewController ()
 
 @end
 
-@implementation StatusViewController
+@implementation TCStatusViewController
 
 static int const LIMIT = 20;
-static StatusViewController *statusViewController;
+static TCStatusViewController *statusViewController;
 
 + (NSMutableArray *)getMessages
 {
@@ -41,7 +41,7 @@ static StatusViewController *statusViewController;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"HH:mm - "];
 
-    NSMutableArray *messages = [StatusViewController getMessages];
+    NSMutableArray *messages = [TCStatusViewController getMessages];
     [messages addObject:[[formatter stringFromDate:[NSDate date]] stringByAppendingString:message]];
     
     if ([messages count] > LIMIT) {
@@ -55,7 +55,7 @@ static StatusViewController *statusViewController;
 
 + (void)clearMessages
 {
-    [[StatusViewController getMessages] removeAllObjects];
+    [[TCStatusViewController getMessages] removeAllObjects];
     
     if (statusViewController != nil) {
         [statusViewController.tableView reloadData];
@@ -63,7 +63,7 @@ static StatusViewController *statusViewController;
 }
 
 - (IBAction)clear:(UIBarButtonItem *)sender {
-    [StatusViewController clearMessages];
+    [TCStatusViewController clearMessages];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -113,7 +113,7 @@ static StatusViewController *statusViewController;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[StatusViewController getMessages] count];
+    return [[TCStatusViewController getMessages] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -126,7 +126,7 @@ static StatusViewController *statusViewController;
     }
     
     // Configure the cell.
-    cell.textLabel.text = [[StatusViewController getMessages] objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[TCStatusViewController getMessages] objectAtIndex:indexPath.row];
     return cell;
 }
 
