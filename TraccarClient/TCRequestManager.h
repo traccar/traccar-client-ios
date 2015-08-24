@@ -18,6 +18,6 @@
 
 @interface TCRequestManager : NSObject
 
-+ (void)sendRequest:(NSString *)request;
++ (void)sendRequest:(NSURL *)url completionHandler:(void (^)(BOOL success))handler;
 
 @end

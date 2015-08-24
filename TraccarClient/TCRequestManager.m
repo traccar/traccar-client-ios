@@ -18,8 +18,16 @@
 
 @implementation TCRequestManager
 
-+ (void)sendRequest:(NSString *)request {
++ (void)sendRequest:(NSURL *)url completionHandler:(void (^)(BOOL success))handler {
     
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                               
+                               handler(data);
+    }];
 }
 
 @end

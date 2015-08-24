@@ -16,23 +16,24 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "TCProtocolFormatter.h"
+#import "TCRequestManager.h"
 
-@interface TCProtocolFormatterTests : XCTestCase
+@interface TCRequestManagerTests : XCTestCase
 
 @end
 
-@implementation TCProtocolFormatterTests
+@implementation TCRequestManagerTests
 
-- (void)testFormatPosition {
+- (void)testSendRequest {
     
-    TCPosition *position = [[TCPosition alloc] init];
-    position.deviceId = @"123456789012345";
-    position.time = [NSDate dateWithTimeIntervalSince1970:0];
+    XCTestExpectation *expectation = [self expectationWithDescription:@"sendRequest"];
     
-    NSURL *url = [TCProtocolFormatter formatPostion:position address:@"localhost" port:5055];
+    [TCRequestManager sendRequest:[NSURL URLWithString:@"http://www.google.com"] completionHandler:^(BOOL success) {
+        XCTAssertTrue(success);
+        [expectation fulfill];
+    }];
     
-    XCTAssertEqualObjects(@"http://localhost:5055?id=123456789012345&timestamp=0&lat=0&lon=0&speed=0&bearing=0&altitude=0&batt=0", url.absoluteString);
+    [self waitForExpectationsWithTimeout:5 handler:nil];
 }
 
 @end

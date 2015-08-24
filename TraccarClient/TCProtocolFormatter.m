@@ -18,7 +18,7 @@
 
 @implementation TCProtocolFormatter
 
-+ (NSString *)formatPostion:(TCPosition *)position address:(NSString *)address port:(int)port {
++ (NSURL *)formatPostion:(TCPosition *)position address:(NSString *)address port:(int)port {
     
     NSURLComponents *components = [[NSURLComponents alloc] init];
     
@@ -36,7 +36,7 @@
     [queryItems addObject:[NSURLQueryItem queryItemWithName:@"batt" value:[NSString stringWithFormat:@"%g", position.battery]]];
     components.queryItems = queryItems;
     
-    return components.string;
+    return components.URL;
 }
 
 @end
