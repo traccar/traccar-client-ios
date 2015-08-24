@@ -14,23 +14,21 @@
 // limitations under the License.
 //
 
+#import <Foundation/Foundation.h>
 #import "TCPosition.h"
 
-@implementation TCPosition
+@protocol TCPositionProviderDelegate <NSObject>
 
-- initWithDeviceId:(NSString *)deviceId location:(CLLocation *)location battery:(double)battery {
-    self = [self init];
-    if (self) {
-        self.deviceId = deviceId;
-        self.time = location.timestamp;
-        self.latitude = location.coordinate.latitude;
-        self.longitude = location.coordinate.longitude;
-        self.altitude = location.altitude;
-        self.speed = location.speed;
-        self.course = location.course;
-        self.battery = battery;
-    }
-    return self;
-}
+- (void)didUpdatePosition:(TCPosition *)position;
+
+@end
+
+@interface TCPositionProvider : NSObject
+
+@property (nonatomic, weak) id<TCPositionProviderDelegate> delegate;
+
+- (void)startUpdates;
+
+- (void)stopUpdates;
 
 @end

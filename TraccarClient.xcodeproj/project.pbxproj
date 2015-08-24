@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CBDA41201B8AB2AA00CD6B32 /* TCRequestManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */; };
+		CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */; };
 		CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */; };
 		CE4968281B80A25100A4964A /* TCPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968271B80A25100A4964A /* TCPosition.m */; };
 		CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5899C71B115C9100ED70D2 /* Images.xcassets */; };
@@ -54,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCRequestManagerTests.m; sourceTree = "<group>"; };
+		CBDA41211B8AC05500CD6B32 /* TCPositionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPositionProvider.h; sourceTree = "<group>"; };
+		CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPositionProvider.m; sourceTree = "<group>"; };
 		CE4968231B80A1C200A4964A /* TCProtocolFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProtocolFormatter.h; sourceTree = "<group>"; };
 		CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProtocolFormatter.m; sourceTree = "<group>"; };
 		CE4968261B80A25100A4964A /* TCPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPosition.h; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				CE4968271B80A25100A4964A /* TCPosition.m */,
 				CEF2C4D51B89B92C005F472A /* TCRequestManager.h */,
 				CEF2C4D61B89B92C005F472A /* TCRequestManager.m */,
+				CBDA41211B8AC05500CD6B32 /* TCPositionProvider.h */,
+				CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */,
 			);
 			path = TraccarClient;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 			files = (
 				CEE8A48F1A72E91E00BD6DB3 /* IASKSettingsStore.m in Sources */,
 				CEE8A4941A72E91E00BD6DB3 /* IASKPSSliderSpecifierViewCell.m in Sources */,
+				CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */,
 				CEE8A4961A72E91E00BD6DB3 /* IASKSlider.m in Sources */,
 				CE4968281B80A25100A4964A /* TCPosition.m in Sources */,
 				CED4872817DB1BF6007FCF57 /* main.m in Sources */,

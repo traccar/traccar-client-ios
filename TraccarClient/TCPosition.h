@@ -15,8 +15,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface TCPosition : NSObject
+
+- initWithDeviceId:(NSString *)deviceId location:(CLLocation *)location battery:(double)battery;
 
 @property (nonatomic) long id;
 @property (nonatomic, copy) NSString *deviceId;
