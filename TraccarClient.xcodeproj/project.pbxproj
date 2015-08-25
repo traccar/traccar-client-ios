@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */; };
+		CBB504E21B8C2073001C1F8B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB504E11B8C2073001C1F8B /* libsqlite3.dylib */; };
 		CBDA41201B8AB2AA00CD6B32 /* TCRequestManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */; };
 		CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */; };
 		CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */; };
@@ -54,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CBB504DE1B8C1FC5001C1F8B /* TCDatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDatabaseHelper.h; sourceTree = "<group>"; };
+		CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDatabaseHelper.m; sourceTree = "<group>"; };
+		CBB504E11B8C2073001C1F8B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCRequestManagerTests.m; sourceTree = "<group>"; };
 		CBDA41211B8AC05500CD6B32 /* TCPositionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPositionProvider.h; sourceTree = "<group>"; };
 		CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPositionProvider.m; sourceTree = "<group>"; };
@@ -136,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB504E21B8C2073001C1F8B /* libsqlite3.dylib in Frameworks */,
 				CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */,
 				CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */,
 				CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */,
@@ -177,6 +183,7 @@
 		CED4871A17DB1BF6007FCF57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBB504E11B8C2073001C1F8B /* libsqlite3.dylib */,
 				CEDB048617ED50C1000E7EDF /* CoreLocation.framework */,
 				CED4879817DB1DF4007FCF57 /* MessageUI.framework */,
 				CED4871B17DB1BF6007FCF57 /* UIKit.framework */,
@@ -206,6 +213,8 @@
 				CEF2C4D61B89B92C005F472A /* TCRequestManager.m */,
 				CBDA41211B8AC05500CD6B32 /* TCPositionProvider.h */,
 				CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */,
+				CBB504DE1B8C1FC5001C1F8B /* TCDatabaseHelper.h */,
+				CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */,
 			);
 			path = TraccarClient;
 			sourceTree = "<group>";
@@ -436,6 +445,7 @@
 				CEE8A4971A72E91E00BD6DB3 /* IASKSwitch.m in Sources */,
 				CED4872C17DB1BF6007FCF57 /* TCAppDelegate.m in Sources */,
 				CEE8A48B1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.m in Sources */,
+				CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */,
 				CEE8A4921A72E91E00BD6DB3 /* IASKSpecifier.m in Sources */,
 				CEE8A48A1A72E91E00BD6DB3 /* IASKAppSettingsViewController.m in Sources */,
 				CED4873B17DB1BF6007FCF57 /* TCMainViewController.m in Sources */,
