@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */; };
 		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
-		CBCE82F21B8D265800A7318B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* Model.xcdatamodeld */; };
+		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
 		CBDA41201B8AB2AA00CD6B32 /* TCRequestManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */; };
 		CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */; };
 		CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */; };
@@ -60,7 +60,7 @@
 		CBB504DE1B8C1FC5001C1F8B /* TCDatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDatabaseHelper.h; sourceTree = "<group>"; };
 		CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDatabaseHelper.m; sourceTree = "<group>"; };
 		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		CBCE82F11B8D265800A7318B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraccarClient.xcdatamodel; sourceTree = "<group>"; };
 		CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCRequestManagerTests.m; sourceTree = "<group>"; };
 		CBDA41211B8AC05500CD6B32 /* TCPositionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPositionProvider.h; sourceTree = "<group>"; };
 		CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPositionProvider.m; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 				CED4872417DB1BF6007FCF57 /* InfoPlist.strings */,
 				CED4872717DB1BF6007FCF57 /* main.m */,
 				CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */,
-				CBCE82F01B8D265800A7318B /* Model.xcdatamodeld */,
+				CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */,
 				CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */,
 			);
 			name = "Supporting Files";
@@ -447,7 +447,7 @@
 				CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */,
 				CEE8A4971A72E91E00BD6DB3 /* IASKSwitch.m in Sources */,
 				CED4872C17DB1BF6007FCF57 /* TCAppDelegate.m in Sources */,
-				CBCE82F21B8D265800A7318B /* Model.xcdatamodeld in Sources */,
+				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
 				CEE8A48B1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.m in Sources */,
 				CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */,
 				CEE8A4921A72E91E00BD6DB3 /* IASKSpecifier.m in Sources */,
@@ -715,13 +715,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CBCE82F01B8D265800A7318B /* Model.xcdatamodeld */ = {
+		CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CBCE82F11B8D265800A7318B /* Model.xcdatamodel */,
+				CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */,
 			);
-			currentVersion = CBCE82F11B8D265800A7318B /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */;
+			path = TraccarClient.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

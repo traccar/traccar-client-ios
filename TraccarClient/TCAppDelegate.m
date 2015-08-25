@@ -39,6 +39,8 @@
     // Change service status
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setValue:NO forKey:@"service_status_preference"];
+    
+    [self saveContext];
 }
 
 - (void)registerDefaultsFromSettingsBundle {
