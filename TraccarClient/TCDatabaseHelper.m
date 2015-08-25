@@ -15,37 +15,7 @@
 //
 
 #import "TCDatabaseHelper.h"
-#import <sqlite3.h>
-
-NSString* const kDatabaseFile = @"traccar.db";
-
-@interface TCDatabaseHelper ()
-
-@property (nonatomic) sqlite3 *db;
-
-@end
 
 @implementation TCDatabaseHelper
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *file = [[paths objectAtIndex:0] stringByAppendingPathComponent:kDatabaseFile];
-        
-        BOOL newDatabase = [[NSFileManager defaultManager] fileExistsAtPath:file];
-        
-        sqlite3_open([file UTF8String], &_db);
-        
-        if (newDatabase) {
-            // TODO: init database
-        }
-    }
-    return self;
-}
-
-- (void)dealloc {
-    sqlite3_close(self.db);
-}
 
 @end

@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */; };
-		CBB504E21B8C2073001C1F8B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB504E11B8C2073001C1F8B /* libsqlite3.dylib */; };
+		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
+		CBCE82F21B8D265800A7318B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* Model.xcdatamodeld */; };
 		CBDA41201B8AB2AA00CD6B32 /* TCRequestManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */; };
 		CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */; };
 		CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */; };
@@ -58,7 +59,8 @@
 /* Begin PBXFileReference section */
 		CBB504DE1B8C1FC5001C1F8B /* TCDatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDatabaseHelper.h; sourceTree = "<group>"; };
 		CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDatabaseHelper.m; sourceTree = "<group>"; };
-		CBB504E11B8C2073001C1F8B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CBCE82F11B8D265800A7318B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCRequestManagerTests.m; sourceTree = "<group>"; };
 		CBDA41211B8AC05500CD6B32 /* TCPositionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPositionProvider.h; sourceTree = "<group>"; };
 		CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPositionProvider.m; sourceTree = "<group>"; };
@@ -141,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBB504E21B8C2073001C1F8B /* libsqlite3.dylib in Frameworks */,
+				CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */,
 				CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */,
 				CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */,
 				CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */,
@@ -183,7 +185,7 @@
 		CED4871A17DB1BF6007FCF57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CBB504E11B8C2073001C1F8B /* libsqlite3.dylib */,
+				CBCE82EE1B8D253600A7318B /* CoreData.framework */,
 				CEDB048617ED50C1000E7EDF /* CoreLocation.framework */,
 				CED4879817DB1DF4007FCF57 /* MessageUI.framework */,
 				CED4871B17DB1BF6007FCF57 /* UIKit.framework */,
@@ -196,15 +198,15 @@
 		CED4872117DB1BF6007FCF57 /* TraccarClient */ = {
 			isa = PBXGroup;
 			children = (
+				CE5899C71B115C9100ED70D2 /* Images.xcassets */,
+				CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */,
+				CED4872217DB1BF6007FCF57 /* Supporting Files */,
 				CED4872A17DB1BF6007FCF57 /* TCAppDelegate.h */,
 				CED4872B17DB1BF6007FCF57 /* TCAppDelegate.m */,
-				CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */,
 				CED4873917DB1BF6007FCF57 /* TCMainViewController.h */,
 				CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */,
 				CEDB302019BDD5DA0021E009 /* TCStatusViewController.h */,
 				CEDB302119BDD5DA0021E009 /* TCStatusViewController.m */,
-				CE5899C71B115C9100ED70D2 /* Images.xcassets */,
-				CED4872217DB1BF6007FCF57 /* Supporting Files */,
 				CE4968231B80A1C200A4964A /* TCProtocolFormatter.h */,
 				CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */,
 				CE4968261B80A25100A4964A /* TCPosition.h */,
@@ -226,6 +228,7 @@
 				CED4872417DB1BF6007FCF57 /* InfoPlist.strings */,
 				CED4872717DB1BF6007FCF57 /* main.m */,
 				CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */,
+				CBCE82F01B8D265800A7318B /* Model.xcdatamodeld */,
 				CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */,
 			);
 			name = "Supporting Files";
@@ -234,8 +237,8 @@
 		CEE286CF1B80839700AE7E83 /* TraccarClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				CEE286D21B80839700AE7E83 /* TCProtocolFormatterTests.m */,
 				CEE286D01B80839700AE7E83 /* Supporting Files */,
+				CEE286D21B80839700AE7E83 /* TCProtocolFormatterTests.m */,
 				CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */,
 			);
 			path = TraccarClientTests;
@@ -444,6 +447,7 @@
 				CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */,
 				CEE8A4971A72E91E00BD6DB3 /* IASKSwitch.m in Sources */,
 				CED4872C17DB1BF6007FCF57 /* TCAppDelegate.m in Sources */,
+				CBCE82F21B8D265800A7318B /* Model.xcdatamodeld in Sources */,
 				CEE8A48B1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.m in Sources */,
 				CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */,
 				CEE8A4921A72E91E00BD6DB3 /* IASKSpecifier.m in Sources */,
@@ -709,6 +713,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CBCE82F01B8D265800A7318B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CBCE82F11B8D265800A7318B /* Model.xcdatamodel */,
+			);
+			currentVersion = CBCE82F11B8D265800A7318B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CED4871017DB1BF6007FCF57 /* Project object */;
 }
