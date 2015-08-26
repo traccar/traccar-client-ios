@@ -14,18 +14,14 @@
 // limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
-#import "TCPosition.h"
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import <XCTest/XCTest.h>
 
-@interface TCDatabaseHelper : NSObject
-
-+ (NSManagedObjectContext *)managedObjectContext;
+@interface TCCoreDataTests : XCTestCase
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
-- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
-
-- (TCPosition *)selectPosition;
-- (void)deletePosition:(TCPosition *)position;
+@property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @end

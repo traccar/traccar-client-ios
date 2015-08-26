@@ -15,23 +15,29 @@
 //
 
 #import "TCCoreDataTests.h"
-#import "TCProtocolFormatter.h"
+#import "TCDatabaseHelper.h"
 
-@interface TCProtocolFormatterTests : TCCoreDataTests
+@interface TCDatabaseHelperTests : TCCoreDataTests
 
 @end
 
-@implementation TCProtocolFormatterTests
+@implementation TCDatabaseHelperTests
 
 - (void)testFormatPosition {
+
+    TCDatabaseHelper *databaseHelper = [[TCDatabaseHelper alloc] initWithManagedObjectContext:self.managedObjectContext];
+    
+    XCTAssertNil([databaseHelper selectPosition]);
     
     TCPosition *position = [[TCPosition alloc] initWithManagedObjectContext:self.managedObjectContext];
     position.deviceId = @"123456789012345";
     position.time = [NSDate dateWithTimeIntervalSince1970:0];
     
-    NSURL *url = [TCProtocolFormatter formatPostion:position address:@"localhost" port:5055];
+    XCTAssertNotNil([databaseHelper selectPosition]);
     
-    XCTAssertEqualObjects(@"http://localhost:5055?id=123456789012345&timestamp=0&lat=0&lon=0&speed=0&bearing=0&altitude=0&batt=0", url.absoluteString);
+    [databaseHelper deletePosition:position];
+    
+    XCTAssertNil([databaseHelper selectPosition]);
 }
 
 @end

@@ -25,4 +25,25 @@
     return delegate.managedObjectContext;
 }
 
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
+    self = [self init];
+    if (self) {
+        self.managedObjectContext = managedObjectContext;
+    }
+    return self;
+}
+
+- (TCPosition *)selectPosition {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Position"];
+    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    if (fetchedObjects && fetchedObjects.count) {
+        return [fetchedObjects objectAtIndex:0];
+    }
+    return nil;
+}
+
+- (void)deletePosition:(TCPosition *)position {
+    [self.managedObjectContext deleteObject:position];
+}
+
 @end

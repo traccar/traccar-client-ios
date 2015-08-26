@@ -10,6 +10,8 @@
 		CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */; };
 		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
 		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
+		CBCE835E1B8D666D00A7318B /* TCDatabaseHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE835D1B8D666D00A7318B /* TCDatabaseHelperTests.m */; };
+		CBCE83611B8D68FA00A7318B /* TCCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE83601B8D68FA00A7318B /* TCCoreDataTests.m */; };
 		CBDA41201B8AB2AA00CD6B32 /* TCRequestManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */; };
 		CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */; };
 		CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */; };
@@ -61,6 +63,9 @@
 		CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDatabaseHelper.m; sourceTree = "<group>"; };
 		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraccarClient.xcdatamodel; sourceTree = "<group>"; };
+		CBCE835D1B8D666D00A7318B /* TCDatabaseHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDatabaseHelperTests.m; sourceTree = "<group>"; };
+		CBCE835F1B8D68FA00A7318B /* TCCoreDataTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCoreDataTests.h; sourceTree = "<group>"; };
+		CBCE83601B8D68FA00A7318B /* TCCoreDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCoreDataTests.m; sourceTree = "<group>"; };
 		CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCRequestManagerTests.m; sourceTree = "<group>"; };
 		CBDA41211B8AC05500CD6B32 /* TCPositionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPositionProvider.h; sourceTree = "<group>"; };
 		CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPositionProvider.m; sourceTree = "<group>"; };
@@ -238,8 +243,11 @@
 			isa = PBXGroup;
 			children = (
 				CEE286D01B80839700AE7E83 /* Supporting Files */,
+				CBCE835F1B8D68FA00A7318B /* TCCoreDataTests.h */,
+				CBCE83601B8D68FA00A7318B /* TCCoreDataTests.m */,
 				CEE286D21B80839700AE7E83 /* TCProtocolFormatterTests.m */,
 				CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */,
+				CBCE835D1B8D666D00A7318B /* TCDatabaseHelperTests.m */,
 			);
 			path = TraccarClientTests;
 			sourceTree = "<group>";
@@ -468,6 +476,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDA41201B8AB2AA00CD6B32 /* TCRequestManagerTests.m in Sources */,
+				CBCE83611B8D68FA00A7318B /* TCCoreDataTests.m in Sources */,
+				CBCE835E1B8D666D00A7318B /* TCDatabaseHelperTests.m in Sources */,
 				CEE286D31B80839700AE7E83 /* TCProtocolFormatterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

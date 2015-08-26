@@ -88,14 +88,12 @@
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"TraccarClient.sqlite"];
-    NSError *error = nil;
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:nil]) {
         NSLog(@"Error in persistentStoreCoordinator");
     }
     
     return _persistentStoreCoordinator;
 }
-
 
 - (NSManagedObjectContext *)managedObjectContext {
     if (_managedObjectContext != nil) {
@@ -114,8 +112,7 @@
 - (void)saveContext {
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
-        NSError *error = nil;
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+        if ([managedObjectContext hasChanges] && ![managedObjectContext save:nil]) {
             NSLog(@"Error in saveContext");
         }
     }

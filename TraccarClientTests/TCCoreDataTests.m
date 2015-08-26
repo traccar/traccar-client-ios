@@ -15,23 +15,17 @@
 //
 
 #import "TCCoreDataTests.h"
-#import "TCProtocolFormatter.h"
 
-@interface TCProtocolFormatterTests : TCCoreDataTests
+@implementation TCCoreDataTests
 
-@end
-
-@implementation TCProtocolFormatterTests
-
-- (void)testFormatPosition {
+- (void)setUp {
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"TraccarClient" withExtension:@"momd"];
+    self.managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     
-    TCPosition *position = [[TCPosition alloc] initWithManagedObjectContext:self.managedObjectContext];
-    position.deviceId = @"123456789012345";
-    position.time = [NSDate dateWithTimeIntervalSince1970:0];
+    self.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     
-    NSURL *url = [TCProtocolFormatter formatPostion:position address:@"localhost" port:5055];
-    
-    XCTAssertEqualObjects(@"http://localhost:5055?id=123456789012345&timestamp=0&lat=0&lon=0&speed=0&bearing=0&altitude=0&batt=0", url.absoluteString);
+    self.managedObjectContext = [[NSManagedObjectContext alloc] init];
+    self.managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
 }
 
 @end
