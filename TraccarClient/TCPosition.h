@@ -16,12 +16,14 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CoreData/CoreData.h>
 
-@interface TCPosition : NSObject
+@interface TCPosition : NSManagedObject
 
-- initWithDeviceId:(NSString *)deviceId location:(CLLocation *)location battery:(double)battery;
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context;
 
-@property (nonatomic) long id;
+- (instancetype)initWithDeviceId:(NSString *)deviceId location:(CLLocation *)location battery:(double)battery managedObjectContext:(NSManagedObjectContext *)context;
+
 @property (nonatomic, copy) NSString *deviceId;
 @property (nonatomic, copy) NSDate *time;
 @property (nonatomic) double latitude;

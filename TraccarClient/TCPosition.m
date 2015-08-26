@@ -18,8 +18,22 @@
 
 @implementation TCPosition
 
-- initWithDeviceId:(NSString *)deviceId location:(CLLocation *)location battery:(double)battery {
-    self = [self init];
+@dynamic deviceId;
+@dynamic time;
+@dynamic latitude;
+@dynamic longitude;
+@dynamic altitude;
+@dynamic speed;
+@dynamic course;
+@dynamic battery;
+
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context {
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Position" inManagedObjectContext:context];
+    return [self initWithEntity:entityDescription insertIntoManagedObjectContext:context];
+}
+
+- (instancetype)initWithDeviceId:(NSString *)deviceId location:(CLLocation *)location battery:(double)battery managedObjectContext:(NSManagedObjectContext *)context {
+    self = [self initWithManagedObjectContext:context];
     if (self) {
         self.deviceId = deviceId;
         self.time = location.timestamp;

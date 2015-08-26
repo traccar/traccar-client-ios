@@ -63,7 +63,7 @@
     if (!self.lastLocation || ![self.lastLocation.timestamp isEqualToDate:location.timestamp]) {
         
         // TODO get device id
-        TCPosition *position = [[TCPosition alloc] initWithDeviceId:@"" location:location battery:self.batteryLevel];
+        TCPosition *position = [[TCPosition alloc] initWithDeviceId:@"" location:location battery:self.batteryLevel managedObjectContext:nil]; // TODO
         
         [self.delegate didUpdatePosition:position];
         self.lastLocation = location;

@@ -20,13 +20,26 @@
 
 @interface TCProtocolFormatterTests : XCTestCase
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
 @end
 
 @implementation TCProtocolFormatterTests
 
-- (void)testFormatPosition {
+- (void)setUp {
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"TraccarClient" withExtension:@"momd"];
+    self.managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     
-    TCPosition *position = [[TCPosition alloc] init];
+    self.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    
+    self.managedObjectContext = [[NSManagedObjectContext alloc] init];
+    self.managedObjectContext.persistentStoreCoordinator = self.persistentStoreCoordinator;
+}
+
+- (void)testFormatPosition {
+    TCPosition *position = [[TCPosition alloc] initWithManagedObjectContext:self.managedObjectContext];
     position.deviceId = @"123456789012345";
     position.time = [NSDate dateWithTimeIntervalSince1970:0];
     
