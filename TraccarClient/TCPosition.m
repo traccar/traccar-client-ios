@@ -32,19 +32,13 @@
     return [self initWithEntity:entityDescription insertIntoManagedObjectContext:context];
 }
 
-- (instancetype)initWithDeviceId:(NSString *)deviceId location:(CLLocation *)location battery:(double)battery managedObjectContext:(NSManagedObjectContext *)context {
-    self = [self initWithManagedObjectContext:context];
-    if (self) {
-        self.deviceId = deviceId;
-        self.time = location.timestamp;
-        self.latitude = location.coordinate.latitude;
-        self.longitude = location.coordinate.longitude;
-        self.altitude = location.altitude;
-        self.speed = location.speed;
-        self.course = location.course;
-        self.battery = battery;
-    }
-    return self;
+- (void)setLocation:(CLLocation *)location {
+    self.time = location.timestamp;
+    self.latitude = location.coordinate.latitude;
+    self.longitude = location.coordinate.longitude;
+    self.altitude = location.altitude;
+    self.speed = location.speed;
+    self.course = location.course;
 }
 
 @end

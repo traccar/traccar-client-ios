@@ -18,4 +18,6 @@
 
 @interface TCDatabaseHelper : NSObject
 
++ (NSManagedObjectContext *)managedObjectContext;
+
 @end

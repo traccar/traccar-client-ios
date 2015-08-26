@@ -39,6 +39,7 @@
 }
 
 - (void)testFormatPosition {
+    
     TCPosition *position = [[TCPosition alloc] initWithManagedObjectContext:self.managedObjectContext];
     position.deviceId = @"123456789012345";
     position.time = [NSDate dateWithTimeIntervalSince1970:0];

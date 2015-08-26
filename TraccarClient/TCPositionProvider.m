@@ -16,6 +16,7 @@
 
 #import "TCPositionProvider.h"
 #import <CoreLocation/CoreLocation.h>
+#import "TCDatabaseHelper.h"
 
 @interface TCPositionProvider () <CLLocationManagerDelegate>
 
@@ -62,8 +63,10 @@
     
     if (!self.lastLocation || ![self.lastLocation.timestamp isEqualToDate:location.timestamp]) {
         
-        // TODO get device id
-        TCPosition *position = [[TCPosition alloc] initWithDeviceId:@"" location:location battery:self.batteryLevel managedObjectContext:nil]; // TODO
+        TCPosition *position = [[TCPosition alloc] initWithManagedObjectContext:[TCDatabaseHelper managedObjectContext]];
+        position.deviceId = @""; // TODO
+        position.location = location;
+        position.battery = self.batteryLevel;
         
         [self.delegate didUpdatePosition:position];
         self.lastLocation = location;

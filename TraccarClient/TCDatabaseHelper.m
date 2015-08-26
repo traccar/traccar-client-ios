@@ -15,7 +15,14 @@
 //
 
 #import "TCDatabaseHelper.h"
+#import "TCAppDelegate.h"
 
 @implementation TCDatabaseHelper
+
++ (NSManagedObjectContext *)managedObjectContext {
+    UIApplication *application = [UIApplication sharedApplication];
+    TCAppDelegate *delegate = (TCAppDelegate *) application.delegate;
+    return delegate.managedObjectContext;
+}
 
 @end

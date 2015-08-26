@@ -20,10 +20,6 @@
 
 @interface TCPosition : NSManagedObject
 
-- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context;
-
-- (instancetype)initWithDeviceId:(NSString *)deviceId location:(CLLocation *)location battery:(double)battery managedObjectContext:(NSManagedObjectContext *)context;
-
 @property (nonatomic, copy) NSString *deviceId;
 @property (nonatomic, copy) NSDate *time;
 @property (nonatomic) double latitude;
@@ -32,5 +28,9 @@
 @property (nonatomic) double speed;
 @property (nonatomic) double course;
 @property (nonatomic) double battery;
+
+- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)context;
+
+- (void)setLocation:(CLLocation *)location;
 
 @end
