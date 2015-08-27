@@ -14,6 +14,8 @@
 		CBCE83611B8D68FA00A7318B /* TCCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE83601B8D68FA00A7318B /* TCCoreDataTests.m */; };
 		CBDA41201B8AB2AA00CD6B32 /* TCRequestManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */; };
 		CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */; };
+		CBDEEB881B8EB536006BC126 /* TCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */; };
+		CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */; };
 		CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */; };
 		CE4968281B80A25100A4964A /* TCPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968271B80A25100A4964A /* TCPosition.m */; };
 		CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5899C71B115C9100ED70D2 /* Images.xcassets */; };
@@ -69,6 +71,9 @@
 		CBDA411F1B8AB2AA00CD6B32 /* TCRequestManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCRequestManagerTests.m; sourceTree = "<group>"; };
 		CBDA41211B8AC05500CD6B32 /* TCPositionProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPositionProvider.h; sourceTree = "<group>"; };
 		CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPositionProvider.m; sourceTree = "<group>"; };
+		CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNetworkManager.h; sourceTree = "<group>"; };
+		CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNetworkManager.m; sourceTree = "<group>"; };
+		CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE4968231B80A1C200A4964A /* TCProtocolFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProtocolFormatter.h; sourceTree = "<group>"; };
 		CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProtocolFormatter.m; sourceTree = "<group>"; };
 		CE4968261B80A25100A4964A /* TCPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPosition.h; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */,
 				CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */,
 				CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */,
 				CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */,
@@ -190,6 +196,7 @@
 		CED4871A17DB1BF6007FCF57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */,
 				CBCE82EE1B8D253600A7318B /* CoreData.framework */,
 				CEDB048617ED50C1000E7EDF /* CoreLocation.framework */,
 				CED4879817DB1DF4007FCF57 /* MessageUI.framework */,
@@ -212,6 +219,8 @@
 				CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */,
 				CED4873917DB1BF6007FCF57 /* TCMainViewController.h */,
 				CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */,
+				CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */,
+				CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */,
 				CE4968261B80A25100A4964A /* TCPosition.h */,
 				CE4968271B80A25100A4964A /* TCPosition.m */,
 				CBDA41211B8AC05500CD6B32 /* TCPositionProvider.h */,
@@ -451,6 +460,7 @@
 				CE4968281B80A25100A4964A /* TCPosition.m in Sources */,
 				CED4872817DB1BF6007FCF57 /* main.m in Sources */,
 				CEE8A4901A72E91E00BD6DB3 /* IASKSettingsStoreFile.m in Sources */,
+				CBDEEB881B8EB536006BC126 /* TCNetworkManager.m in Sources */,
 				CEE8A48C1A72E91E00BD6DB3 /* IASKMultipleValueSelection.m in Sources */,
 				CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */,
 				CEE8A4971A72E91E00BD6DB3 /* IASKSwitch.m in Sources */,
