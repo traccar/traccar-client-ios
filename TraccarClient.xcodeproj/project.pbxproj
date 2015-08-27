@@ -221,8 +221,6 @@
 				CBB504DE1B8C1FC5001C1F8B /* TCDatabaseHelper.h */,
 				CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */,
 				CED4873917DB1BF6007FCF57 /* TCMainViewController.h */,
-				CBDEEB8B1B8EBFBC006BC126 /* TCTrackingController.h */,
-				CBDEEB8C1B8EBFBC006BC126 /* TCTrackingController.m */,
 				CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */,
 				CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */,
 				CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */,
@@ -236,6 +234,8 @@
 				CEF2C4D61B89B92C005F472A /* TCRequestManager.m */,
 				CEDB302019BDD5DA0021E009 /* TCStatusViewController.h */,
 				CEDB302119BDD5DA0021E009 /* TCStatusViewController.m */,
+				CBDEEB8B1B8EBFBC006BC126 /* TCTrackingController.h */,
+				CBDEEB8C1B8EBFBC006BC126 /* TCTrackingController.m */,
 			);
 			path = TraccarClient;
 			sourceTree = "<group>";
