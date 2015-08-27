@@ -16,6 +16,7 @@
 		CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */; };
 		CBDEEB881B8EB536006BC126 /* TCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */; };
 		CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */; };
+		CBDEEB8D1B8EBFBC006BC126 /* TCTrackingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDEEB8C1B8EBFBC006BC126 /* TCTrackingController.m */; };
 		CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */; };
 		CE4968281B80A25100A4964A /* TCPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968271B80A25100A4964A /* TCPosition.m */; };
 		CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5899C71B115C9100ED70D2 /* Images.xcassets */; };
@@ -74,6 +75,8 @@
 		CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNetworkManager.h; sourceTree = "<group>"; };
 		CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNetworkManager.m; sourceTree = "<group>"; };
 		CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CBDEEB8B1B8EBFBC006BC126 /* TCTrackingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCTrackingController.h; path = ../TCTrackingController.h; sourceTree = "<group>"; };
+		CBDEEB8C1B8EBFBC006BC126 /* TCTrackingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCTrackingController.m; path = ../TCTrackingController.m; sourceTree = "<group>"; };
 		CE4968231B80A1C200A4964A /* TCProtocolFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProtocolFormatter.h; sourceTree = "<group>"; };
 		CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProtocolFormatter.m; sourceTree = "<group>"; };
 		CE4968261B80A25100A4964A /* TCPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPosition.h; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 				CBB504DE1B8C1FC5001C1F8B /* TCDatabaseHelper.h */,
 				CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */,
 				CED4873917DB1BF6007FCF57 /* TCMainViewController.h */,
+				CBDEEB8B1B8EBFBC006BC126 /* TCTrackingController.h */,
+				CBDEEB8C1B8EBFBC006BC126 /* TCTrackingController.m */,
 				CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */,
 				CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */,
 				CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */,
@@ -468,6 +473,7 @@
 				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
 				CEE8A48B1A72E91E00BD6DB3 /* IASKAppSettingsWebViewController.m in Sources */,
 				CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */,
+				CBDEEB8D1B8EBFBC006BC126 /* TCTrackingController.m in Sources */,
 				CEE8A4921A72E91E00BD6DB3 /* IASKSpecifier.m in Sources */,
 				CEE8A48A1A72E91E00BD6DB3 /* IASKAppSettingsViewController.m in Sources */,
 				CED4873B17DB1BF6007FCF57 /* TCMainViewController.m in Sources */,

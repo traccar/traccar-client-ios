@@ -19,7 +19,7 @@
 
 static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReachabilityFlags flags, void* info) {
     TCNetworkManager *networkManager = (__bridge TCNetworkManager *)info;
-    [networkManager.delegate didNetworkUpdate:[TCNetworkManager onlineForFlags:flags]];
+    [networkManager.delegate didUpdateNetwork:[TCNetworkManager onlineForFlags:flags]];
 }
 
 @interface TCNetworkManager ()

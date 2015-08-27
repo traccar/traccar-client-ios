@@ -1,5 +1,5 @@
 //
-// Copyright 2015 Anton Tananaev (anton.tananaev@gmail.com)
+// Copyright 2013 - 2015 Anton Tananaev (anton.tananaev@gmail.com)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,23 +15,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SystemConfiguration/SystemConfiguration.h>
 
-@protocol TCNetworkManagerDelegate <NSObject>
-
-- (void)didUpdateNetwork:(BOOL)online;
-
-@end
-
-@interface TCNetworkManager : NSObject
-
-@property (nonatomic, weak) id<TCNetworkManagerDelegate> delegate;
-
-@property (nonatomic, readonly) BOOL online;
+@interface TCTrackingController : NSObject
 
 - (void)start;
 - (void)stop;
-
-+ (BOOL)onlineForFlags:(SCNetworkReachabilityFlags)flags;
 
 @end

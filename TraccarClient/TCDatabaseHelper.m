@@ -25,8 +25,13 @@
     return delegate.managedObjectContext;
 }
 
+- (instancetype)init {
+    NSManagedObjectContext *managedObjectContext = [TCDatabaseHelper managedObjectContext];
+    return [self initWithManagedObjectContext:managedObjectContext];
+}
+
 - (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
-    self = [self init];
+    self = [super init];
     if (self) {
         self.managedObjectContext = managedObjectContext;
     }
