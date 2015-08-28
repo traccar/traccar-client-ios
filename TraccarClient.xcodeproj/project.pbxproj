@@ -26,7 +26,6 @@
 		CED4872617DB1BF6007FCF57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CED4872417DB1BF6007FCF57 /* InfoPlist.strings */; };
 		CED4872817DB1BF6007FCF57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4872717DB1BF6007FCF57 /* main.m */; };
 		CED4872C17DB1BF6007FCF57 /* TCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4872B17DB1BF6007FCF57 /* TCAppDelegate.m */; };
-		CED4873517DB1BF6007FCF57 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */; };
 		CED4873B17DB1BF6007FCF57 /* TCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */; };
 		CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4879817DB1DF4007FCF57 /* MessageUI.framework */; };
 		CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */; };
@@ -48,6 +47,7 @@
 		CEE8A4961A72E91E00BD6DB3 /* IASKSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE8A4851A72E91E00BD6DB3 /* IASKSlider.m */; };
 		CEE8A4971A72E91E00BD6DB3 /* IASKSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE8A4871A72E91E00BD6DB3 /* IASKSwitch.m */; };
 		CEE8A4981A72E91E00BD6DB3 /* IASKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE8A4891A72E91E00BD6DB3 /* IASKTextField.m */; };
+		CEF254DE1B905280001DEFD2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */; };
 		CEF2C4D71B89B92C005F472A /* TCRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF2C4D61B89B92C005F472A /* TCRequestManager.m */; };
 /* End PBXBuildFile section */
 
@@ -92,7 +92,6 @@
 		CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClient-Prefix.pch"; sourceTree = "<group>"; };
 		CED4872A17DB1BF6007FCF57 /* TCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAppDelegate.h; sourceTree = "<group>"; };
 		CED4872B17DB1BF6007FCF57 /* TCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAppDelegate.m; sourceTree = "<group>"; };
-		CED4873417DB1BF6007FCF57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CED4873917DB1BF6007FCF57 /* TCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMainViewController.h; sourceTree = "<group>"; };
 		CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMainViewController.m; sourceTree = "<group>"; };
 		CED4879817DB1DF4007FCF57 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -147,6 +146,8 @@
 		CEE8A4871A72E91E00BD6DB3 /* IASKSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKSwitch.m; sourceTree = "<group>"; };
 		CEE8A4881A72E91E00BD6DB3 /* IASKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKTextField.h; sourceTree = "<group>"; };
 		CEE8A4891A72E91E00BD6DB3 /* IASKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKTextField.m; sourceTree = "<group>"; };
+		CEF254DD1B905266001DEFD2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CEF254DF1B9052EB001DEFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CEF2C4D51B89B92C005F472A /* TCRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCRequestManager.h; sourceTree = "<group>"; };
 		CEF2C4D61B89B92C005F472A /* TCRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCRequestManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -436,9 +437,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF254DE1B905280001DEFD2 /* MainStoryboard.storyboard in Resources */,
 				CED4872617DB1BF6007FCF57 /* InfoPlist.strings in Resources */,
 				CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */,
-				CED4873517DB1BF6007FCF57 /* MainStoryboard.storyboard in Resources */,
 				CEE8A4931A72E91E00BD6DB3 /* IASKLocalizable.strings in Resources */,
 				CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */,
 			);
@@ -520,7 +521,8 @@
 		CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CED4873417DB1BF6007FCF57 /* en */,
+				CEF254DD1B905266001DEFD2 /* ru */,
+				CEF254DF1B9052EB001DEFD2 /* Base */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";

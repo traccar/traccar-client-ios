@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "Это приложение распростаняется бесплатно, исходный код распростаняется по лицензии Apache License Version 2.0 и доступен на GitHub."; ObjectID = "2Hh-sN-c9g"; */
+"2Hh-sN-c9g.text" = "Это приложение распростаняется бесплатно, исходный код распростаняется по лицензии Apache License Version 2.0 и доступен на GitHub.";
+
+/* Class = "UIBarButtonItem"; title = "Очистить"; ObjectID = "He4-eJ-a31"; */
+"He4-eJ-a31.title" = "Очистить";
+
+/* Class = "UILabel"; text = "Traccar Клиент"; ObjectID = "TDj-2j-wEh"; */
+"TDj-2j-wEh.text" = "Traccar Клиент";
+
+/* Class = "UILabel"; text = "Brandon Zylstra, Guido Preite, Gonzalo Saloma, Stefaan Bolle, Robert Hercz, Ponthieux"; ObjectID = "WOT-5f-Bzg"; */
+"WOT-5f-Bzg.text" = "Brandon Zylstra, Guido Preite, Gonzalo Saloma, Stefaan Bolle, Robert Hercz, Ponthieux";
+
+/* Class = "UILabel"; text = "Трекер для Android устройств. Совместим с Traccar сервером и другими мониторинговыми системами."; ObjectID = "drL-Ag-IYB"; */
+"drL-Ag-IYB.text" = "Трекер для Android устройств. Совместим с Traccar сервером и другими мониторинговыми системами.";
+
+/* Class = "UIBarButtonItem"; title = "Состояние"; ObjectID = "eKa-7m-jq1"; */
+"eKa-7m-jq1.title" = "Состояние";
+
+/* Class = "UIBarButtonItem"; title = "О программе"; ObjectID = "gEG-ov-HEk"; */
+"gEG-ov-HEk.title" = "О программе";
+
+/* Class = "UILabel"; text = "Eoghan Gilboy, Jan Maika Dy, Luke Attard, Ted Holbrook, Anthony Knight, Stewart Brown, Marvin Percival, Jeffrey Streeter, Osman El-Baba, Keith Tallent, Rogier, David Thompson, Rafael Alonso, Rémi de Chazelles"; ObjectID = "gfT-Qd-zbx"; */
+"gfT-Qd-zbx.text" = "Eoghan Gilboy, Jan Maika Dy, Luke Attard, Ted Holbrook, Anthony Knight, Stewart Brown, Marvin Percival, Jeffrey Streeter, Osman El-Baba, Keith Tallent, Rogier, David Thompson, Rafael Alonso, Rémi de Chazelles";
+
+/* Class = "UILabel"; text = "Для получения дополнительной информации посетите\nwww.traccar.org/client"; ObjectID = "jF9-Ub-rRP"; */
+"jF9-Ub-rRP.text" = "Для получения дополнительной информации посетите\nwww.traccar.org/client";
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "mBp-pp-ezn"; */
+"mBp-pp-ezn.title" = "Root View Controller";
+
+/* Class = "UILabel"; text = "Kickstarter backers"; ObjectID = "owH-ok-sQ8"; */
+"owH-ok-sQ8.text" = "Kickstarter backers";
