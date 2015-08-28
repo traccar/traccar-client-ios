@@ -44,82 +44,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon60x60" translatesAutoresizingMaskIntoConstraints="NO" id="t6r-6v-ia3">
-                                <rect key="frame" x="16" y="80" width="60" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traccar Client" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDj-2j-wEh">
+                                <rect key="frame" x="68" y="78" width="236" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real time GPS tracker for Android devices. Compatible with Traccar Server and other tracking systems." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drL-Ag-IYB">
+                                <rect key="frame" x="68" y="106" width="236" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application is free and open source, source code is licensed under Apache License Version 2.0 and available on GitHub." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hh-sN-c9g">
+                                <rect key="frame" x="68" y="165" width="236" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For more information visit www.traccar.org/client" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jF9-Ub-rRP">
+                                <rect key="frame" x="68" y="240" width="236" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kickstarter backers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owH-ok-sQ8">
+                                <rect key="frame" x="16" y="288" width="288" height="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfT-Qd-zbx">
+                                <rect key="frame" x="16" y="316" width="288" height="72"/>
+                                <string key="text">Eoghan Gilboy, Jan Maika Dy, Luke Attard, Ted Holbrook, Anthony Knight, Stewart Brown, Marvin Percival, Jeffrey Streeter, Osman El-Baba, Keith Tallent, Rogier, David Thompson, Rafael Alonso, Rémi de Chazelles</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brandon Zylstra, Guido Preite, Gonzalo Saloma, Stefaan Bolle, Robert Hercz, Ponthieux" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOT-5f-Bzg">
+                                <rect key="frame" x="16" y="396" width="288" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon40x40" translatesAutoresizingMaskIntoConstraints="NO" id="t6r-6v-ia3">
+                                <rect key="frame" x="16" y="78" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Pcs-ua-ISA"/>
-                                    <constraint firstAttribute="height" constant="60" id="SJq-U4-dra"/>
+                                    <constraint firstAttribute="width" constant="40" id="Pcs-ua-ISA"/>
+                                    <constraint firstAttribute="height" constant="40" id="SJq-U4-dra"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traccar Client" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfG-TQ-ZCI">
-                                <rect key="frame" x="92" y="80" width="212" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real time GPS tracker for Android devices. Compatible with Traccar Server and other tracking systems." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cg-Sf-d0G">
-                                <rect key="frame" x="92" y="120" width="212" height="77"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For more information visit www.traccar.org/client" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFi-Gq-XlC">
-                                <rect key="frame" x="92" y="325" width="212" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kickstarter backers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5q-26-eOy">
-                                <rect key="frame" x="16" y="380" width="288" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWs-fX-tZy">
-                                <rect key="frame" x="16" y="420" width="288" height="66"/>
-                                <string key="text">Eoghan Gilboy, Jan Maika Dy, Luke Attard, Ted Holbrook, Anthony Knight, Stewart Brown, Marvin Percival, Jeffrey Streeter, Osman El-Baba, Keith Tallent, Rogier, David Thompson, Rafael Alonso, Rémi de Chazelles</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brandon Zylstra, Guido Preite, Gonzalo Saloma, Stefaan Bolle, Robert Hercz, Ponthieux" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkq-Hk-AjF">
-                                <rect key="frame" x="16" y="502" width="288" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application is free and open source, source code is licensed under Apache License Version 2.0 and available on GitHub." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBo-FC-Yhk">
-                                <rect key="frame" x="92" y="213" width="212" height="96"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PFi-Gq-XlC" firstAttribute="top" secondItem="yBo-FC-Yhk" secondAttribute="bottom" constant="16" id="5X8-7w-cMp"/>
-                            <constraint firstItem="nfG-TQ-ZCI" firstAttribute="top" secondItem="1gd-ZB-nPA" secondAttribute="bottom" constant="16" id="5xy-3k-imN"/>
-                            <constraint firstItem="t6r-6v-ia3" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="6mb-JB-mer"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Gkq-Hk-AjF" secondAttribute="trailing" id="7BE-Bd-Tjh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2cg-Sf-d0G" secondAttribute="trailing" id="9E2-cb-ow9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kWs-fX-tZy" secondAttribute="trailing" id="AO7-Yc-bAx"/>
-                            <constraint firstItem="nfG-TQ-ZCI" firstAttribute="leading" secondItem="t6r-6v-ia3" secondAttribute="trailing" constant="16" id="EP5-sa-EUH"/>
-                            <constraint firstItem="kWs-fX-tZy" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="Fqe-Yv-GhR"/>
-                            <constraint firstItem="L5q-26-eOy" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="Hj4-Nd-CUR"/>
-                            <constraint firstItem="PFi-Gq-XlC" firstAttribute="leading" secondItem="t6r-6v-ia3" secondAttribute="trailing" constant="16" id="IS8-YX-IWm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="L5q-26-eOy" secondAttribute="trailing" id="R8o-mT-Xzb"/>
-                            <constraint firstItem="Gkq-Hk-AjF" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="aXy-TE-YDx"/>
-                            <constraint firstItem="2cg-Sf-d0G" firstAttribute="top" secondItem="nfG-TQ-ZCI" secondAttribute="bottom" constant="16" id="bJT-5r-o7W"/>
-                            <constraint firstItem="Gkq-Hk-AjF" firstAttribute="top" secondItem="kWs-fX-tZy" secondAttribute="bottom" constant="16" id="hpJ-xj-Cak"/>
-                            <constraint firstItem="2cg-Sf-d0G" firstAttribute="leading" secondItem="t6r-6v-ia3" secondAttribute="trailing" constant="16" id="peJ-Cx-U3J"/>
-                            <constraint firstItem="L5q-26-eOy" firstAttribute="top" secondItem="PFi-Gq-XlC" secondAttribute="bottom" constant="16" id="qIl-Jh-w8G"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PFi-Gq-XlC" secondAttribute="trailing" id="qKt-Vb-9yw"/>
-                            <constraint firstItem="yBo-FC-Yhk" firstAttribute="leading" secondItem="t6r-6v-ia3" secondAttribute="trailing" constant="16" id="qhm-AB-4at"/>
-                            <constraint firstItem="yBo-FC-Yhk" firstAttribute="top" secondItem="2cg-Sf-d0G" secondAttribute="bottom" constant="16" id="rpg-N5-zcA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yBo-FC-Yhk" secondAttribute="trailing" id="ssw-vC-KBR"/>
-                            <constraint firstItem="t6r-6v-ia3" firstAttribute="top" secondItem="1gd-ZB-nPA" secondAttribute="bottom" constant="16" id="tv8-bz-n31"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nfG-TQ-ZCI" secondAttribute="trailing" id="uPK-4R-QPe"/>
-                            <constraint firstItem="kWs-fX-tZy" firstAttribute="top" secondItem="L5q-26-eOy" secondAttribute="bottom" constant="16" id="zee-9O-PkB"/>
+                            <constraint firstItem="gfT-Qd-zbx" firstAttribute="trailing" secondItem="owH-ok-sQ8" secondAttribute="trailing" id="0P5-Ew-arU"/>
+                            <constraint firstItem="gfT-Qd-zbx" firstAttribute="trailing" secondItem="WOT-5f-Bzg" secondAttribute="trailing" id="4tn-Xz-mfC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TDj-2j-wEh" secondAttribute="trailing" id="6f9-o9-ICo"/>
+                            <constraint firstItem="jF9-Ub-rRP" firstAttribute="top" secondItem="2Hh-sN-c9g" secondAttribute="bottom" constant="8" id="BSm-sW-SLD"/>
+                            <constraint firstItem="owH-ok-sQ8" firstAttribute="top" secondItem="jF9-Ub-rRP" secondAttribute="bottom" constant="14" id="Dj7-Tv-ADV"/>
+                            <constraint firstItem="TDj-2j-wEh" firstAttribute="top" secondItem="1gd-ZB-nPA" secondAttribute="bottom" constant="14" id="ERd-9J-G1a"/>
+                            <constraint firstItem="gfT-Qd-zbx" firstAttribute="top" secondItem="owH-ok-sQ8" secondAttribute="bottom" constant="8" id="EqK-o1-uKa"/>
+                            <constraint firstItem="drL-Ag-IYB" firstAttribute="trailing" secondItem="2Hh-sN-c9g" secondAttribute="trailing" id="J3z-37-B5a"/>
+                            <constraint firstItem="drL-Ag-IYB" firstAttribute="leading" secondItem="TDj-2j-wEh" secondAttribute="leading" id="Lvf-Ep-Jwi"/>
+                            <constraint firstItem="drL-Ag-IYB" firstAttribute="trailing" secondItem="TDj-2j-wEh" secondAttribute="trailing" id="MTW-mt-ez6"/>
+                            <constraint firstItem="drL-Ag-IYB" firstAttribute="leading" secondItem="jF9-Ub-rRP" secondAttribute="leading" id="PP0-hV-sAD"/>
+                            <constraint firstItem="gfT-Qd-zbx" firstAttribute="leading" secondItem="owH-ok-sQ8" secondAttribute="leading" id="Q1x-2s-rN3"/>
+                            <constraint firstItem="WOT-5f-Bzg" firstAttribute="top" secondItem="gfT-Qd-zbx" secondAttribute="bottom" constant="8" id="WqV-G8-vPM"/>
+                            <constraint firstItem="gfT-Qd-zbx" firstAttribute="leading" secondItem="WOT-5f-Bzg" secondAttribute="leading" id="XZZ-Ug-xJS"/>
+                            <constraint firstItem="owH-ok-sQ8" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="Xvk-Nr-Uj4"/>
+                            <constraint firstItem="t6r-6v-ia3" firstAttribute="top" secondItem="1gd-ZB-nPA" secondAttribute="bottom" constant="14" id="acf-FQ-Nja"/>
+                            <constraint firstItem="t6r-6v-ia3" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="cV1-U7-C8j"/>
+                            <constraint firstItem="TDj-2j-wEh" firstAttribute="leading" secondItem="t6r-6v-ia3" secondAttribute="trailing" constant="12" id="eDb-kS-Acq"/>
+                            <constraint firstItem="2Hh-sN-c9g" firstAttribute="top" secondItem="drL-Ag-IYB" secondAttribute="bottom" constant="8" id="gWJ-rQ-gOl"/>
+                            <constraint firstItem="drL-Ag-IYB" firstAttribute="leading" secondItem="2Hh-sN-c9g" secondAttribute="leading" id="hSN-OM-9eF"/>
+                            <constraint firstItem="drL-Ag-IYB" firstAttribute="top" secondItem="TDj-2j-wEh" secondAttribute="bottom" constant="8" id="ncE-Df-2QV"/>
+                            <constraint firstItem="drL-Ag-IYB" firstAttribute="trailing" secondItem="jF9-Ub-rRP" secondAttribute="trailing" id="pPd-dO-auh"/>
+                            <constraint firstItem="owH-ok-sQ8" firstAttribute="trailing" secondItem="hT5-zo-5s1" secondAttribute="trailingMargin" id="tqF-Fg-pL4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="v1t-Zh-2SR"/>
@@ -180,7 +180,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppIcon60x60" width="16" height="16"/>
+        <image name="AppIcon40x40" width="16" height="16"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
