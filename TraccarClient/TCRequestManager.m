@@ -26,7 +26,7 @@
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                                
-                               handler(data);
+                               handler(data != nil);
     }];
 }
 
