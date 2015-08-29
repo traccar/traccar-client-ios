@@ -35,7 +35,7 @@ int64_t kRetryDelay = 30 * 1000;
 @property (nonatomic, strong) TCNetworkManager *networkManager;
 
 @property (nonatomic, strong) NSString *address;
-@property (nonatomic, assign) int port;
+@property (nonatomic, assign) long port;
 
 - (void)write:(TCPosition *)position;
 - (void)read;

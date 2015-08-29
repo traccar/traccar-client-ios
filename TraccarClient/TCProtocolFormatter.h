@@ -19,6 +19,6 @@
 
 @interface TCProtocolFormatter : NSObject
 
-+ (NSURL *)formatPostion:(TCPosition *)position address:(NSString *)address port:(int)port;
++ (NSURL *)formatPostion:(TCPosition *)position address:(NSString *)address port:(long)port;
 
 @end

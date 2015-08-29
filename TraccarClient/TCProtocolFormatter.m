@@ -18,12 +18,12 @@
 
 @implementation TCProtocolFormatter
 
-+ (NSURL *)formatPostion:(TCPosition *)position address:(NSString *)address port:(int)port {
++ (NSURL *)formatPostion:(TCPosition *)position address:(NSString *)address port:(long)port {
     
     NSURLComponents *components = [[NSURLComponents alloc] init];
     
     components.scheme = @"http";
-    components.percentEncodedHost = [NSString stringWithFormat:@"%@:%d", address, port];
+    components.percentEncodedHost = [NSString stringWithFormat:@"%@:%ld", address, port];
     
     NSMutableArray *queryItems = [[NSMutableArray alloc] init];
     [queryItems addObject:[NSURLQueryItem queryItemWithName:@"id" value:position.deviceId]];
