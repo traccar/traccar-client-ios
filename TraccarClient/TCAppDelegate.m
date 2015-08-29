@@ -50,11 +50,9 @@
     NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
     
     NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
-    for(NSDictionary *prefSpecification in preferences)
-    {
+    for(NSDictionary *prefSpecification in preferences) {
         NSString *key = [prefSpecification objectForKey:@"Key"];
-        if(key && [[prefSpecification allKeys] containsObject:@"DefaultValue"])
-        {
+        if(key && [[prefSpecification allKeys] containsObject:@"DefaultValue"]) {
             [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
         }
     }

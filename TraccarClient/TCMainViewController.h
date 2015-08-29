@@ -16,28 +16,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreFoundation/CoreFoundation.h>
-#import <CoreLocation/CoreLocation.h>
 #import "IASKAppSettingsViewController.h"
 
-@interface TCMainViewController : IASKAppSettingsViewController <CLLocationManagerDelegate, NSStreamDelegate>
-
-@property (nonatomic) BOOL currentStatus;
-
-@property (nonatomic) CLLocationManager *locationManager;
-
-@property (nonatomic, copy) NSString *deviceId, *address;
-@property (nonatomic) long port, period;
-
-@property (nonatomic) NSOutputStream *outputStream;
-
-@property (nonatomic) NSDate *lastLocation;
-
-- (void)defaultsChanged:(NSNotification *)notification;
-
-- (void)openConnection;
-- (void)closeConnection;
-
-+ (NSString *)createIdentificationMessage:(NSString *)deviceId;
-+ (NSString *)createLocationMessage:(CLLocation *)location;
+@interface TCMainViewController : IASKAppSettingsViewController
 
 @end

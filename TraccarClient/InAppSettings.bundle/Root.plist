@@ -34,7 +34,7 @@
 			<key>KeyboardType</key>
 			<string>NumberPad</string>
 			<key>DefaultValue</key>
-			<string>5005</string>
+			<string>5055</string>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>

@@ -16,29 +16,28 @@
 
 #import "TCMainViewController.h"
 #import "TCStatusViewController.h"
+#import "TCTrackingController.h"
+
+@interface TCMainViewController ()
+
+@property (nonatomic, strong) TCTrackingController *trackingController;
+
+- (void)defaultsChanged:(NSNotification *)notification;
+
+@end
 
 @implementation TCMainViewController
 
-@synthesize currentStatus;
-@synthesize locationManager;
-@synthesize deviceId, address;
-@synthesize port, period;
-@synthesize outputStream;
-@synthesize lastLocation;
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     self.title = NSLocalizedString(@"Traccar Client", @"");
     self.showCreditsFooter = NO;
     self.neverShowPrivacySettings = YES;
-    currentStatus = NO;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self
@@ -47,197 +46,30 @@
                  object:nil];
 }
 
--(void)viewWillDisappear:(BOOL)animated
-{
+-(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center removeObserver:self];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    [TCStatusViewController addMessage:@"Low memory warning"];
-}
-
 - (void)defaultsChanged:(NSNotification *)notification
 {
     NSUserDefaults *defaults = (NSUserDefaults *)[notification object];
     
-    // Update settings
-    deviceId = [defaults stringForKey:@"device_id_preference"];
-    address = [defaults stringForKey:@"server_address_preference"];
-    port = [defaults integerForKey:@"server_port_preference"];
-    period = [defaults integerForKey:@"frequency_preference"];
-    
-    // Check status
-    BOOL newStatus = [defaults boolForKey:@"service_status_preference"];
-    if (newStatus != currentStatus)
-    {
-        NSLog(@"Service status changed: %@", newStatus ? @"ON" : @"OFF");
-        
-        if (newStatus)
-        {
-            [TCStatusViewController addMessage:@"Service started"];
-            
-            [self openConnection];
-            
-            // Start location updates
-            locationManager = [[CLLocationManager alloc] init];
-            locationManager.delegate = self;
+    BOOL status = [defaults boolForKey:@"service_status_preference"];
+    if (status && !self.trackingController) {
 
-            if ([locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
-                [locationManager requestAlwaysAuthorization];
-            }
+        [TCStatusViewController addMessage:NSLocalizedString(@"Service created", @"")];
+        self.trackingController = [[TCTrackingController alloc] init];
+        [self.trackingController start];
 
-            locationManager.pausesLocationUpdatesAutomatically = NO;
-            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
-            [locationManager startUpdatingLocation];
-        }
-        else
-        {
-            // Stop location updates
-            [locationManager stopUpdatingLocation];
-            locationManager = nil;
-            
-            [self closeConnection];
+    } else if (!status && self.trackingController) {
 
-            [TCStatusViewController addMessage:@"Service stopped"];
-        }
-        
-        currentStatus = newStatus;
-    }
-}
+        [TCStatusViewController addMessage:NSLocalizedString(@"Service destroyed", @"")];
+        [self.trackingController stop];
+        self.trackingController = nil;
 
-- (void)openConnection
-{
-    // Establish network connection
-    CFWriteStreamRef writeStream;
-    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef) address, (int) port, NULL, &writeStream);
-    outputStream = (__bridge_transfer NSOutputStream *) writeStream;
-    outputStream.delegate = self;
-    [outputStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-    [outputStream open];
-    
-    // Send identification
-    NSString *message = [TCMainViewController createIdentificationMessage:deviceId];
-    [outputStream write:(const uint8_t *)[message UTF8String] maxLength:message.length];
-}
-
-- (void)closeConnection
-{
-    // Close network connection
-    if (outputStream)
-    {
-        [outputStream close];
-        [outputStream removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-        outputStream = nil;
-    }
-}
-
-+ (NSString *)createIdentificationMessage:(NSString *)deviceId
-{
-    return [NSString stringWithFormat:@"$PGID,%@*00\r\n", deviceId];
-}
-
-+ (NSString *)createLocationMessage:(CLLocation *)location
-{
-    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
-    unitFlags |= NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    [calendar setTimeZone:[NSTimeZone timeZoneWithName:@"UTC"]];
-    NSDateComponents *components = [calendar components:unitFlags fromDate:location.timestamp];
-    
-    double lat = location.coordinate.latitude;
-    double lon = location.coordinate.longitude;
-    
-    return [NSString stringWithFormat:@"$GPRMC,%02d%02d%02d.000,A,%02d%07.4f,%@,%03d%07.4f,%@,%.2f,%.2f,%02d%02d%02d,,*00\r\n",
-            (int) components.hour, (int) components.minute, (int) components.second,
-            (int) trunc(fabs(lat)), fmod(fabs(lat), 1.0) * 60.0, (lat > 0) ? @"N" : @"S",
-            (int) trunc(fabs(lon)), fmod(fabs(lon), 1.0) * 60.0, (lon > 0) ? @"E" : @"W",
-            (location.speed > 0) ? location.speed * 1.943844 : 0.0,
-            (location.course > 0) ? location.course : 0.0,
-            (int) components.day, (int) components.month, (int) components.year % 100];
-}
-
-- (void)locationManager:(CLLocationManager *)manager
-	 didUpdateLocations:(NSArray *)locations
-{
-    CLLocation *location = [locations lastObject];
-    
-    if (!lastLocation || [location.timestamp timeIntervalSinceDate:lastLocation] > period)
-    {
-        NSLog(@"Send location update");
-        [TCStatusViewController addMessage:@"Location update"];
-
-        // Send location
-        if (outputStream)
-        {
-            NSString *message = [TCMainViewController createLocationMessage:location];
-            [outputStream write:(const uint8_t *)[message UTF8String] maxLength:message.length];
-        }
-        
-        lastLocation = location.timestamp;
-    }
-}
-
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-    NSLog(@"Location error: %@", [error localizedDescription]);
-    [TCStatusViewController addMessage:@"Location error"];
-}
-
-- (void)locationManagerDidPauseLocationUpdates:(CLLocationManager *)manager
-{
-    NSLog(@"LocationManager: pause");
-    [TCStatusViewController addMessage:@"LocationManager pause"];
-}
-
-- (void)locationManagerDidResumeLocationUpdates:(CLLocationManager *)manager
-{
-    NSLog(@"LocationManager: resume");
-    [TCStatusViewController addMessage:@"LocationManager resume"];
-}
-
-- (void)stream:(NSStream *)aStream handleEvent:(NSStreamEvent)eventCode
-{
-    switch (eventCode) {
-        case NSStreamEventNone:
-            NSLog(@"Event: NSStreamEventNone");
-            break;
-        case NSStreamEventOpenCompleted:
-            NSLog(@"Event: NSStreamEventOpenCompleted");
-            [TCStatusViewController addMessage:@"Connection succeeded"];
-            break;
-        case NSStreamEventHasBytesAvailable:
-            NSLog(@"Event: NSStreamEventHasBytesAvailable");
-            break;
-        case NSStreamEventHasSpaceAvailable:
-            NSLog(@"Event: NSStreamEventHasSpaceAvailable");
-            break;
-        case NSStreamEventErrorOccurred:
-            NSLog(@"Event: NSStreamEventErrorOccurred");
-            [TCStatusViewController addMessage:@"Network error"];
-            break;
-        case NSStreamEventEndEncountered:
-            NSLog(@"Event: NSStreamEventEndEncountered");
-            [TCStatusViewController addMessage:@"Connection closed"];
-            break;
-    }
-    
-    if (eventCode == NSStreamEventErrorOccurred || eventCode == NSStreamEventEndEncountered)
-    {
-        if (eventCode == NSStreamEventErrorOccurred)
-        {
-            NSLog(@"Network error: %@", [outputStream streamError]);
-        }
-        
-        // Reconnect
-        [self closeConnection];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 30 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-            [self openConnection];
-        });
     }
 }
 

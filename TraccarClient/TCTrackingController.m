@@ -20,6 +20,7 @@
 #import "TCNetworkManager.h"
 #import "TCProtocolFormatter.h"
 #import "TCRequestManager.h"
+#import "TCStatusViewController.h"
 
 int64_t kRetryDelay = 30 * 1000;
 
@@ -27,10 +28,14 @@ int64_t kRetryDelay = 30 * 1000;
 
 @property (nonatomic) BOOL online;
 @property (nonatomic) BOOL waiting;
+@property (nonatomic) BOOL stopped;
 
 @property (nonatomic, strong) TCPositionProvider *positionProvider;
 @property (nonatomic, strong) TCDatabaseHelper *databaseHelper;
 @property (nonatomic, strong) TCNetworkManager *networkManager;
+
+@property (nonatomic, strong) NSString *address;
+@property (nonatomic, assign) int port;
 
 - (void)write:(TCPosition *)position;
 - (void)read;
@@ -53,24 +58,40 @@ int64_t kRetryDelay = 30 * 1000;
         self.networkManager.delegate = self;
         
         self.online = self.networkManager.online;
+        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        self.address = [userDefaults stringForKey:@"server_address_preference"];
+        self.port = [userDefaults integerForKey:@"server_port_preference"];
     }
     return self;
 }
 
 - (void)start {
-    
+    self.stopped = NO;
+    if (self.online) {
+        [self read];
+    }
+    [self.positionProvider startUpdates];
+    [self.networkManager start];
 }
 
 - (void)stop {
-    
+    [self.networkManager stop];
+    [self.positionProvider stopUpdates];
+    self.stopped = YES;
 }
 
 - (void)didUpdatePosition:(TCPosition *)position {
-    
+    [TCStatusViewController addMessage:NSLocalizedString(@"Location update", @"")];
+    [self write:position];
 }
 
 - (void)didUpdateNetwork:(BOOL)online {
-    
+    [TCStatusViewController addMessage:NSLocalizedString(@"Connectivity change", @"")];
+    if (!self.online && online) {
+        [self read];
+    }
+    self.online = online;
 }
 
 //
@@ -103,11 +124,12 @@ int64_t kRetryDelay = 30 * 1000;
 }
 
 - (void)send:(TCPosition *)position {
-    NSURL *request = [TCProtocolFormatter formatPostion:position address:@"TODO" port:666]; // TODO
+    NSURL *request = [TCProtocolFormatter formatPostion:position address:self.address port:self.port];
     [TCRequestManager sendRequest:request completionHandler:^(BOOL success) {
         if (success) {
             [self delete:position];
         } else {
+            [TCStatusViewController addMessage:NSLocalizedString(@"Send failed", @"")];
             [self retry];
         }
     }];
@@ -115,7 +137,7 @@ int64_t kRetryDelay = 30 * 1000;
 
 - (void)retry {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, kRetryDelay * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
-        if (self.online) {
+        if (!self.stopped && self.online) {
             [self read];
         }
     });

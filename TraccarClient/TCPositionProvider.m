@@ -20,9 +20,12 @@
 
 @interface TCPositionProvider () <CLLocationManagerDelegate>
 
-@property (nonatomic) CLLocationManager *locationManager;
-@property (nonatomic) CLLocation *lastLocation;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocation *lastLocation;
 @property (nonatomic, readonly) double batteryLevel;
+
+@property (nonatomic, strong) NSString *deviceId;
+@property (nonatomic, assign) long period;
 
 @end
 
@@ -36,6 +39,10 @@
         
         self.locationManager.pausesLocationUpdatesAutomatically = NO;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        self.deviceId = [userDefaults stringForKey:@"device_id_preference"];
+        self.period = [userDefaults integerForKey:@"frequency_preference"];
     }
     return self;
 }
@@ -61,10 +68,10 @@
 
     CLLocation *location = [locations lastObject];
     
-    if (!self.lastLocation || ![self.lastLocation.timestamp isEqualToDate:location.timestamp]) {
+    if (!self.lastLocation || [location.timestamp timeIntervalSinceDate:self.lastLocation.timestamp] >= self.period) {
         
         TCPosition *position = [[TCPosition alloc] initWithManagedObjectContext:[TCDatabaseHelper managedObjectContext]];
-        position.deviceId = @""; // TODO
+        position.deviceId = self.deviceId;
         position.location = location;
         position.battery = self.batteryLevel;
         

@@ -1,0 +1,6 @@
+"Traccar Client" = "Traccar";
+"Service created" = "Service créé";
+"Service destroyed" = "Service supprimé";
+"Send failed" = "L’envoi de localisation a échoué";
+"Location update" = "Localisation mise à jour";
+"Connectivity change" = "Changement de connectivité";
