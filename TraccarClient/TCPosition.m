@@ -37,8 +37,12 @@
     self.latitude = location.coordinate.latitude;
     self.longitude = location.coordinate.longitude;
     self.altitude = location.altitude;
-    self.speed = location.speed;
-    self.course = location.course;
+    if (location.speed >= 0) {
+        self.speed = location.speed;
+    }
+    if (location.course >= 0) {
+        self.course = location.course;
+    }
 }
 
 @end

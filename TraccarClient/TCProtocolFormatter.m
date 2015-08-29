@@ -27,7 +27,7 @@
     
     NSMutableArray *queryItems = [[NSMutableArray alloc] init];
     [queryItems addObject:[NSURLQueryItem queryItemWithName:@"id" value:position.deviceId]];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"timestamp" value:[NSString stringWithFormat:@"%g", [position.time timeIntervalSince1970]]]];
+    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"timestamp" value:[NSString stringWithFormat:@"%ld", (long) [position.time timeIntervalSince1970]]]];
     [queryItems addObject:[NSURLQueryItem queryItemWithName:@"lat" value:[NSString stringWithFormat:@"%g", position.latitude]]];
     [queryItems addObject:[NSURLQueryItem queryItemWithName:@"lon" value:[NSString stringWithFormat:@"%g", position.longitude]]];
     [queryItems addObject:[NSURLQueryItem queryItemWithName:@"speed" value:[NSString stringWithFormat:@"%g", position.speed]]];
