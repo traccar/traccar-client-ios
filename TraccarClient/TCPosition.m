@@ -38,7 +38,7 @@
     self.longitude = location.coordinate.longitude;
     self.altitude = location.altitude;
     if (location.speed >= 0) {
-        self.speed = location.speed;
+        self.speed = location.speed * 1.94384; // knots from m/s
     }
     if (location.course >= 0) {
         self.course = location.course;
