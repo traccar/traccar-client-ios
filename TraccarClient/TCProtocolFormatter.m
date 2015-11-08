@@ -25,16 +25,16 @@
     components.scheme = @"http";
     components.percentEncodedHost = [NSString stringWithFormat:@"%@:%ld", address, port];
     
-    NSMutableArray *queryItems = [[NSMutableArray alloc] init];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"id" value:position.deviceId]];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"timestamp" value:[NSString stringWithFormat:@"%ld", (long) [position.time timeIntervalSince1970]]]];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"lat" value:[NSString stringWithFormat:@"%g", position.latitude]]];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"lon" value:[NSString stringWithFormat:@"%g", position.longitude]]];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"speed" value:[NSString stringWithFormat:@"%g", position.speed]]];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"bearing" value:[NSString stringWithFormat:@"%g", position.course]]];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"altitude" value:[NSString stringWithFormat:@"%g", position.altitude]]];
-    [queryItems addObject:[NSURLQueryItem queryItemWithName:@"batt" value:[NSString stringWithFormat:@"%g", position.battery]]];
-    components.queryItems = queryItems;
+    NSMutableString *query = [[NSMutableString alloc] init];
+    [query appendFormat:@"id=%@&", position.deviceId];
+    [query appendFormat:@"timestamp=%ld&", (long) [position.time timeIntervalSince1970]];
+    [query appendFormat:@"lat=%.06f&", position.latitude];
+    [query appendFormat:@"lon=%.06f&", position.longitude];
+    [query appendFormat:@"speed=%g&", position.speed];
+    [query appendFormat:@"bearing=%g&", position.course];
+    [query appendFormat:@"altitude=%g&", position.altitude];
+    [query appendFormat:@"batt=%g", position.battery];
+    components.query = query; // use queryItems for iOS 8
     
     return components.URL;
 }

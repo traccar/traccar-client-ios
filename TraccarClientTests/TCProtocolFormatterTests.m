@@ -31,7 +31,7 @@
     
     NSURL *url = [TCProtocolFormatter formatPostion:position address:@"localhost" port:5055];
     
-    XCTAssertEqualObjects(@"http://localhost:5055?id=123456789012345&timestamp=0&lat=0&lon=0&speed=0&bearing=0&altitude=0&batt=0", url.absoluteString);
+    XCTAssertEqualObjects(@"http://localhost:5055?id=123456789012345&timestamp=0&lat=0.000000&lon=0.000000&speed=0&bearing=0&altitude=0&batt=0", url.absoluteString);
 }
 
 @end
