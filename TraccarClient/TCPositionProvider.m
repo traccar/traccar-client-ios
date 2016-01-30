@@ -39,7 +39,11 @@
         
         self.locationManager.pausesLocationUpdatesAutomatically = NO;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
-        
+
+        if ([self.locationManager respondsToSelector:@selector(allowsBackgroundLocationUpdates)]) {
+            [self.locationManager allowsBackgroundLocationUpdates];
+        }
+
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         self.deviceId = [userDefaults stringForKey:@"device_id_preference"];
         self.period = [userDefaults integerForKey:@"frequency_preference"];
