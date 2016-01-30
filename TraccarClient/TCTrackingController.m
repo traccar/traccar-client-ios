@@ -33,6 +33,7 @@ int64_t kRetryDelay = 30 * 1000;
 @property (nonatomic, strong) TCPositionProvider *positionProvider;
 @property (nonatomic, strong) TCDatabaseHelper *databaseHelper;
 @property (nonatomic, strong) TCNetworkManager *networkManager;
+@property (nonatomic, strong) NSUserDefaults *userDefaults;
 
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic, assign) long port;
@@ -59,9 +60,9 @@ int64_t kRetryDelay = 30 * 1000;
         
         self.online = self.networkManager.online;
         
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        self.address = [userDefaults stringForKey:@"server_address_preference"];
-        self.port = [userDefaults integerForKey:@"server_port_preference"];
+        self.userDefaults = [NSUserDefaults standardUserDefaults];
+        self.address = [self.userDefaults stringForKey:@"server_address_preference"];
+        self.port = [self.userDefaults integerForKey:@"server_port_preference"];
     }
     return self;
 }
@@ -112,7 +113,11 @@ int64_t kRetryDelay = 30 * 1000;
 - (void)read {
     TCPosition *position = [self.databaseHelper selectPosition];
     if (position) {
-        [self send:position];
+        if ([position.deviceId isEqualToString:[self.userDefaults stringForKey:@"device_id_preference"]]) {
+            [self send:position];
+        } else {
+            [self delete:position];
+        }
     } else {
         self.waiting = YES;
     }
