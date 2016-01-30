@@ -346,6 +346,12 @@ CGRect IASKCGRectSwap(CGRect rect);
     }
 }
 
+- (void)setNeverShowPrivacySettings:(BOOL)neverShowPrivacySettings {
+	_neverShowPrivacySettings = neverShowPrivacySettings;
+	self.settingsReader = nil;
+	[self reload];
+}
+
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -384,7 +390,7 @@ CGRect IASKCGRectSwap(CGRect rect);
         }
     }
     [[NSNotificationCenter defaultCenter] postNotificationName:kIASKAppSettingChanged
-                                                        object:[toggle key]
+                                                        object:self
                                                       userInfo:[NSDictionary dictionaryWithObject:[self.settingsStore objectForKey:[toggle key]]
                                                                                            forKey:[toggle key]]];
 }
@@ -393,7 +399,7 @@ CGRect IASKCGRectSwap(CGRect rect);
     IASKSlider *slider = (IASKSlider*)sender;
     [self.settingsStore setFloat:[slider value] forKey:[slider key]];
     [[NSNotificationCenter defaultCenter] postNotificationName:kIASKAppSettingChanged
-                                                        object:[slider key]
+                                                        object:self
                                                       userInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithFloat:[slider value]]
                                                                                            forKey:[slider key]]];
 }
@@ -449,8 +455,8 @@ CGRect IASKCGRectSwap(CGRect rect);
 
 - (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section {
 	if ([self tableView:tableView viewForHeaderInSection:section] && [self.delegate respondsToSelector:@selector(settingsViewController:tableView:heightForHeaderForSection:)]) {
-		CGFloat result;
-		if ((result = [self.delegate settingsViewController:self tableView:tableView heightForHeaderForSection:section])) {
+		CGFloat result = [self.delegate settingsViewController:self tableView:tableView heightForHeaderForSection:section];
+		if (result > 0) {
 			return result;
 		}
 		
@@ -746,7 +752,10 @@ CGRect IASKCGRectSwap(CGRect rect);
         } else if ([self.delegate respondsToSelector:@selector(settingsViewController:buttonTappedForKey:)]) {
             // deprecated, provided for backward compatibility
             NSLog(@"InAppSettingsKit Warning: -settingsViewController:buttonTappedForKey: is deprecated. Please use -settingsViewController:buttonTappedForSpecifier:");
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
             [self.delegate settingsViewController:self buttonTappedForKey:[specifier key]];
+#pragma clang diagnostic pop
         } else {
             // legacy code, provided for backward compatibility
             // the delegate mechanism above is much cleaner and doesn't leak
@@ -861,7 +870,7 @@ CGRect IASKCGRectSwap(CGRect rect);
     IASKTextField *text = sender;
     [_settingsStore setObject:[text text] forKey:[text key]];
     [[NSNotificationCenter defaultCenter] postNotificationName:kIASKAppSettingChanged
-                                                        object:[text key]
+                                                        object:self
                                                       userInfo:[NSDictionary dictionaryWithObject:[text text]
                                                                                            forKey:[text key]]];
 }
@@ -910,7 +919,8 @@ static NSDictionary *oldUserDefaults = nil;
 }
 
 - (void)didChangeSettingViaIASK:(NSNotification*)notification {
-	[oldUserDefaults setValue:[self.settingsStore objectForKey:notification.object] forKey:notification.object];
+	NSString *key = notification.userInfo.allKeys.firstObject;
+	[oldUserDefaults setValue:notification.userInfo[key] forKey:key];
 }
 
 - (void)reload {
