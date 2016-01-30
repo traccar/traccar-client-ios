@@ -400,7 +400,7 @@
 		CED4871017DB1BF6007FCF57 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Traccar;
 				TargetAttributes = {
 					CED4871717DB1BF6007FCF57 = {
@@ -588,6 +588,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -643,6 +644,7 @@
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -660,6 +662,7 @@
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -695,6 +698,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
 			};
@@ -727,6 +731,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
 			};
