@@ -41,7 +41,7 @@
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
 
         if ([self.locationManager respondsToSelector:@selector(allowsBackgroundLocationUpdates)]) {
-            [self.locationManager allowsBackgroundLocationUpdates];
+            self.locationManager.allowsBackgroundLocationUpdates = YES;
         }
 
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
