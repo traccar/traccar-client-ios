@@ -76,6 +76,7 @@
 		CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNetworkManager.h; sourceTree = "<group>"; };
 		CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNetworkManager.m; sourceTree = "<group>"; };
 		CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE2FA5181CB935C9007F86B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CE4968231B80A1C200A4964A /* TCProtocolFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCProtocolFormatter.h; sourceTree = "<group>"; };
 		CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCProtocolFormatter.m; sourceTree = "<group>"; };
 		CE4968261B80A25100A4964A /* TCPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPosition.h; sourceTree = "<group>"; };
@@ -532,6 +533,7 @@
 				CEF6432C1B91A49400195CEA /* es */,
 				CEF6432E1B91A49700195CEA /* fr */,
 				CEF643321B91A4BF00195CEA /* pt */,
+				CE2FA5181CB935C9007F86B4 /* en */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
