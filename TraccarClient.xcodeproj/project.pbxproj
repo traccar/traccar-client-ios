@@ -19,6 +19,8 @@
 		CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968241B80A1C200A4964A /* TCProtocolFormatter.m */; };
 		CE4968281B80A25100A4964A /* TCPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968271B80A25100A4964A /* TCPosition.m */; };
 		CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5899C71B115C9100ED70D2 /* Images.xcassets */; };
+		CE8D10111CD0D0B300B439DF /* IASKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8D100E1CD0D0B300B439DF /* IASKTextView.m */; };
+		CE8D10121CD0D0B300B439DF /* IASKTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8D10101CD0D0B300B439DF /* IASKTextViewCell.m */; };
 		CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871B17DB1BF6007FCF57 /* UIKit.framework */; };
 		CED4871E17DB1BF6007FCF57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871D17DB1BF6007FCF57 /* Foundation.framework */; };
 		CED4872017DB1BF6007FCF57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */; };
@@ -82,6 +84,10 @@
 		CE4968261B80A25100A4964A /* TCPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPosition.h; sourceTree = "<group>"; };
 		CE4968271B80A25100A4964A /* TCPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPosition.m; sourceTree = "<group>"; };
 		CE5899C71B115C9100ED70D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE8D100D1CD0D0B300B439DF /* IASKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKTextView.h; sourceTree = "<group>"; };
+		CE8D100E1CD0D0B300B439DF /* IASKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKTextView.m; sourceTree = "<group>"; };
+		CE8D100F1CD0D0B300B439DF /* IASKTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASKTextViewCell.h; sourceTree = "<group>"; };
+		CE8D10101CD0D0B300B439DF /* IASKTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASKTextViewCell.m; sourceTree = "<group>"; };
 		CED4871817DB1BF6007FCF57 /* TraccarClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraccarClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4871B17DB1BF6007FCF57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CED4871D17DB1BF6007FCF57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -343,6 +349,10 @@
 		CEE8A47F1A72E91E00BD6DB3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE8D100D1CD0D0B300B439DF /* IASKTextView.h */,
+				CE8D100E1CD0D0B300B439DF /* IASKTextView.m */,
+				CE8D100F1CD0D0B300B439DF /* IASKTextViewCell.h */,
+				CE8D10101CD0D0B300B439DF /* IASKTextViewCell.m */,
 				CEE8A4801A72E91E00BD6DB3 /* IASKPSSliderSpecifierViewCell.h */,
 				CEE8A4811A72E91E00BD6DB3 /* IASKPSSliderSpecifierViewCell.m */,
 				CEE8A4821A72E91E00BD6DB3 /* IASKPSTextFieldSpecifierViewCell.h */,
@@ -474,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE8A48F1A72E91E00BD6DB3 /* IASKSettingsStore.m in Sources */,
+				CE8D10121CD0D0B300B439DF /* IASKTextViewCell.m in Sources */,
 				CEE8A4941A72E91E00BD6DB3 /* IASKPSSliderSpecifierViewCell.m in Sources */,
 				CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */,
 				CEE8A4961A72E91E00BD6DB3 /* IASKSlider.m in Sources */,
@@ -494,6 +505,7 @@
 				CED4873B17DB1BF6007FCF57 /* TCMainViewController.m in Sources */,
 				CEE8A48E1A72E91E00BD6DB3 /* IASKSettingsReader.m in Sources */,
 				CEF2C4D71B89B92C005F472A /* TCRequestManager.m in Sources */,
+				CE8D10111CD0D0B300B439DF /* IASKTextView.m in Sources */,
 				CEE8A4951A72E91E00BD6DB3 /* IASKPSTextFieldSpecifierViewCell.m in Sources */,
 				CEDB302219BDD5DA0021E009 /* TCStatusViewController.m in Sources */,
 				CEE8A4981A72E91E00BD6DB3 /* IASKTextField.m in Sources */,
