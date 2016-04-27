@@ -53,16 +53,45 @@
     [center removeObserver:self];
 }
 
+-(void)showError:(NSString*)message
+{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:NSLocalizedString(message, @"")
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              [[NSUserDefaults standardUserDefaults] setValue:NO forKey:@"service_status_preference"];
+                                                          }];
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 - (void)defaultsChanged:(NSNotification *)notification
 {
     NSUserDefaults *defaults = (NSUserDefaults *)[notification object];
     
     BOOL status = [defaults boolForKey:@"service_status_preference"];
     if (status && !self.trackingController) {
+        
+        NSString *validHost = @"^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$";
+        NSPredicate *hostPredicate  = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", validHost];
 
-        [TCStatusViewController addMessage:NSLocalizedString(@"Service created", @"")];
-        self.trackingController = [[TCTrackingController alloc] init];
-        [self.trackingController start];
+        NSString *address = [defaults stringForKey:@"server_address_preference"];
+        int port = [defaults integerForKey:@"server_port_preference"];
+        int frequency = [defaults integerForKey:@"frequency_preference"];
+        
+        if (![hostPredicate evaluateWithObject:address]) {
+            [self showError:@"Invalid server address"];
+        } else if (port <= 0 || port > 65535) {
+            [self showError:@"Invalid server port"];
+        } else if (frequency <= 0) {
+            [self showError:@"Invalid frequency value"];
+        } else {
+            [TCStatusViewController addMessage:NSLocalizedString(@"Service created", @"")];
+            self.trackingController = [[TCTrackingController alloc] init];
+            [self.trackingController start];
+        }
 
     } else if (!status && self.trackingController) {
 
