@@ -1,5 +1,5 @@
 //
-// Copyright 2013 - 2015 Anton Tananaev (anton.tananaev@gmail.com)
+// Copyright 2013 - 2016 Anton Tananaev (anton.tananaev@gmail.com)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -78,9 +78,9 @@
         NSPredicate *hostPredicate  = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", validHost];
 
         NSString *address = [defaults stringForKey:@"server_address_preference"];
-        int port = [defaults integerForKey:@"server_port_preference"];
-        int frequency = [defaults integerForKey:@"frequency_preference"];
-        
+        long port = [defaults integerForKey:@"server_port_preference"];
+        long frequency = [defaults integerForKey:@"frequency_preference"];
+
         if (![hostPredicate evaluateWithObject:address]) {
             [self showError:@"Invalid server address"];
         } else if (port <= 0 || port > 65535) {
