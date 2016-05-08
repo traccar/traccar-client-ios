@@ -1,5 +1,7 @@
 # [Traccar Client for iOS](https://www.traccar.org/client)
 
+[![](http://images.apple.com/itunes/link/images/link-badge-appstore.png)](https://itunes.apple.com/app/traccar-client/id843156974)
+
 ## Contacts
 
 Author - Anton Tananaev ([anton.tananaev@gmail.com](mailto:anton.tananaev@gmail.com))
