@@ -37,6 +37,7 @@ int64_t kRetryDelay = 30 * 1000;
 
 @property (nonatomic, strong) NSString *address;
 @property (nonatomic, assign) long port;
+@property (nonatomic, assign) BOOL secure;
 
 - (void)write:(TCPosition *)position;
 - (void)read;
@@ -63,6 +64,7 @@ int64_t kRetryDelay = 30 * 1000;
         self.userDefaults = [NSUserDefaults standardUserDefaults];
         self.address = [self.userDefaults stringForKey:@"server_address_preference"];
         self.port = [self.userDefaults integerForKey:@"server_port_preference"];
+        self.secure = [self.userDefaults integerForKey:@"secure_preference"];
     }
     return self;
 }
@@ -129,7 +131,7 @@ int64_t kRetryDelay = 30 * 1000;
 }
 
 - (void)send:(TCPosition *)position {
-    NSURL *request = [TCProtocolFormatter formatPostion:position address:self.address port:self.port];
+    NSURL *request = [TCProtocolFormatter formatPostion:position address:self.address port:self.port secure:self.secure];
     [TCRequestManager sendRequest:request completionHandler:^(BOOL success) {
         if (success) {
             [self delete:position];

@@ -1,5 +1,5 @@
 //
-// Copyright 2015 Anton Tananaev (anton.tananaev@gmail.com)
+// Copyright 2016 Anton Tananaev (anton.tananaev@gmail.com)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,11 +18,11 @@
 
 @implementation TCProtocolFormatter
 
-+ (NSURL *)formatPostion:(TCPosition *)position address:(NSString *)address port:(long)port {
++ (NSURL *)formatPostion:(TCPosition *)position address:(NSString *)address port:(long)port secure:(BOOL)secure {
     
     NSURLComponents *components = [[NSURLComponents alloc] init];
     
-    components.scheme = @"http";
+    components.scheme = secure ? @"https" : @"http";
     components.percentEncodedHost = [NSString stringWithFormat:@"%@:%ld", address, port];
     
     NSMutableString *query = [[NSMutableString alloc] init];

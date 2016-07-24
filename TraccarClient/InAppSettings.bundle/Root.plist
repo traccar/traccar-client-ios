@@ -53,6 +53,16 @@
 			<string>server_port_preference</string>
 		</dict>
 		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Encryption</string>
+			<key>Key</key>
+			<string>secure_preference</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
 			<key>KeyboardType</key>
 			<string>NumberPad</string>
 			<key>DefaultValue</key>
