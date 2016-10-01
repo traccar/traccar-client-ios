@@ -61,7 +61,7 @@
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
-                                                              [[NSUserDefaults standardUserDefaults] setValue:NO forKey:@"service_status_preference"];
+                                                              [[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"service_status_preference"];
                                                           }];
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];

@@ -45,6 +45,7 @@
 #define kIASKViewControllerSelector           @"IASKViewControllerSelector"
 #define kIASKViewControllerStoryBoardFile     @"IASKViewControllerStoryBoardFile"
 #define kIASKViewControllerStoryBoardId       @"IASKViewControllerStoryBoardId"
+#define kIASKSegueIdentifier                  @"IASKSegueIdentifier"
 #define kIASKButtonClass                      @"IASKButtonClass"
 #define kIASKButtonAction                     @"IASKButtonAction"
 #define kIASKMailComposeToRecipents           @"IASKMailComposeToRecipents"
@@ -175,6 +176,20 @@ _Pragma("clang diagnostic pop")
 #else
 #define IASK_IF_PRE_IOS7(...)  __VA_ARGS__
 #endif
+
+#ifdef __IPHONE_8_0
+#define IASK_IF_PRE_IOS8(...) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wdeprecated-declarations\"") \
+if (kCFCoreFoundationVersionNumber < kCFCoreFoundationVersionNumber_iOS_8_0) \
+{ \
+__VA_ARGS__ \
+} \
+_Pragma("clang diagnostic pop")
+#else
+#define IASK_IF_PRE_IOS8(...)  __VA_ARGS__
+#endif
+
 
 #ifdef __IPHONE_8_0
 #define IASK_IF_IOS8_OR_GREATER(...) \
