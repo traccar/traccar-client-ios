@@ -2,15 +2,13 @@
 
 [![](http://images.apple.com/itunes/link/images/link-badge-appstore.png)](https://itunes.apple.com/app/traccar-client/id843156974)
 
-## Contacts
-
-Author - Anton Tananaev ([anton.tananaev@gmail.com](mailto:anton.tananaev@gmail.com))
-
-Website - [https://www.traccar.org/client](https://www.traccar.org/client)
-
 ## Overview
 
 Traccar Client is an iOS GPS tracking application. It can work with Traccar open source server software.
+
+## Team
+
+- Anton Tananaev ([anton@traccar.org](mailto:anton@traccar.org))
 
 ## License
 
