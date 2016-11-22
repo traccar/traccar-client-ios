@@ -30,7 +30,7 @@
 		<true/>
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string></string>
+	<string>This application requires location services to work</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
