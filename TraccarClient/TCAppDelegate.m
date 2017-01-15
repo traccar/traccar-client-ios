@@ -19,6 +19,7 @@
 @implementation TCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[UIDevice currentDevice] setBatteryMonitoringEnabled:YES];
 
     // Initialize device identifier
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
