@@ -1,6 +1,6 @@
 # [Traccar Client for iOS](https://www.traccar.org/client)
 
-[![](http://images.apple.com/itunes/link/images/link-badge-appstore.png)](https://itunes.apple.com/app/traccar-client/id843156974)
+[![Download on the App Store](http://www.tananaev.com/badges/app-store.svg)](https://itunes.apple.com/app/traccar-client/id843156974)
 
 ## Overview
 
