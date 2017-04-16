@@ -1,5 +1,5 @@
 //
-// Copyright 2015 Anton Tananaev (anton.tananaev@gmail.com)
+// Copyright 2015 - 2017 Anton Tananaev (anton.tananaev@gmail.com)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 #import "TCPositionProvider.h"
 #import <CoreLocation/CoreLocation.h>
 #import "TCDatabaseHelper.h"
+#import "TCDistanceCalculator.h"
 
 @interface TCPositionProvider () <CLLocationManagerDelegate>
 
@@ -24,7 +25,9 @@
 @property (nonatomic, strong) CLLocation *lastLocation;
 
 @property (nonatomic, strong) NSString *deviceId;
-@property (nonatomic, assign) long period;
+@property (nonatomic, assign) long interval;
+@property (nonatomic, assign) long distance;
+@property (nonatomic, assign) long angle;
 
 @end
 
@@ -45,7 +48,9 @@
 
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         self.deviceId = [userDefaults stringForKey:@"device_id_preference"];
-        self.period = [userDefaults integerForKey:@"frequency_preference"];
+        self.interval = [userDefaults integerForKey:@"frequency_preference"];
+        self.distance = [userDefaults integerForKey:@"distance_preference"];
+        self.angle = [userDefaults integerForKey:@"angle_preference"];
     }
     return self;
 }
@@ -75,7 +80,10 @@
 
     CLLocation *location = [locations lastObject];
     
-    if (!self.lastLocation || [location.timestamp timeIntervalSinceDate:self.lastLocation.timestamp] >= self.period) {
+    if (!self.lastLocation
+            || [location.timestamp timeIntervalSinceDate:self.lastLocation.timestamp] >= self.interval
+            || (self.distance > 0 && [TCDistanceCalculator distanceFromLat:location.coordinate.latitude fromLon:location.coordinate.longitude toLat:self.lastLocation.coordinate.latitude toLon:self.lastLocation.coordinate.longitude] >= self.distance)
+            || (self.angle > 0 && fabs(location.course - self.lastLocation.course) >= self.angle)) {
         
         TCPosition *position = [[TCPosition alloc] initWithManagedObjectContext:[TCDatabaseHelper managedObjectContext]];
         position.deviceId = self.deviceId;

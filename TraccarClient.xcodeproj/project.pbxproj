@@ -37,6 +37,7 @@
 		CEF6433D1B91AA9400195CEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF643371B91A94600195CEA /* Localizable.strings */; };
 		CEFA94ED1EA2EE31009B5809 /* InAppSettingsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFA94EA1EA2E81E009B5809 /* InAppSettingsKit.framework */; };
 		CEFA94EE1EA2EE31009B5809 /* InAppSettingsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEFA94EA1EA2E81E009B5809 /* InAppSettingsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEFA94F21EA2F58A009B5809 /* TCDistanceCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFA94F11EA2F58A009B5809 /* TCDistanceCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,8 @@
 		CEF643381B91A95700195CEA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF643391B91A98300195CEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEFA94EA1EA2E81E009B5809 /* InAppSettingsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InAppSettingsKit.framework; path = Carthage/Build/iOS/InAppSettingsKit.framework; sourceTree = "<group>"; };
+		CEFA94F01EA2F58A009B5809 /* TCDistanceCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDistanceCalculator.h; sourceTree = "<group>"; };
+		CEFA94F11EA2F58A009B5809 /* TCDistanceCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDistanceCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 				CED4872B17DB1BF6007FCF57 /* TCAppDelegate.m */,
 				CBB504DE1B8C1FC5001C1F8B /* TCDatabaseHelper.h */,
 				CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */,
+				CEFA94F01EA2F58A009B5809 /* TCDistanceCalculator.h */,
+				CEFA94F11EA2F58A009B5809 /* TCDistanceCalculator.m */,
 				CED4873917DB1BF6007FCF57 /* TCMainViewController.h */,
 				CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */,
 				CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */,
@@ -388,6 +393,7 @@
 				CE4968251B80A1C200A4964A /* TCProtocolFormatter.m in Sources */,
 				CED4872C17DB1BF6007FCF57 /* TCAppDelegate.m in Sources */,
 				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
+				CEFA94F21EA2F58A009B5809 /* TCDistanceCalculator.m in Sources */,
 				CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */,
 				CEF643281B919FFA00195CEA /* TCTrackingController.m in Sources */,
 				CED4873B17DB1BF6007FCF57 /* TCMainViewController.m in Sources */,
