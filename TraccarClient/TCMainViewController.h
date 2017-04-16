@@ -16,7 +16,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreFoundation/CoreFoundation.h>
-#import "IASKAppSettingsViewController.h"
+#import <InAppSettingsKit/IASKAppSettingsViewController.h>
 
 @interface TCMainViewController : IASKAppSettingsViewController
 

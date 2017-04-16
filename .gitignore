@@ -2,3 +2,5 @@
 project.xcworkspace/
 xcuserdata/
 .idea/
+Cartfile.resolved
+Carthage/
