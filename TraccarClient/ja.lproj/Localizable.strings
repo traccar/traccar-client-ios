@@ -1,0 +1,9 @@
+"Traccar Client" = "Traccar クライアント";
+"Service created" = "サービスを作成しました";
+"Service destroyed" = "サービスを破棄しました";
+"Send failed" = "送信に失敗しました";
+"Location update" = "位置の更新";
+"Connectivity change" = "接続の変更";
+"Invalid server address" = "Invalid server address";
+"Invalid server port" = "Invalid server port";
+"Invalid frequency value" = "Invalid frequency value";

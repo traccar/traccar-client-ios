@@ -1,6 +1,9 @@
-"Traccar Client" = "Traccar für Android";
+"Traccar Client" = "Traccar Client";
 "Service created" = "Dienst installiert";
-"Service destroyed" = "Dienst zerstört";
+"Service destroyed" = "Dienst gestoppt";
 "Send failed" = "Übertragung fehlerhaft";
 "Location update" = "Positionsupdate";
 "Connectivity change" = "Anschlusswechsel";
+"Invalid server address" = "Invalid server address";
+"Invalid server port" = "Invalid server port";
+"Invalid frequency value" = "Invalid frequency value";

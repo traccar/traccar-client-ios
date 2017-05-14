@@ -1,5 +1,8 @@
-"Device identifier" = "Identificador de Dispositivo";
-"Server address" = "Dirección Servidor";
-"Server port" = "Puerto del Servidor";
-"Frequency" = "Frecuencia de rastreo";
 "Service status" = "Estado del servicio";
+"Device identifier" = "Identificador de Dispositivo";
+"Server address" = "Dirección del Servidor";
+"Server port" = "Puerto del Servidor";
+"Encryption" = "Encriptación";
+"Frequency" = "Frecuencia de rastreo";
+"Distance" = "Distance";
+"Angle" = "Angle";

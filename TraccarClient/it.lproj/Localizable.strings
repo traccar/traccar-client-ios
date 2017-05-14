@@ -1,0 +1,9 @@
+"Traccar Client" = "Traccar Client";
+"Service created" = "Servizio creato";
+"Service destroyed" = "Servizio distrutto";
+"Send failed" = "Invio fallito";
+"Location update" = "Aggiornamento posizione";
+"Connectivity change" = "Connessione cambiata";
+"Invalid server address" = "Invalid server address";
+"Invalid server port" = "Invalid server port";
+"Invalid frequency value" = "Invalid frequency value";

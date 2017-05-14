@@ -1,0 +1,9 @@
+"Traccar Client" = "Traccar客户端";
+"Service created" = "设备已创建";
+"Service destroyed" = "设备已销毁";
+"Send failed" = "发送失败";
+"Location update" = "位置更新";
+"Connectivity change" = "连接变化";
+"Invalid server address" = "Invalid server address";
+"Invalid server port" = "Invalid server port";
+"Invalid frequency value" = "Invalid frequency value";

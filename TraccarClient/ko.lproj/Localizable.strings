@@ -1,0 +1,9 @@
+"Traccar Client" = "Traccar 고객";
+"Service created" = "서비스 생성";
+"Service destroyed" = "서비스 실패";
+"Send failed" = "보내기 실패";
+"Location update" = "위치 수정";
+"Connectivity change" = "연결 변경";
+"Invalid server address" = "Invalid server address";
+"Invalid server port" = "Invalid server port";
+"Invalid frequency value" = "Invalid frequency value";

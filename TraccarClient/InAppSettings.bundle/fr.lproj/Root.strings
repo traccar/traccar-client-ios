@@ -1,5 +1,8 @@
+"Service status" = "Statut";
 "Device identifier" = "Identifiant du périphérique";
 "Server address" = "Adresse du serveur";
 "Server port" = "Port du serveur";
+"Encryption" = "Encryption";
 "Frequency" = "Fréquence";
-"Service status" = "Statut";
+"Distance" = "Distance";
+"Angle" = "Angle";

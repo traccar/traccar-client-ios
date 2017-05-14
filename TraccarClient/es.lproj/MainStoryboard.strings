@@ -1,7 +1,8 @@
 "TDj-2j-wEh.text" = "Cliente Traccar";
 "eKa-7m-jq1.title" = "Estado";
-"gEG-ov-HEk.title" = "Acerca de";
+"gEG-ov-HEk.title" = "Acerca de…";
 "He4-eJ-a31.title" = "Limpiar";
-"drL-Ag-IYB.text" = "Rastreador GPS en tiempo real para dispositivos iOS. Compatible con Servidore Traccar y otros sistemas de rastreo.";
-"2Hh-sN-c9g.text" = "Esta aplición es gratuíta y de código abierto. El código fuente está sometido a Licencia Apache Versión 2 y disponible en Github.";
-"jF9-Ub-rRP.text" = "Para más información visite\nwww.traccar.org/client";
+"drL-Ag-IYB.text" = "Rastreador GPS en tiempo real para dispositivos Android. Compatible con Servidor Traccar y otros sistemas de rastreo.";
+"2Hh-sN-c9g.text" = "Esta aplición es gratuíta y de código abierto. El código fuente está bajo la Licencia Apache Versión 2 y disponible en Github.";
+"jF9-Ub-rRP.text" = "Para más información visite
+www.traccar.org/client";

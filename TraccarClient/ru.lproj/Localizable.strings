@@ -4,3 +4,6 @@
 "Send failed" = "Ошибка отправки";
 "Location update" = "Обновление местоположения";
 "Connectivity change" = "Изменение подключения";
+"Invalid server address" = "Invalid server address";
+"Invalid server port" = "Invalid server port";
+"Invalid frequency value" = "Invalid frequency value";
