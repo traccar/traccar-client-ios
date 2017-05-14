@@ -276,8 +276,8 @@
 				CED4871417DB1BF6007FCF57 /* Sources */,
 				CED4871517DB1BF6007FCF57 /* Frameworks */,
 				CED4871617DB1BF6007FCF57 /* Resources */,
-				CEFA94EC1EA2E841009B5809 /* ShellScript */,
 				CEFA94EF1EA2EE31009B5809 /* Embed Frameworks */,
+				CEFA94EC1EA2E841009B5809 /* ShellScript */,
 			);
 			buildRules = (
 			);
