@@ -4,6 +4,6 @@
 "Send failed" = "Invio fallito";
 "Location update" = "Aggiornamento posizione";
 "Connectivity change" = "Connessione cambiata";
-"Invalid server address" = "Invalid server address";
-"Invalid server port" = "Invalid server port";
-"Invalid frequency value" = "Invalid frequency value";
+"Invalid server address" = "Indirizzo del server non valido";
+"Invalid server port" = "Porta del server non valida";
+"Invalid frequency value" = "Valore di frequenza non valido";
