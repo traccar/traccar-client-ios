@@ -162,9 +162,14 @@
         <scene sceneID="kvI-h8-0j0">
             <objects>
                 <navigationController definesPresentationContext="YES" id="4Uy-y2-7bi" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aeM-3M-Z4b">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="aeM-3M-Z4b">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.263132751" green="0.62866193059999997" blue="0.27687552570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="ZiV-Qa-hnE" kind="relationship" relationship="rootViewController" id="nGO-vC-KYZ"/>
