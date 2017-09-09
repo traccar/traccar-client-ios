@@ -18,9 +18,8 @@
 #import "TCPositionProvider.h"
 #import "TCDatabaseHelper.h"
 #import "TCNetworkManager.h"
-#import "TCProtocolFormatter.h"
-#import "TCRequestManager.h"
 #import "TCStatusViewController.h"
+#import "TraccarClient-Swift.h"
 
 int64_t kRetryDelay = 30 * 1000;
 
@@ -131,8 +130,8 @@ int64_t kRetryDelay = 30 * 1000;
 }
 
 - (void)send:(TCPosition *)position {
-    NSURL *request = [TCProtocolFormatter formatPostion:position address:self.address port:self.port secure:self.secure];
-    [TCRequestManager sendRequest:request completionHandler:^(BOOL success) {
+    NSURL *request = [ProtocolFormatter formatPostion:position address:self.address port:self.port secure:self.secure];
+    [RequestManager sendRequest:request completionHandler:^(BOOL success) {
         if (success) {
             [self delete:position];
         } else {

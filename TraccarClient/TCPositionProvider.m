@@ -17,7 +17,7 @@
 #import "TCPositionProvider.h"
 #import <CoreLocation/CoreLocation.h>
 #import "TCDatabaseHelper.h"
-#import "TCDistanceCalculator.h"
+#import "TraccarClient-Swift.h"
 
 @interface TCPositionProvider () <CLLocationManagerDelegate>
 
@@ -82,7 +82,7 @@
     
     if (!self.lastLocation
             || [location.timestamp timeIntervalSinceDate:self.lastLocation.timestamp] >= self.interval
-            || (self.distance > 0 && [TCDistanceCalculator distanceFromLat:location.coordinate.latitude fromLon:location.coordinate.longitude toLat:self.lastLocation.coordinate.latitude toLon:self.lastLocation.coordinate.longitude] >= self.distance)
+            || (self.distance > 0 && [DistanceCalculator distanceFromLat:location.coordinate.latitude fromLon:location.coordinate.longitude toLat:self.lastLocation.coordinate.latitude toLon:self.lastLocation.coordinate.longitude] >= self.distance)
             || (self.angle > 0 && fabs(location.course - self.lastLocation.course) >= self.angle)) {
         
         TCPosition *position = [[TCPosition alloc] initWithManagedObjectContext:[TCDatabaseHelper managedObjectContext]];

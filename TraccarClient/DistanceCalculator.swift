@@ -14,10 +14,20 @@
 // limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
+import Foundation
 
-@interface TCDistanceCalculator : NSObject
+class DistanceCalculator: NSObject {
+    
+    static let EQUATORIAL_EARTH_RADIUS = 6378.1370
+    static let DEG_TO_RAD = Double.pi / 180
+    
+    static func distance(fromLat lat1: Double, fromLon lon1: Double, toLat lat2: Double, toLon lon2: Double) -> Double {
+        let dlong = (lon2 - lon1) * DEG_TO_RAD
+        let dlat = (lat2 - lat1) * DEG_TO_RAD
+        let a = pow(sin(dlat / 2), 2) + cos(lat1 * DEG_TO_RAD) * cos(lat2 * DEG_TO_RAD) * pow(sin(dlong / 2), 2)
+        let c = 2 * atan2(sqrt(a), sqrt(1 - a))
+        let d = EQUATORIAL_EARTH_RADIUS * c
+        return d * 1000
+    }
 
-+ (double)distanceFromLat:(double)lat1 fromLon:(double)lon1 toLat:(double)lat2 toLon:(double)lon2;
-
-@end
+}
