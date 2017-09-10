@@ -1,6 +1,5 @@
-*.DS_Store
-project.xcworkspace/
-xcuserdata/
-.idea/
+xcuserdata
+Carthage
 Cartfile.resolved
-Carthage/
+.DS_Store
+Pods/

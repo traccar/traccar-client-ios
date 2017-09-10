@@ -12,6 +12,7 @@
 		5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */; };
 		5E716A2E1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */; };
 		5E716A301F63A9F600A2DBC3 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */; };
+		C59D33F716F7A39BBA8CBB00 /* Pods_TraccarClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */; };
 		CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */; };
 		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
 		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
@@ -36,8 +37,6 @@
 		CEF643281B919FFA00195CEA /* TCTrackingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF643261B919FFA00195CEA /* TCTrackingController.m */; };
 		CEF6433C1B91AA9400195CEA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */; };
 		CEF6433D1B91AA9400195CEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF643371B91A94600195CEA /* Localizable.strings */; };
-		CEFA94ED1EA2EE31009B5809 /* InAppSettingsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFA94EA1EA2E81E009B5809 /* InAppSettingsKit.framework */; };
-		CEFA94EE1EA2EE31009B5809 /* InAppSettingsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEFA94EA1EA2E81E009B5809 /* InAppSettingsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +56,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CEFA94EE1EA2EE31009B5809 /* InAppSettingsKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +63,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25EBC597A94D70D7BA8ED6BC /* Pods-TraccarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.debug.xcconfig"; sourceTree = "<group>"; };
+		397F4F2888630B0F1F130F19 /* Pods-TraccarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.release.xcconfig"; sourceTree = "<group>"; };
+		570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E716A251F63A0B100A2DBC3 /* TraccarClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClient-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
 		5E716A281F63A45A00A2DBC3 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
@@ -135,7 +136,6 @@
 		CEF643361B91A94600195CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF643381B91A95700195CEA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF643391B91A98300195CEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CEFA94EA1EA2E81E009B5809 /* InAppSettingsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InAppSettingsKit.framework; path = Carthage/Build/iOS/InAppSettingsKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,7 @@
 				CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */,
 				CED4871E17DB1BF6007FCF57 /* Foundation.framework in Frameworks */,
 				CED4872017DB1BF6007FCF57 /* CoreGraphics.framework in Frameworks */,
-				CEFA94ED1EA2EE31009B5809 /* InAppSettingsKit.framework in Frameworks */,
+				C59D33F716F7A39BBA8CBB00 /* Pods_TraccarClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +172,7 @@
 				CED4871A17DB1BF6007FCF57 /* Frameworks */,
 				CED4871917DB1BF6007FCF57 /* Products */,
 				5E716A251F63A0B100A2DBC3 /* TraccarClient-Bridging-Header.h */,
+				E8B64AC67D0BDC702E5F02CF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,7 +188,6 @@
 		CED4871A17DB1BF6007FCF57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEFA94EA1EA2E81E009B5809 /* InAppSettingsKit.framework */,
 				CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */,
 				CBCE82EE1B8D253600A7318B /* CoreData.framework */,
 				CEDB048617ED50C1000E7EDF /* CoreLocation.framework */,
@@ -195,6 +195,7 @@
 				CED4871B17DB1BF6007FCF57 /* UIKit.framework */,
 				CED4871D17DB1BF6007FCF57 /* Foundation.framework */,
 				CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */,
+				570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,6 +265,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E8B64AC67D0BDC702E5F02CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25EBC597A94D70D7BA8ED6BC /* Pods-TraccarClient.debug.xcconfig */,
+				397F4F2888630B0F1F130F19 /* Pods-TraccarClient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,11 +281,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "TraccarClient" */;
 			buildPhases = (
+				1C45497C39E13645FFE1641E /* [CP] Check Pods Manifest.lock */,
 				CED4871417DB1BF6007FCF57 /* Sources */,
 				CED4871517DB1BF6007FCF57 /* Frameworks */,
 				CED4871617DB1BF6007FCF57 /* Resources */,
 				CEFA94EF1EA2EE31009B5809 /* Embed Frameworks */,
-				CEFA94EC1EA2E841009B5809 /* ShellScript */,
+				FCFBF8EE6D7AB7B0579C833F /* [CP] Embed Pods Frameworks */,
+				893E3CEA9F2969E56D04ABF2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,19 +390,62 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CEFA94EC1EA2E841009B5809 /* ShellScript */ = {
+		1C45497C39E13645FFE1641E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/InAppSettingsKit.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TraccarClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		893E3CEA9F2969E56D04ABF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCFBF8EE6D7AB7B0579C833F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/InAppSettingsKit/InAppSettingsKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InAppSettingsKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -564,6 +619,7 @@
 		};
 		CED4873F17DB1BF6007FCF57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25EBC597A94D70D7BA8ED6BC /* Pods-TraccarClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -573,7 +629,6 @@
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
@@ -592,6 +647,7 @@
 		};
 		CED4874017DB1BF6007FCF57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 397F4F2888630B0F1F130F19 /* Pods-TraccarClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -602,7 +658,6 @@
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
