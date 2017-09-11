@@ -79,7 +79,7 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
                 || (distance > 0 && DistanceCalculator.distance(fromLat: location.coordinate.latitude, fromLon: location.coordinate.longitude, toLat: lastLocation!.coordinate.latitude, toLon: lastLocation!.coordinate.longitude) >= distance)
                 || (angle > 0 && fabs(location.course - lastLocation!.course) >= angle) {
                 
-                let position = Position(managedObjectContext: TCDatabaseHelper.managedObjectContext())
+                let position = Position(managedObjectContext: DatabaseHelper().managedObjectContext)
                 position.deviceId = deviceId
                 position.setLocation(location)
                 position.battery = getBatteryLevel() as NSNumber

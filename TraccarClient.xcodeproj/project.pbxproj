@@ -13,10 +13,10 @@
 		5E716A2E1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */; };
 		5E716A301F63A9F600A2DBC3 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */; };
 		C59D33F716F7A39BBA8CBB00 /* Pods_TraccarClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */; };
+		CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197921F674A3E008F301C /* DatabaseHelper.swift */; };
 		CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED07F1F6602CD00A33FCF /* Position.swift */; };
 		CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */; };
 		CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */; };
-		CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */; };
 		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
 		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
 		CBCE835E1B8D666D00A7318B /* TCDatabaseHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE835D1B8D666D00A7318B /* TCDatabaseHelperTests.m */; };
@@ -72,11 +72,10 @@
 		5E716A2C1F63A7A100A2DBC3 /* TraccarClientTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClientTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatterTests.swift; sourceTree = "<group>"; };
 		5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		CB4197921F674A3E008F301C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		CB7ED07F1F6602CD00A33FCF /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionProvider.swift; sourceTree = "<group>"; };
 		CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBB504DE1B8C1FC5001C1F8B /* TCDatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDatabaseHelper.h; sourceTree = "<group>"; };
-		CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDatabaseHelper.m; sourceTree = "<group>"; };
 		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraccarClient.xcdatamodel; sourceTree = "<group>"; };
 		CBCE835D1B8D666D00A7318B /* TCDatabaseHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDatabaseHelperTests.m; sourceTree = "<group>"; };
@@ -203,8 +202,7 @@
 				CEF643371B91A94600195CEA /* Localizable.strings */,
 				CED4872217DB1BF6007FCF57 /* Supporting Files */,
 				CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */,
-				CBB504DE1B8C1FC5001C1F8B /* TCDatabaseHelper.h */,
-				CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */,
+				CB4197921F674A3E008F301C /* DatabaseHelper.swift */,
 				5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */,
 				CED4873917DB1BF6007FCF57 /* TCMainViewController.h */,
 				CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */,
@@ -451,12 +449,12 @@
 				CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */,
 				5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */,
 				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
-				CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */,
 				5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */,
 				CEF643281B919FFA00195CEA /* TCTrackingController.m in Sources */,
 				CED4873B17DB1BF6007FCF57 /* TCMainViewController.m in Sources */,
 				5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */,
 				CEDB302219BDD5DA0021E009 /* TCStatusViewController.m in Sources */,
+				CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

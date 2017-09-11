@@ -15,7 +15,6 @@
 //
 
 #import "TCTrackingController.h"
-#import "TCDatabaseHelper.h"
 #import "TCNetworkManager.h"
 #import "TCStatusViewController.h"
 #import "TraccarClient-Swift.h"
@@ -29,7 +28,7 @@ int64_t kRetryDelay = 30 * 1000;
 @property (nonatomic) BOOL stopped;
 
 @property (nonatomic, strong) PositionProvider *positionProvider;
-@property (nonatomic, strong) TCDatabaseHelper *databaseHelper;
+@property (nonatomic, strong) DatabaseHelper *databaseHelper;
 @property (nonatomic, strong) TCNetworkManager *networkManager;
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
 
@@ -51,7 +50,7 @@ int64_t kRetryDelay = 30 * 1000;
     self = [super init];
     if (self) {
         self.positionProvider = [[PositionProvider alloc] init];
-        self.databaseHelper = [[TCDatabaseHelper alloc] init];
+        self.databaseHelper = [[DatabaseHelper alloc] init];
         self.networkManager = [[TCNetworkManager alloc] init];
         
         self.positionProvider.delegate = self;
@@ -124,7 +123,7 @@ int64_t kRetryDelay = 30 * 1000;
 }
 
 - (void)delete:(Position *)position {
-    [self.databaseHelper deletePosition:position];
+    [self.databaseHelper deleteWithPosition:position];
     [self read];
 }
 
