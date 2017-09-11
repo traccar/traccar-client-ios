@@ -15,7 +15,6 @@
 //
 
 #import "TCTrackingController.h"
-#import "TCPositionProvider.h"
 #import "TCDatabaseHelper.h"
 #import "TCNetworkManager.h"
 #import "TCStatusViewController.h"
@@ -23,13 +22,13 @@
 
 int64_t kRetryDelay = 30 * 1000;
 
-@interface TCTrackingController () <TCPositionProviderDelegate, TCNetworkManagerDelegate>
+@interface TCTrackingController () <PositionProviderDelegate, TCNetworkManagerDelegate>
 
 @property (nonatomic) BOOL online;
 @property (nonatomic) BOOL waiting;
 @property (nonatomic) BOOL stopped;
 
-@property (nonatomic, strong) TCPositionProvider *positionProvider;
+@property (nonatomic, strong) PositionProvider *positionProvider;
 @property (nonatomic, strong) TCDatabaseHelper *databaseHelper;
 @property (nonatomic, strong) TCNetworkManager *networkManager;
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
@@ -51,7 +50,7 @@ int64_t kRetryDelay = 30 * 1000;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.positionProvider = [[TCPositionProvider alloc] init];
+        self.positionProvider = [[PositionProvider alloc] init];
         self.databaseHelper = [[TCDatabaseHelper alloc] init];
         self.networkManager = [[TCNetworkManager alloc] init];
         
@@ -83,7 +82,7 @@ int64_t kRetryDelay = 30 * 1000;
     self.stopped = YES;
 }
 
-- (void)didUpdatePosition:(Position *)position {
+- (void)didUpdateWithPosition:(Position *)position {
     [TCStatusViewController addMessage:NSLocalizedString(@"Location update", @"")];
     [self write:position];
 }
