@@ -15,14 +15,13 @@
 //
 
 #import "TCDatabaseHelper.h"
-#import "TCAppDelegate.h"
 #import "TraccarClient-Swift.h"
 
 @implementation TCDatabaseHelper
 
 + (NSManagedObjectContext *)managedObjectContext {
     UIApplication *application = [UIApplication sharedApplication];
-    TCAppDelegate *delegate = (TCAppDelegate *) application.delegate;
+    AppDelegate *delegate = (AppDelegate *) application.delegate;
     return delegate.managedObjectContext;
 }
 
