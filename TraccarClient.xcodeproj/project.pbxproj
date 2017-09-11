@@ -13,6 +13,7 @@
 		5E716A2E1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */; };
 		5E716A301F63A9F600A2DBC3 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */; };
 		C59D33F716F7A39BBA8CBB00 /* Pods_TraccarClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */; };
+		CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED07F1F6602CD00A33FCF /* Position.swift */; };
 		CBB504E01B8C1FC5001C1F8B /* TCDatabaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */; };
 		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
 		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
@@ -21,7 +22,6 @@
 		CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */; };
 		CBDEEB881B8EB536006BC126 /* TCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */; };
 		CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */; };
-		CE4968281B80A25100A4964A /* TCPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4968271B80A25100A4964A /* TCPosition.m */; };
 		CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5899C71B115C9100ED70D2 /* Images.xcassets */; };
 		CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871B17DB1BF6007FCF57 /* UIKit.framework */; };
 		CED4871E17DB1BF6007FCF57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871D17DB1BF6007FCF57 /* Foundation.framework */; };
@@ -73,6 +73,7 @@
 		5E716A2C1F63A7A100A2DBC3 /* TraccarClientTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClientTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatterTests.swift; sourceTree = "<group>"; };
 		5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		CB7ED07F1F6602CD00A33FCF /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		CBB504DE1B8C1FC5001C1F8B /* TCDatabaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDatabaseHelper.h; sourceTree = "<group>"; };
 		CBB504DF1B8C1FC5001C1F8B /* TCDatabaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDatabaseHelper.m; sourceTree = "<group>"; };
 		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -86,8 +87,6 @@
 		CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNetworkManager.m; sourceTree = "<group>"; };
 		CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE2FA5181CB935C9007F86B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
-		CE4968261B80A25100A4964A /* TCPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPosition.h; sourceTree = "<group>"; };
-		CE4968271B80A25100A4964A /* TCPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPosition.m; sourceTree = "<group>"; };
 		CE4B80FE1EC71CAE00D1C41D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/MainStoryboard.strings"; sourceTree = "<group>"; };
 		CE4B80FF1EC71CAE00D1C41D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CE4B81001EC71CCF00D1C41D /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
@@ -217,8 +216,7 @@
 				CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */,
 				CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */,
 				CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */,
-				CE4968261B80A25100A4964A /* TCPosition.h */,
-				CE4968271B80A25100A4964A /* TCPosition.m */,
+				CB7ED07F1F6602CD00A33FCF /* Position.swift */,
 				CBDA41211B8AC05500CD6B32 /* TCPositionProvider.h */,
 				CBDA41221B8AC05500CD6B32 /* TCPositionProvider.m */,
 				5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */,
@@ -454,8 +452,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */,
 				CBDA41231B8AC05500CD6B32 /* TCPositionProvider.m in Sources */,
-				CE4968281B80A25100A4964A /* TCPosition.m in Sources */,
 				CED4872817DB1BF6007FCF57 /* main.m in Sources */,
 				CBDEEB881B8EB536006BC126 /* TCNetworkManager.m in Sources */,
 				CED4872C17DB1BF6007FCF57 /* TCAppDelegate.m in Sources */,

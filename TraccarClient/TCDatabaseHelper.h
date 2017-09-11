@@ -15,7 +15,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TCPosition.h"
+
+@class Position;
 
 @interface TCDatabaseHelper : NSObject
 
@@ -25,7 +26,7 @@
 
 - (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
-- (TCPosition *)selectPosition;
-- (void)deletePosition:(TCPosition *)position;
+- (Position *)selectPosition;
+- (void)deletePosition:(Position *)position;
 
 @end

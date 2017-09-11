@@ -38,10 +38,10 @@ int64_t kRetryDelay = 30 * 1000;
 @property (nonatomic, assign) long port;
 @property (nonatomic, assign) BOOL secure;
 
-- (void)write:(TCPosition *)position;
+- (void)write:(Position *)position;
 - (void)read;
-- (void)delete:(TCPosition *)position;
-- (void)send:(TCPosition *)position;
+- (void)delete:(Position *)position;
+- (void)send:(Position *)position;
 - (void)retry;
 
 @end
@@ -83,7 +83,7 @@ int64_t kRetryDelay = 30 * 1000;
     self.stopped = YES;
 }
 
-- (void)didUpdatePosition:(TCPosition *)position {
+- (void)didUpdatePosition:(Position *)position {
     [TCStatusViewController addMessage:NSLocalizedString(@"Location update", @"")];
     [self write:position];
 }
@@ -104,7 +104,7 @@ int64_t kRetryDelay = 30 * 1000;
 // read -> send -> retry -> read -> send
 //
 
-- (void)write:(TCPosition *)position {
+- (void)write:(Position *)position {
     if (self.online && self.waiting) {
         [self read];
         self.waiting = NO;
@@ -112,7 +112,7 @@ int64_t kRetryDelay = 30 * 1000;
 }
 
 - (void)read {
-    TCPosition *position = [self.databaseHelper selectPosition];
+    Position *position = [self.databaseHelper selectPosition];
     if (position) {
         if ([position.deviceId isEqualToString:[self.userDefaults stringForKey:@"device_id_preference"]]) {
             [self send:position];
@@ -124,12 +124,12 @@ int64_t kRetryDelay = 30 * 1000;
     }
 }
 
-- (void)delete:(TCPosition *)position {
+- (void)delete:(Position *)position {
     [self.databaseHelper deletePosition:position];
     [self read];
 }
 
-- (void)send:(TCPosition *)position {
+- (void)send:(Position *)position {
     NSURL *request = [ProtocolFormatter formatPostion:position address:self.address port:self.port secure:self.secure];
     [RequestManager sendRequest:request completionHandler:^(BOOL success) {
         if (success) {

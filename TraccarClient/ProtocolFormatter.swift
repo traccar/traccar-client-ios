@@ -18,7 +18,7 @@ import Foundation
 
 public class ProtocolFormatter: NSObject {
     
-    public static func formatPostion(_ position: TCPosition, address: String, port: Int, secure: Bool) -> URL {
+    public static func formatPostion(_ position: Position, address: String, port: Int, secure: Bool) -> URL {
         var components = URLComponents()
 
         components.scheme = secure ? "https" : "http"
@@ -26,13 +26,13 @@ public class ProtocolFormatter: NSObject {
 
         var query = String()
         query += "id=\(position.deviceId!)&"
-        query += "timestamp=\(Int(position.time.timeIntervalSince1970))&"
-        query += String(format: "lat=%.06f&", position.latitude)
-        query += String(format: "lon=%.06f&", position.longitude)
-        query += "speed=\(position.speed)&"
-        query += "bearing=\(position.course)&"
-        query += "altitude=\(position.altitude)&"
-        query += "batt=\(position.battery)"
+        query += "timestamp=\(Int(position.time!.timeIntervalSince1970))&"
+        query += String(format: "lat=%.06f&", position.latitude!)
+        query += String(format: "lon=%.06f&", position.longitude!)
+        query += "speed=\(position.speed!)&"
+        query += "bearing=\(position.course!)&"
+        query += "altitude=\(position.altitude!)&"
+        query += "batt=\(position.battery!)"
         components.query = query
 
         // use queryItems for iOS 8

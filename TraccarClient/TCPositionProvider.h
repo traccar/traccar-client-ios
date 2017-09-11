@@ -15,11 +15,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TCPosition.h"
+#import "TraccarClient-Swift.h"
 
 @protocol TCPositionProviderDelegate <NSObject>
 
-- (void)didUpdatePosition:(TCPosition *)position;
+- (void)didUpdatePosition:(Position *)position;
 
 @end
 

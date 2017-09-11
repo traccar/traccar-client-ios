@@ -20,13 +20,13 @@ import TraccarClient
 class ProtocolFormatterTests: TCCoreDataTests {
 
     func testFormatPosition() {
-        let position = TCPosition(managedObjectContext: managedObjectContext)
-        position?.deviceId = "123456789012345"
-        position?.time = Date(timeIntervalSince1970: 0)
+        let position = Position(managedObjectContext: managedObjectContext)
+        position.deviceId = "123456789012345"
+        position.time = Date(timeIntervalSince1970: 0) as NSDate
 
-        let url: URL? = ProtocolFormatter.formatPostion(position!, address: "localhost", port: 5055, secure: false)
+        let url: URL? = ProtocolFormatter.formatPostion(position, address: "localhost", port: 5055, secure: false)
 
-        XCTAssertEqual("http://localhost:5055?id=123456789012345&timestamp=0&lat=0.000000&lon=0.000000&speed=0.0&bearing=0.0&altitude=0.0&batt=0.0", url?.absoluteString)
+        XCTAssertEqual("http://localhost:5055?id=123456789012345&timestamp=0&lat=0.000000&lon=0.000000&speed=0&bearing=0&altitude=0&batt=0", url?.absoluteString)
     }
 
 }

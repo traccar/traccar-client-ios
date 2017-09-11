@@ -85,10 +85,10 @@
             || (self.distance > 0 && [DistanceCalculator distanceFromLat:location.coordinate.latitude fromLon:location.coordinate.longitude toLat:self.lastLocation.coordinate.latitude toLon:self.lastLocation.coordinate.longitude] >= self.distance)
             || (self.angle > 0 && fabs(location.course - self.lastLocation.course) >= self.angle)) {
         
-        TCPosition *position = [[TCPosition alloc] initWithManagedObjectContext:[TCDatabaseHelper managedObjectContext]];
+        Position *position = [[Position alloc] initWithManagedObjectContext:[TCDatabaseHelper managedObjectContext]];
         position.deviceId = self.deviceId;
         position.location = location;
-        position.battery = [self getBatteryLevel];
+        position.battery = [NSNumber numberWithDouble:[self getBatteryLevel]];
         
         [self.delegate didUpdatePosition:position];
         self.lastLocation = location;

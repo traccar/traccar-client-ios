@@ -16,6 +16,7 @@
 
 #import "TCDatabaseHelper.h"
 #import "TCAppDelegate.h"
+#import "TraccarClient-Swift.h"
 
 @implementation TCDatabaseHelper
 
@@ -38,7 +39,7 @@
     return self;
 }
 
-- (TCPosition *)selectPosition {
+- (Position *)selectPosition {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Position"];
     NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
     if (fetchedObjects && fetchedObjects.count) {
@@ -47,7 +48,7 @@
     return nil;
 }
 
-- (void)deletePosition:(TCPosition *)position {
+- (void)deletePosition:(Position *)position {
     [self.managedObjectContext deleteObject:position];
 }
 
