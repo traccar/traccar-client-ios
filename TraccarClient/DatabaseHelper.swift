@@ -18,7 +18,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class DatabaseHelper: NSObject {
+public class DatabaseHelper: NSObject {
     
     let managedObjectContext: NSManagedObjectContext
     
@@ -27,12 +27,12 @@ class DatabaseHelper: NSObject {
         self.init(managedObjectContext: (delegate?.managedObjectContext)!)
     }
     
-    init(managedObjectContext: NSManagedObjectContext) {
+    public init(managedObjectContext: NSManagedObjectContext) {
         self.managedObjectContext = managedObjectContext
         super.init()
     }
     
-    func selectPosition() -> Position? {
+    public func selectPosition() -> Position? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Position")
         if let fetchedObjects = try? managedObjectContext.fetch(fetchRequest) {
             if fetchedObjects.count > 0 {
@@ -42,7 +42,7 @@ class DatabaseHelper: NSObject {
         return nil
     }
     
-    func delete(position: Position) {
+    public func delete(position: Position) {
         managedObjectContext.delete(position)
     }
 

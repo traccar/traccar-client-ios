@@ -14,13 +14,13 @@
 		5E716A301F63A9F600A2DBC3 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */; };
 		C59D33F716F7A39BBA8CBB00 /* Pods_TraccarClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */; };
 		CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197921F674A3E008F301C /* DatabaseHelper.swift */; };
+		CB4197951F675518008F301C /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197941F675518008F301C /* CoreDataTests.swift */; };
+		CB4197971F676B52008F301C /* DatabaseHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197961F676B52008F301C /* DatabaseHelperTests.swift */; };
 		CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED07F1F6602CD00A33FCF /* Position.swift */; };
 		CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */; };
 		CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */; };
 		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
 		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
-		CBCE835E1B8D666D00A7318B /* TCDatabaseHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE835D1B8D666D00A7318B /* TCDatabaseHelperTests.m */; };
-		CBCE83611B8D68FA00A7318B /* TCCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCE83601B8D68FA00A7318B /* TCCoreDataTests.m */; };
 		CBDEEB881B8EB536006BC126 /* TCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */; };
 		CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */; };
 		CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5899C71B115C9100ED70D2 /* Images.xcassets */; };
@@ -69,18 +69,16 @@
 		5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
 		5E716A281F63A45A00A2DBC3 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatter.swift; sourceTree = "<group>"; };
-		5E716A2C1F63A7A100A2DBC3 /* TraccarClientTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClientTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatterTests.swift; sourceTree = "<group>"; };
 		5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
 		CB4197921F674A3E008F301C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		CB4197941F675518008F301C /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		CB4197961F676B52008F301C /* DatabaseHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelperTests.swift; sourceTree = "<group>"; };
 		CB7ED07F1F6602CD00A33FCF /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionProvider.swift; sourceTree = "<group>"; };
 		CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraccarClient.xcdatamodel; sourceTree = "<group>"; };
-		CBCE835D1B8D666D00A7318B /* TCDatabaseHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDatabaseHelperTests.m; sourceTree = "<group>"; };
-		CBCE835F1B8D68FA00A7318B /* TCCoreDataTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCoreDataTests.h; sourceTree = "<group>"; };
-		CBCE83601B8D68FA00A7318B /* TCCoreDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCoreDataTests.m; sourceTree = "<group>"; };
 		CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNetworkManager.h; sourceTree = "<group>"; };
 		CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNetworkManager.m; sourceTree = "<group>"; };
 		CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -236,12 +234,10 @@
 			isa = PBXGroup;
 			children = (
 				CEE286D01B80839700AE7E83 /* Supporting Files */,
-				CBCE835F1B8D68FA00A7318B /* TCCoreDataTests.h */,
-				CBCE83601B8D68FA00A7318B /* TCCoreDataTests.m */,
-				CBCE835D1B8D666D00A7318B /* TCDatabaseHelperTests.m */,
+				CB4197941F675518008F301C /* CoreDataTests.swift */,
+				CB4197961F676B52008F301C /* DatabaseHelperTests.swift */,
 				5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */,
 				5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */,
-				5E716A2C1F63A7A100A2DBC3 /* TraccarClientTests-Bridging-Header.h */,
 			);
 			path = TraccarClientTests;
 			sourceTree = "<group>";
@@ -463,9 +459,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E716A301F63A9F600A2DBC3 /* RequestManagerTests.swift in Sources */,
-				CBCE83611B8D68FA00A7318B /* TCCoreDataTests.m in Sources */,
-				CBCE835E1B8D666D00A7318B /* TCDatabaseHelperTests.m in Sources */,
+				CB4197971F676B52008F301C /* DatabaseHelperTests.swift in Sources */,
 				5E716A2E1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift in Sources */,
+				CB4197951F675518008F301C /* CoreDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,7 +682,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TraccarClientTests/TraccarClientTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
@@ -719,7 +715,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TraccarClientTests/TraccarClientTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
 			};

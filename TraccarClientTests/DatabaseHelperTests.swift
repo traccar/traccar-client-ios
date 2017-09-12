@@ -17,16 +17,23 @@
 import XCTest
 import TraccarClient
 
-class ProtocolFormatterTests: CoreDataTests {
-
+class DatabaseHelperTests: CoreDataTests {
+    
     func testFormatPosition() {
+        let databaseHelper = DatabaseHelper(managedObjectContext: managedObjectContext!)
+
+        XCTAssertNil(databaseHelper.selectPosition())
+
         let position = Position(managedObjectContext: managedObjectContext!)
         position.deviceId = "123456789012345"
         position.time = Date(timeIntervalSince1970: 0) as NSDate
 
-        let url: URL? = ProtocolFormatter.formatPostion(position, address: "localhost", port: 5055, secure: false)
+        XCTAssertNotNil(databaseHelper.selectPosition())
 
-        XCTAssertEqual("http://localhost:5055?id=123456789012345&timestamp=0&lat=0.000000&lon=0.000000&speed=0&bearing=0&altitude=0&batt=0", url?.absoluteString)
+        databaseHelper.delete(position: position)
+
+        XCTAssertNil(databaseHelper.selectPosition())
     }
 
+    
 }
