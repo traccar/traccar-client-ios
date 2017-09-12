@@ -16,12 +16,12 @@
 		CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197921F674A3E008F301C /* DatabaseHelper.swift */; };
 		CB4197951F675518008F301C /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197941F675518008F301C /* CoreDataTests.swift */; };
 		CB4197971F676B52008F301C /* DatabaseHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197961F676B52008F301C /* DatabaseHelperTests.swift */; };
+		CB4197991F67724F008F301C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197981F67724F008F301C /* NetworkManager.swift */; };
 		CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED07F1F6602CD00A33FCF /* Position.swift */; };
 		CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */; };
 		CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */; };
 		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
 		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
-		CBDEEB881B8EB536006BC126 /* TCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */; };
 		CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */; };
 		CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5899C71B115C9100ED70D2 /* Images.xcassets */; };
 		CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871B17DB1BF6007FCF57 /* UIKit.framework */; };
@@ -74,13 +74,12 @@
 		CB4197921F674A3E008F301C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		CB4197941F675518008F301C /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		CB4197961F676B52008F301C /* DatabaseHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelperTests.swift; sourceTree = "<group>"; };
+		CB4197981F67724F008F301C /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CB7ED07F1F6602CD00A33FCF /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionProvider.swift; sourceTree = "<group>"; };
 		CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraccarClient.xcdatamodel; sourceTree = "<group>"; };
-		CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCNetworkManager.h; sourceTree = "<group>"; };
-		CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCNetworkManager.m; sourceTree = "<group>"; };
 		CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE2FA5181CB935C9007F86B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CE4B80FE1EC71CAE00D1C41D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/MainStoryboard.strings"; sourceTree = "<group>"; };
@@ -204,8 +203,7 @@
 				5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */,
 				CED4873917DB1BF6007FCF57 /* TCMainViewController.h */,
 				CED4873A17DB1BF6007FCF57 /* TCMainViewController.m */,
-				CBDEEB861B8EB536006BC126 /* TCNetworkManager.h */,
-				CBDEEB871B8EB536006BC126 /* TCNetworkManager.m */,
+				CB4197981F67724F008F301C /* NetworkManager.swift */,
 				CB7ED07F1F6602CD00A33FCF /* Position.swift */,
 				CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */,
 				5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */,
@@ -441,7 +439,7 @@
 			files = (
 				CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */,
 				CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */,
-				CBDEEB881B8EB536006BC126 /* TCNetworkManager.m in Sources */,
+				CB4197991F67724F008F301C /* NetworkManager.swift in Sources */,
 				CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */,
 				5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */,
 				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,

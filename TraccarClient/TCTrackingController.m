@@ -15,13 +15,12 @@
 //
 
 #import "TCTrackingController.h"
-#import "TCNetworkManager.h"
 #import "TCStatusViewController.h"
 #import "TraccarClient-Swift.h"
 
 int64_t kRetryDelay = 30 * 1000;
 
-@interface TCTrackingController () <PositionProviderDelegate, TCNetworkManagerDelegate>
+@interface TCTrackingController () <PositionProviderDelegate, NetworkManagerDelegate>
 
 @property (nonatomic) BOOL online;
 @property (nonatomic) BOOL waiting;
@@ -29,7 +28,7 @@ int64_t kRetryDelay = 30 * 1000;
 
 @property (nonatomic, strong) PositionProvider *positionProvider;
 @property (nonatomic, strong) DatabaseHelper *databaseHelper;
-@property (nonatomic, strong) TCNetworkManager *networkManager;
+@property (nonatomic, strong) NetworkManager *networkManager;
 @property (nonatomic, strong) NSUserDefaults *userDefaults;
 
 @property (nonatomic, strong) NSString *address;
@@ -51,7 +50,7 @@ int64_t kRetryDelay = 30 * 1000;
     if (self) {
         self.positionProvider = [[PositionProvider alloc] init];
         self.databaseHelper = [[DatabaseHelper alloc] init];
-        self.networkManager = [[TCNetworkManager alloc] init];
+        self.networkManager = [[NetworkManager alloc] init];
         
         self.positionProvider.delegate = self;
         self.networkManager.delegate = self;
@@ -86,7 +85,7 @@ int64_t kRetryDelay = 30 * 1000;
     [self write:position];
 }
 
-- (void)didUpdateNetwork:(BOOL)online {
+- (void)didUpdateNetworkWithOnline:(BOOL)online {
     [TCStatusViewController addMessage:NSLocalizedString(@"Connectivity change", @"")];
     if (!self.online && online) {
         [self read];
