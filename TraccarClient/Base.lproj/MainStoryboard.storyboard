@@ -13,7 +13,7 @@
         <!--Root View Controller-->
         <scene sceneID="Ejt-ia-q1N">
             <objects>
-                <tableViewController id="ZiV-Qa-hnE" customClass="TCMainViewController" sceneMemberID="viewController">
+                <tableViewController id="ZiV-Qa-hnE" customClass="MainViewController" customModule="TraccarClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="KcQ-JP-xCp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
