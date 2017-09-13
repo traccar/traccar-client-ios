@@ -16,6 +16,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var persistentStoreCoordinator: NSPersistentStoreCoordinator?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
+        #if FIREBASE
+        FirebaseApp.configure()
+        #endif
+
         UIDevice.current.isBatteryMonitoringEnabled = true
 
         // Initialize device identifier
