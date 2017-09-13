@@ -19,7 +19,7 @@ import InAppSettingsKit
 
 class MainViewController: IASKAppSettingsViewController {
     
-    var trackingController: TCTrackingController?
+    var trackingController: TrackingController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +67,7 @@ class MainViewController: IASKAppSettingsViewController {
                 showError("Invalid frequency value")
             } else {
                 StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
-                trackingController = TCTrackingController()
+                trackingController = TrackingController()
                 trackingController?.start()
             }
         } else if !status && trackingController != nil {

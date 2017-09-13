@@ -22,6 +22,7 @@
 		CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */; };
 		CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */; };
 		CBAA0F7F1F68E807008BBBBE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0F7E1F68E807008BBBBE /* MainViewController.swift */; };
+		CBAA0F811F68EB62008BBBBE /* TrackingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0F801F68EB62008BBBBE /* TrackingController.swift */; };
 		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
 		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
 		CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */; };
@@ -33,7 +34,6 @@
 		CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */; };
 		CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB048617ED50C1000E7EDF /* CoreLocation.framework */; };
 		CEF643271B919FFA00195CEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF643241B919FFA00195CEA /* LaunchScreen.xib */; };
-		CEF643281B919FFA00195CEA /* TCTrackingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF643261B919FFA00195CEA /* TCTrackingController.m */; };
 		CEF6433C1B91AA9400195CEA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */; };
 		CEF6433D1B91AA9400195CEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF643371B91A94600195CEA /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -65,7 +65,6 @@
 		25EBC597A94D70D7BA8ED6BC /* Pods-TraccarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.debug.xcconfig"; sourceTree = "<group>"; };
 		397F4F2888630B0F1F130F19 /* Pods-TraccarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.release.xcconfig"; sourceTree = "<group>"; };
 		570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E716A251F63A0B100A2DBC3 /* TraccarClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClient-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
 		5E716A281F63A45A00A2DBC3 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatter.swift; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		CBAA0F7E1F68E807008BBBBE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CBAA0F801F68EB62008BBBBE /* TrackingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingController.swift; sourceTree = "<group>"; };
 		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraccarClient.xcdatamodel; sourceTree = "<group>"; };
 		CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -116,8 +116,6 @@
 		CEF254DD1B905266001DEFD2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CEF254DF1B9052EB001DEFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CEF643241B919FFA00195CEA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		CEF643251B919FFA00195CEA /* TCTrackingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCTrackingController.h; sourceTree = "<group>"; };
-		CEF643261B919FFA00195CEA /* TCTrackingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCTrackingController.m; sourceTree = "<group>"; };
 		CEF6432A1B91A48B00195CEA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CEF6432C1B91A49400195CEA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CEF6432E1B91A49700195CEA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
@@ -206,9 +204,7 @@
 				5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */,
 				5E716A281F63A45A00A2DBC3 /* RequestManager.swift */,
 				CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */,
-				CEF643251B919FFA00195CEA /* TCTrackingController.h */,
-				CEF643261B919FFA00195CEA /* TCTrackingController.m */,
-				5E716A251F63A0B100A2DBC3 /* TraccarClient-Bridging-Header.h */,
+				CBAA0F801F68EB62008BBBBE /* TrackingController.swift */,
 			);
 			path = TraccarClient;
 			sourceTree = "<group>";
@@ -441,8 +437,8 @@
 				5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */,
 				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
 				CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */,
+				CBAA0F811F68EB62008BBBBE /* TrackingController.swift in Sources */,
 				5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */,
-				CEF643281B919FFA00195CEA /* TCTrackingController.m in Sources */,
 				5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */,
 				CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */,
 			);
@@ -615,7 +611,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "TraccarClient-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
@@ -642,7 +638,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "TraccarClient-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
