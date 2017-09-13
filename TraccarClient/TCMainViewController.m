@@ -15,8 +15,8 @@
 //
 
 #import "TCMainViewController.h"
-#import "TCStatusViewController.h"
 #import "TCTrackingController.h"
+#import "TraccarClient-Swift.h"
 
 @interface TCMainViewController ()
 
@@ -88,14 +88,14 @@
         } else if (frequency <= 0) {
             [self showError:@"Invalid frequency value"];
         } else {
-            [TCStatusViewController addMessage:NSLocalizedString(@"Service created", @"")];
+            [StatusViewController addMessage:NSLocalizedString(@"Service created", @"")];
             self.trackingController = [[TCTrackingController alloc] init];
             [self.trackingController start];
         }
 
     } else if (!status && self.trackingController) {
 
-        [TCStatusViewController addMessage:NSLocalizedString(@"Service destroyed", @"")];
+        [StatusViewController addMessage:NSLocalizedString(@"Service destroyed", @"")];
         [self.trackingController stop];
         self.trackingController = nil;
 

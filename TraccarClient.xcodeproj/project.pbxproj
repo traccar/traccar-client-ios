@@ -20,6 +20,7 @@
 		CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED07F1F6602CD00A33FCF /* Position.swift */; };
 		CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */; };
 		CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */; };
+		CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */; };
 		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
 		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
 		CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */; };
@@ -31,7 +32,6 @@
 		CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4879817DB1DF4007FCF57 /* MessageUI.framework */; };
 		CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */; };
 		CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB048617ED50C1000E7EDF /* CoreLocation.framework */; };
-		CEDB302219BDD5DA0021E009 /* TCStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDB302119BDD5DA0021E009 /* TCStatusViewController.m */; };
 		CEF643271B919FFA00195CEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF643241B919FFA00195CEA /* LaunchScreen.xib */; };
 		CEF643281B919FFA00195CEA /* TCTrackingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF643261B919FFA00195CEA /* TCTrackingController.m */; };
 		CEF6433C1B91AA9400195CEA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */; };
@@ -78,6 +78,7 @@
 		CB7ED07F1F6602CD00A33FCF /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionProvider.swift; sourceTree = "<group>"; };
 		CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraccarClient.xcdatamodel; sourceTree = "<group>"; };
 		CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -108,8 +109,6 @@
 		CED4879817DB1DF4007FCF57 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InAppSettings.bundle; sourceTree = "<group>"; };
 		CEDB048617ED50C1000E7EDF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		CEDB302019BDD5DA0021E009 /* TCStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCStatusViewController.h; sourceTree = "<group>"; };
-		CEDB302119BDD5DA0021E009 /* TCStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCStatusViewController.m; sourceTree = "<group>"; };
 		CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraccarClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE286D11B80839700AE7E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEECE4B91B91AE2B00EB6F4A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -208,8 +207,7 @@
 				CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */,
 				5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */,
 				5E716A281F63A45A00A2DBC3 /* RequestManager.swift */,
-				CEDB302019BDD5DA0021E009 /* TCStatusViewController.h */,
-				CEDB302119BDD5DA0021E009 /* TCStatusViewController.m */,
+				CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */,
 				CEF643251B919FFA00195CEA /* TCTrackingController.h */,
 				CEF643261B919FFA00195CEA /* TCTrackingController.m */,
 				5E716A251F63A0B100A2DBC3 /* TraccarClient-Bridging-Header.h */,
@@ -443,11 +441,11 @@
 				CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */,
 				5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */,
 				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
+				CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */,
 				5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */,
 				CEF643281B919FFA00195CEA /* TCTrackingController.m in Sources */,
 				CED4873B17DB1BF6007FCF57 /* TCMainViewController.m in Sources */,
 				5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */,
-				CEDB302219BDD5DA0021E009 /* TCStatusViewController.m in Sources */,
 				CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,6 @@
 //
 
 #import "TCTrackingController.h"
-#import "TCStatusViewController.h"
 #import "TraccarClient-Swift.h"
 
 int64_t kRetryDelay = 30 * 1000;
@@ -81,12 +80,12 @@ int64_t kRetryDelay = 30 * 1000;
 }
 
 - (void)didUpdateWithPosition:(Position *)position {
-    [TCStatusViewController addMessage:NSLocalizedString(@"Location update", @"")];
+    [StatusViewController addMessage:NSLocalizedString(@"Location update", @"")];
     [self write:position];
 }
 
 - (void)didUpdateNetworkWithOnline:(BOOL)online {
-    [TCStatusViewController addMessage:NSLocalizedString(@"Connectivity change", @"")];
+    [StatusViewController addMessage:NSLocalizedString(@"Connectivity change", @"")];
     if (!self.online && online) {
         [self read];
     }
@@ -132,7 +131,7 @@ int64_t kRetryDelay = 30 * 1000;
         if (success) {
             [self delete:position];
         } else {
-            [TCStatusViewController addMessage:NSLocalizedString(@"Send failed", @"")];
+            [StatusViewController addMessage:NSLocalizedString(@"Send failed", @"")];
             [self retry];
         }
     }];
