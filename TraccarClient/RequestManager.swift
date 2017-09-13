@@ -1,5 +1,5 @@
 //
-// Copyright 2015 Anton Tananaev (anton.tananaev@gmail.com)
+// Copyright 2015 - 2017 Anton Tananaev (anton.tananaev@gmail.com)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,18 +14,15 @@
 // limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
-#import "TCPosition.h"
+import Foundation
 
-@interface TCDatabaseHelper : NSObject
+public class RequestManager: NSObject {
+    
+    public static func sendRequest(_ url: URL, completionHandler handler: @escaping (Bool) -> Void) {
+        let request = URLRequest(url: url)
+        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main, completionHandler: {(response, data, connectionError) -> Void in
+            handler(data != nil)
+        })
+    }
 
-+ (NSManagedObjectContext *)managedObjectContext;
-
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
-- (instancetype)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
-
-- (TCPosition *)selectPosition;
-- (void)deletePosition:(TCPosition *)position;
-
-@end
+}

@@ -1,5 +1,5 @@
 //
-// Copyright 2015 Anton Tananaev (anton.tananaev@gmail.com)
+// Copyright 2015 - 2017 Anton Tananaev (anton.tananaev@gmail.com)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,10 +14,20 @@
 // limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
+import XCTest
+import TraccarClient
 
-@interface TCRequestManager : NSObject
+class RequestManagerTests: XCTestCase {
 
-+ (void)sendRequest:(NSURL *)url completionHandler:(void (^)(BOOL success))handler;
+    func testSendRequest() {
+        let expectation: XCTestExpectation? = self.expectation(description: "sendRequest")
 
-@end
+        RequestManager.sendRequest(URL(string: "http://www.google.com")!, completionHandler: {(success) -> Void in
+            XCTAssertTrue(success)
+            expectation?.fulfill()
+        })
+
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+
+}

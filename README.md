@@ -6,6 +6,14 @@
 
 Traccar Client is an iOS GPS tracking application. It can work with Traccar open source server software.
 
+## Build
+
+Project uses CocoaPods for dependencies management. To build the project you need to download dependencies:
+
+```
+pod install
+```
+
 ## Team
 
 - Anton Tananaev ([anton@traccar.org](mailto:anton@traccar.org))
