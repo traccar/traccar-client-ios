@@ -52,17 +52,13 @@ class MainViewController: IASKAppSettingsViewController {
         let status = (defaults?.bool(forKey: "service_status_preference"))!
 
         if status && trackingController == nil {
-            let validHost = "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$"
-            let hostPredicate = NSPredicate(format: "SELF MATCHES %@", validHost)
-
-            let address = (defaults?.string(forKey: "server_address_preference"))!
-            let port = (defaults?.integer(forKey: "server_port_preference"))!
+            let url = (defaults?.string(forKey: "server_url_preference"))!
             let frequency = (defaults?.integer(forKey: "frequency_preference"))!
-            
-            if !hostPredicate.evaluate(with: address) {
-                showError("Invalid server address")
-            } else if port <= 0 || port > 65535 {
-                showError("Invalid server port")
+
+            let candidateUrl = NSURL(string: url)
+
+            if candidateUrl == nil || candidateUrl?.host == nil || (candidateUrl?.scheme != "http" && candidateUrl?.scheme != "https") {
+                showError("Invalid server URL")
             } else if frequency <= 0 {
                 showError("Invalid frequency value")
             } else {

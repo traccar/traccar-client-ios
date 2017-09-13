@@ -29,16 +29,12 @@ class TrackingController: PositionProviderDelegate, NetworkManagerDelegate {
     var networkManager = NetworkManager()
     var userDefaults = UserDefaults.standard
 
-    var address: String
-    var port: Int
-    var secure: Bool
+    var url: String
     
     init() {
         online = networkManager.online()
 
-        address = userDefaults.string(forKey: "server_address_preference")!
-        port = userDefaults.integer(forKey: "server_port_preference")
-        secure = userDefaults.bool(forKey: "secure_preference")
+        url = userDefaults.string(forKey: "server_url_preference")!
 
         positionProvider.delegate = self;
         networkManager.delegate = self;
@@ -105,7 +101,7 @@ class TrackingController: PositionProviderDelegate, NetworkManagerDelegate {
     }
     
     func send(_ position: Position) {
-        let request = ProtocolFormatter.formatPostion(position, address: address, port: port, secure: secure)
+        let request = ProtocolFormatter.formatPostion(position, url: url)
         RequestManager.sendRequest(request, completionHandler: {(_ success: Bool) -> Void in
             if success {
                 self.delete(position)

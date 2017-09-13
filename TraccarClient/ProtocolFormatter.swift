@@ -18,11 +18,8 @@ import Foundation
 
 public class ProtocolFormatter: NSObject {
     
-    public static func formatPostion(_ position: Position, address: String, port: Int, secure: Bool) -> URL {
-        var components = URLComponents()
-
-        components.scheme = secure ? "https" : "http"
-        components.percentEncodedHost = "\(address):\(port)"
+    public static func formatPostion(_ position: Position, url: String) -> URL {
+        var components = URLComponents(string: url)
 
         var query = String()
         query += "id=\(position.deviceId!)&"
@@ -33,10 +30,10 @@ public class ProtocolFormatter: NSObject {
         query += "bearing=\(position.course!)&"
         query += "altitude=\(position.altitude!)&"
         query += "batt=\(position.battery!)"
-        components.query = query
+        components?.query = query
 
         // use queryItems for iOS 8
-        return components.url!
+        return (components?.url)!
     }
 
 }
