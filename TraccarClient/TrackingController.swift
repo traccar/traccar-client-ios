@@ -77,6 +77,10 @@ class TrackingController: PositionProviderDelegate, NetworkManagerDelegate {
     //
     
     func write(_ position: Position) {
+        let context = DatabaseHelper().managedObjectContext
+        if context.hasChanges {
+            try? context.save()
+        }
         if self.online && self.waiting {
             read()
             self.waiting = false

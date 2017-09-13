@@ -24,8 +24,8 @@ public class ProtocolFormatter: NSObject {
         var query = String()
         query += "id=\(position.deviceId!)&"
         query += "timestamp=\(Int(position.time!.timeIntervalSince1970))&"
-        query += String(format: "lat=%.06f&", position.latitude!)
-        query += String(format: "lon=%.06f&", position.longitude!)
+        query += String(format: "lat=%.06f&", position.latitude!.doubleValue)
+        query += String(format: "lon=%.06f&", position.longitude!.doubleValue)
         query += "speed=\(position.speed!)&"
         query += "bearing=\(position.course!)&"
         query += "altitude=\(position.altitude!)&"
