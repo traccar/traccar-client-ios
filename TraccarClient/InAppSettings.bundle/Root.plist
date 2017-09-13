@@ -32,35 +32,13 @@
 		</dict>
 		<dict>
 			<key>DefaultValue</key>
-			<string>demo.traccar.org</string>
+			<string>http://demo.traccar.org:5055</string>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Server address</string>
+			<string>Server URL</string>
 			<key>Key</key>
-			<string>server_address_preference</string>
-		</dict>
-		<dict>
-			<key>KeyboardType</key>
-			<string>NumberPad</string>
-			<key>DefaultValue</key>
-			<string>5055</string>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Server port</string>
-			<key>Key</key>
-			<string>server_port_preference</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Encryption</string>
-			<key>Key</key>
-			<string>secure_preference</string>
-			<key>DefaultValue</key>
-			<false/>
+			<string>server_url_preference</string>
 		</dict>
 		<dict>
 			<key>KeyboardType</key>

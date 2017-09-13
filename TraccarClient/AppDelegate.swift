@@ -40,6 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize other defaults
         registerDefaultsFromSettingsBundle()
         
+        migrateLegacyDefaults()
+        
         let modelURL = Bundle.main.url(forResource: "TraccarClient", withExtension: "momd")
         managedObjectModel = NSManagedObjectModel(contentsOf: modelURL!)
         
@@ -82,6 +84,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         UserDefaults.standard.register(defaults: defaults)
+    }
+    
+    func migrateLegacyDefaults() {
+        let userDefaults = UserDefaults.standard
+        if userDefaults.object(forKey: "server_address_preference") != nil {
+            var urlComponents = URLComponents()
+            urlComponents.scheme = userDefaults.bool(forKey: "secure_preference") ? "https" : "http"
+            urlComponents.host = userDefaults.string(forKey: "server_address_preference")
+            urlComponents.port = userDefaults.integer(forKey: "server_port_preference")
+            if urlComponents.port == 0 {
+                urlComponents.port = 5055
+            }
+            
+            userDefaults.set(urlComponents.string, forKey: "server_url_preference")
+            
+            userDefaults.removeObject(forKey: "server_port_preference")
+            userDefaults.removeObject(forKey: "server_address_preference")
+            userDefaults.removeObject(forKey: "secure_preference")
+        }
     }
 
 }
