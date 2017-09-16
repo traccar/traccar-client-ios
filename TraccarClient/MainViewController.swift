@@ -47,7 +47,7 @@ class MainViewController: IASKAppSettingsViewController {
         present(alert, animated: true)
     }
 
-    func defaultsChanged(_ notification: Notification) {
+    @objc func defaultsChanged(_ notification: Notification) {
         let defaults = notification.object as? UserDefaults
         let status = (defaults?.bool(forKey: "service_status_preference"))!
 
