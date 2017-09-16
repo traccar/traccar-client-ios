@@ -17,7 +17,7 @@
 import Foundation
 import SystemConfiguration
 
-@objc protocol NetworkManagerDelegate {
+protocol NetworkManagerDelegate: class {
     func didUpdateNetwork(online: Bool)
 }
 
