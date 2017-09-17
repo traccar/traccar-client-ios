@@ -428,7 +428,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Google\" ]; then\ncp -r \"${PROJECT_DIR}/../traccar-shared/google-services/traccar-client-ios.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\nfi\n";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Google\" ]; then\nGOOGLE_APP_ID=`cat ../traccar-shared/google-services/traccar-client-ios.plist | grep \"<string>1:\" | cut -f2 -d\">\" | cut -f1 -d\"<\"`\ncp -r \"${PROJECT_DIR}/../traccar-shared/google-services/traccar-client-ios.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n\"${PODS_ROOT}\"/FirebaseCrash/upload-sym \"../traccar-shared/firebase/traccar-client-ios.json\"\nfi\n";
 		};
 		893E3CEA9F2969E56D04ABF2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
