@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var managedObjectModel: NSManagedObjectModel?
     var persistentStoreCoordinator: NSPersistentStoreCoordinator?
     
+    static var trackingController: TrackingController?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         #if FIREBASE
         FirebaseApp.configure()
@@ -34,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UIDevice.current.isBatteryMonitoringEnabled = true
 
-        // Initialize device identifier
         let userDefaults = UserDefaults.standard
         if userDefaults.string(forKey: "device_id_preference") == nil {
             srandomdev()
@@ -42,17 +43,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             userDefaults.setValue(identifier, forKey: "device_id_preference")
         }
 
-        // Initialize other defaults
         registerDefaultsFromSettingsBundle()
         
         migrateLegacyDefaults()
         
-        let modelURL = Bundle.main.url(forResource: "TraccarClient", withExtension: "momd")
-        managedObjectModel = NSManagedObjectModel(contentsOf: modelURL!)
+        let modelUrl = Bundle.main.url(forResource: "TraccarClient", withExtension: "momd")
+        managedObjectModel = NSManagedObjectModel(contentsOf: modelUrl!)
         
         persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel!)
-        let storeURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last?.appendingPathComponent("TraccarClient.sqlite")
-        try! persistentStoreCoordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
+        let storeUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last?.appendingPathComponent("TraccarClient.sqlite")
+        try! persistentStoreCoordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeUrl, options: nil)
         
         managedObjectContext = NSManagedObjectContext()
         managedObjectContext?.persistentStoreCoordinator = persistentStoreCoordinator
@@ -61,8 +61,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-
-        // Change service status
         let userDefaults = UserDefaults.standard
         userDefaults.setValue(nil, forKey: "service_status_preference")
         
@@ -74,7 +72,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func registerDefaultsFromSettingsBundle() {
-        
         let settingsBundle = Bundle.main.path(forResource: "InAppSettings", ofType: "bundle")!
         let finalPath = URL(fileURLWithPath: settingsBundle).appendingPathComponent("Root.plist")
         let settingsDictionary = NSDictionary(contentsOf: finalPath)

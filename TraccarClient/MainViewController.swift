@@ -19,8 +19,6 @@ import InAppSettingsKit
 
 class MainViewController: IASKAppSettingsViewController {
     
-    var trackingController: TrackingController?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("Traccar Client", comment: "")
@@ -51,7 +49,7 @@ class MainViewController: IASKAppSettingsViewController {
         let defaults = notification.object as? UserDefaults
         let status = (defaults?.bool(forKey: "service_status_preference"))!
 
-        if status && trackingController == nil {
+        if status && AppDelegate.trackingController == nil {
             let url = (defaults?.string(forKey: "server_url_preference"))!
             let frequency = (defaults?.integer(forKey: "frequency_preference"))!
 
@@ -63,13 +61,13 @@ class MainViewController: IASKAppSettingsViewController {
                 showError("Invalid frequency value")
             } else {
                 StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
-                trackingController = TrackingController()
-                trackingController?.start()
+                AppDelegate.trackingController = TrackingController()
+                AppDelegate.trackingController?.start()
             }
-        } else if !status && trackingController != nil {
+        } else if !status && AppDelegate.trackingController != nil {
             StatusViewController.addMessage(NSLocalizedString("Service destroyed", comment: ""))
-            trackingController?.stop()
-            trackingController = nil
+            AppDelegate.trackingController?.stop()
+            AppDelegate.trackingController = nil
         }
     }
     
