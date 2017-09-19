@@ -25,10 +25,10 @@ class NetworkManager : NSObject {
     
     weak var delegate: NetworkManagerDelegate?
     
-    var reachability: SCNetworkReachability
+    //var reachability: SCNetworkReachability
     
     override init() {
-        var zeroAddress = sockaddr_in()
+        /*var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
         zeroAddress.sin_family = sa_family_t(AF_INET)
 
@@ -36,28 +36,29 @@ class NetworkManager : NSObject {
             $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {
                 SCNetworkReachabilityCreateWithAddress(nil, $0)
             }
-        })!
+        })!*/
 
         super.init()
     }
 
     func online() -> Bool {
-        var flags: SCNetworkReachabilityFlags = []
+        /*var flags: SCNetworkReachabilityFlags = []
         SCNetworkReachabilityGetFlags(reachability, &flags)
-        return NetworkManager.online(for: flags)
+        return NetworkManager.online(for: flags)*/
+        return true
     }
     
     func start() {
-        var context = SCNetworkReachabilityContext(version: 0, info: Unmanaged.passUnretained(self).toOpaque(), retain: nil, release: nil, copyDescription: nil)
+        /*var context = SCNetworkReachabilityContext(version: 0, info: Unmanaged.passUnretained(self).toOpaque(), retain: nil, release: nil, copyDescription: nil)
         SCNetworkReachabilitySetCallback(reachability, { (reachability, flags, pointer) in
             let networkManager = Unmanaged<NetworkManager>.fromOpaque(pointer!).takeUnretainedValue()
             networkManager.delegate?.didUpdateNetwork(online: NetworkManager.online(for: flags))
         }, &context)
-        SCNetworkReachabilityScheduleWithRunLoop(reachability, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode.rawValue)
+        SCNetworkReachabilityScheduleWithRunLoop(reachability, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode.rawValue)*/
     }
     
     func stop() {
-        SCNetworkReachabilityUnscheduleFromRunLoop(reachability, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode.rawValue)
+        /*SCNetworkReachabilityUnscheduleFromRunLoop(reachability, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode.rawValue)*/
     }
 
     static func online(for flags: SCNetworkReachabilityFlags) -> Bool {

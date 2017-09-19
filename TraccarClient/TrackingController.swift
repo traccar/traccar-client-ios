@@ -32,7 +32,7 @@ class TrackingController: PositionProviderDelegate, NetworkManagerDelegate {
     var url: String
     
     init() {
-        online = true // networkManager.online()
+        online = networkManager.online()
 
         url = userDefaults.string(forKey: "server_url_preference")!
 
@@ -46,11 +46,11 @@ class TrackingController: PositionProviderDelegate, NetworkManagerDelegate {
             read()
         }
         positionProvider.startUpdates()
-        //networkManager.start()
+        networkManager.start()
     }
     
     func stop() {
-        //networkManager.stop()
+        networkManager.stop()
         positionProvider.stopUpdates()
         self.stopped = true
     }
