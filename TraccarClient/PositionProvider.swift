@@ -55,8 +55,12 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
     }
     
     func startUpdates() {
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
+        switch CLLocationManager.authorizationStatus() {
+        case .notDetermined, .restricted, .denied:
+            locationManager.requestAlwaysAuthorization()
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        }
     }
     
     func stopUpdates() {
@@ -69,6 +73,15 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
             return device.batteryLevel * 100
         } else {
             return 0
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        default:
+            break
         }
     }
     
