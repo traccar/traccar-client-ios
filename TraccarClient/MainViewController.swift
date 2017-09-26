@@ -28,7 +28,7 @@ class MainViewController: IASKAppSettingsViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.defaultsChanged), name: UserDefaults.didChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didChangeSetting), name: Notification.Name("kAppSettingChanged"), object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,29 +45,29 @@ class MainViewController: IASKAppSettingsViewController {
         present(alert, animated: true)
     }
 
-    @objc func defaultsChanged(_ notification: Notification) {
-        let defaults = notification.object as? UserDefaults
-        let status = (defaults?.bool(forKey: "service_status_preference"))!
-
-        if status && AppDelegate.trackingController == nil {
-            let url = (defaults?.string(forKey: "server_url_preference"))!
-            let frequency = (defaults?.integer(forKey: "frequency_preference"))!
-
-            let candidateUrl = NSURL(string: url)
-
-            if candidateUrl == nil || candidateUrl?.host == nil || (candidateUrl?.scheme != "http" && candidateUrl?.scheme != "https") {
-                showError("Invalid server URL")
-            } else if frequency <= 0 {
-                showError("Invalid frequency value")
-            } else {
-                StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
-                AppDelegate.trackingController = TrackingController()
-                AppDelegate.trackingController?.start()
+    @objc func didChangeSetting(_ notification: Notification) {
+        if let status = notification.userInfo?["service_status_preference"] as? Bool {
+            if status && AppDelegate.instance.trackingController == nil {
+                let userDefaults = UserDefaults.standard
+                let url = userDefaults.string(forKey: "server_url_preference")
+                let frequency = userDefaults.integer(forKey: "frequency_preference")
+                
+                let candidateUrl = NSURL(string: url!)
+                
+                if candidateUrl == nil || candidateUrl?.host == nil || (candidateUrl?.scheme != "http" && candidateUrl?.scheme != "https") {
+                    self.showError("Invalid server URL")
+                } else if frequency <= 0 {
+                    self.showError("Invalid frequency value")
+                } else {
+                    StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
+                    AppDelegate.instance.trackingController = TrackingController()
+                    AppDelegate.instance.trackingController?.start()
+                }
+            } else if !status && AppDelegate.instance.trackingController != nil {
+                StatusViewController.addMessage(NSLocalizedString("Service destroyed", comment: ""))
+                AppDelegate.instance.trackingController?.stop()
+                AppDelegate.instance.trackingController = nil
             }
-        } else if !status && AppDelegate.trackingController != nil {
-            StatusViewController.addMessage(NSLocalizedString("Service destroyed", comment: ""))
-            AppDelegate.trackingController?.stop()
-            AppDelegate.trackingController = nil
         }
     }
     

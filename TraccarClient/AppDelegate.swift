@@ -27,7 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var managedObjectModel: NSManagedObjectModel?
     var persistentStoreCoordinator: NSPersistentStoreCoordinator?
     
-    static var trackingController: TrackingController?
+    var trackingController: TrackingController?
+    
+    static var instance: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         #if FIREBASE

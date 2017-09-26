@@ -23,8 +23,7 @@ public class DatabaseHelper: NSObject {
     let managedObjectContext: NSManagedObjectContext
     
     convenience override init() {
-        let delegate = UIApplication.shared.delegate as? AppDelegate
-        self.init(managedObjectContext: (delegate?.managedObjectContext)!)
+        self.init(managedObjectContext: AppDelegate.instance.managedObjectContext!)
     }
     
     public init(managedObjectContext: NSManagedObjectContext) {
