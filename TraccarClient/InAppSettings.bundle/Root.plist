@@ -41,6 +41,28 @@
 			<string>server_url_preference</string>
 		</dict>
 		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Location accuracy</string>
+			<key>Key</key>
+			<string>accuracy_preference</string>
+			<key>DefaultValue</key>
+			<string>medium</string>
+			<key>Titles</key>
+			<array>
+				<string>High</string>
+				<string>Medium</string>
+				<string>Low</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>high</string>
+				<string>medium</string>
+				<string>low</string>
+			</array>
+		</dict>
+		<dict>
 			<key>KeyboardType</key>
 			<string>NumberPad</string>
 			<key>DefaultValue</key>
