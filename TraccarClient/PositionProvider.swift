@@ -47,7 +47,15 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
         locationManager.delegate = self
 
         locationManager.pausesLocationUpdatesAutomatically = false
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        
+        switch userDefaults.string(forKey: "accuracy_preference") ?? "medium" {
+        case "high":
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        case "low":
+            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        default:
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        }
 
         if #available(iOS 9.0, *) {
             locationManager.allowsBackgroundLocationUpdates = true

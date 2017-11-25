@@ -15,8 +15,9 @@
 //
 
 import Foundation
+import CoreLocation
 
-class TrackingController: PositionProviderDelegate, NetworkManagerDelegate {
+class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDelegate, CLLocationManagerDelegate {
     
     static let RETRY_DELAY: UInt64 = 30 * 1000;
     
@@ -25,19 +26,22 @@ class TrackingController: PositionProviderDelegate, NetworkManagerDelegate {
     var stopped = false
 
     var positionProvider = PositionProvider()
+    var locationManager = CLLocationManager()
     var databaseHelper = DatabaseHelper()
     var networkManager = NetworkManager()
     var userDefaults = UserDefaults.standard
 
     var url: String
     
-    init() {
+    override init() {
         online = networkManager.online()
-
         url = userDefaults.string(forKey: "server_url_preference")!
 
-        positionProvider.delegate = self;
-        networkManager.delegate = self;
+        super.init()
+
+        positionProvider.delegate = self
+        locationManager.delegate = self
+        networkManager.delegate = self
     }
     
     func start() {
@@ -46,11 +50,13 @@ class TrackingController: PositionProviderDelegate, NetworkManagerDelegate {
             read()
         }
         positionProvider.startUpdates()
+        locationManager.startMonitoringSignificantLocationChanges()
         networkManager.start()
     }
     
     func stop() {
         networkManager.stop()
+        locationManager.stopMonitoringSignificantLocationChanges()
         positionProvider.stopUpdates()
         self.stopped = true
     }

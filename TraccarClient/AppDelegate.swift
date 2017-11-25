@@ -60,14 +60,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         managedObjectContext = NSManagedObjectContext()
         managedObjectContext?.persistentStoreCoordinator = persistentStoreCoordinator
-        
+
+        if userDefaults.bool(forKey: "service_status_preference") {
+            StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
+            trackingController = TrackingController()
+            trackingController?.start()
+        }
+
         return true
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        let userDefaults = UserDefaults.standard
-        userDefaults.setValue(nil, forKey: "service_status_preference")
-        
         if let context = managedObjectContext {
             if context.hasChanges {
                 try! context.save()
