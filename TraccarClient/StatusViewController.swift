@@ -46,6 +46,10 @@ class StatusViewController: UITableViewController {
         StatusViewController.clearMessages()
     }
     
+    override func viewDidLoad() {
+        tableView.tableFooterView = UIView()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         StatusViewController.statusViewController = self
