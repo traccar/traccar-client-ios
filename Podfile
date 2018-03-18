@@ -4,7 +4,8 @@ target 'TraccarClient' do
   use_frameworks!
   pod 'InAppSettingsKit'
   pod 'Firebase/Core'
-  pod 'Firebase/Crash'
+  pod 'Fabric'
+  pod 'Crashlytics'
 end
 
 target 'TraccarClientTests' do
