@@ -26,7 +26,7 @@ class ProtocolFormatterTests: CoreDataTests {
 
         let url: URL? = ProtocolFormatter.formatPostion(position, url: "http://localhost:5055")
 
-        XCTAssertEqual("http://localhost:5055?id=123456789012345&timestamp=0&lat=0.000000&lon=0.000000&speed=0&bearing=0&altitude=0&batt=0", url?.absoluteString)
+        XCTAssertEqual("http://localhost:5055?id=123456789012345&timestamp=0&lat=0.000000&lon=0.000000&speed=0&bearing=0&altitude=0&accuracy=0&batt=0", url?.absoluteString)
     }
 
 }

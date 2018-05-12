@@ -9,6 +9,7 @@ target 'TraccarClient' do
 end
 
 target 'TraccarClientTests' do
-    use_frameworks!
-    pod 'InAppSettingsKit'
+  use_frameworks!
+  pod 'Firebase'
+  pod 'InAppSettingsKit'
 end

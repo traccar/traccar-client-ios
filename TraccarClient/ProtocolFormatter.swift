@@ -29,6 +29,7 @@ public class ProtocolFormatter: NSObject {
         query += "speed=\(position.speed!)&"
         query += "bearing=\(position.course!)&"
         query += "altitude=\(position.altitude!)&"
+        query += "accuracy=\(position.accuracy!)&"
         query += "batt=\(position.battery!)"
         components?.query = query
 

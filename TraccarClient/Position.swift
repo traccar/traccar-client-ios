@@ -28,6 +28,7 @@ public class Position: NSManagedObject {
     @NSManaged public var speed: NSNumber?
     @NSManaged public var course: NSNumber?
     @NSManaged public var battery: NSNumber?
+    @NSManaged public var accuracy: NSNumber?
     
     public convenience init(managedObjectContext context: NSManagedObjectContext) {
         let entityDescription = NSEntityDescription.entity(forEntityName: "Position", in: context)
@@ -45,6 +46,7 @@ public class Position: NSManagedObject {
         if location.course >= 0 {
             course = location.course as NSNumber
         }
+        accuracy = location.horizontalAccuracy as NSNumber
     }
 
 }
