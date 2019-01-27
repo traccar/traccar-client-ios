@@ -1,8 +1,10 @@
 "Service status" = "Server status";
 "Device identifier" = "Toestelidentificatie";
-"Server address" = "Serveradres";
-"Server port" = "Serverpoort";
-"Encryption" = "Versleuteling";
+"Server URL" = "Server URL";
+"Location accuracy" = "Locatienauwkeurigheid";
+"High" = "Hoog";
+"Medium" = "Gemiddeld";
+"Low" = "Laag";
 "Frequency" = "Frequentie";
 "Distance" = "Afstand";
 "Angle" = "Hoek";

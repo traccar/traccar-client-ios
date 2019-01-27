@@ -1,8 +1,10 @@
 "Service status" = "Status usługi";
 "Device identifier" = "Identyfikator urządzenia";
-"Server address" = "Adres serwera";
-"Server port" = "Port serwera";
-"Encryption" = "Szyfrowanie";
+"Server URL" = "URL Serwera";
+"Location accuracy" = "Dokładność lokalizacji";
+"High" = "Wysoka";
+"Medium" = "Średnia";
+"Low" = "Niska";
 "Frequency" = "Częstotliwość";
 "Distance" = "Dystans";
 "Angle" = "Kąt";

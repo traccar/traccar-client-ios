@@ -1,8 +1,10 @@
 "Service status" = "Statut";
-"Device identifier" = "Identifiant du périphérique";
-"Server address" = "Adresse du serveur";
-"Server port" = "Port du serveur";
-"Encryption" = "Encryption";
+"Device identifier" = "Identifiant de l\'appareil";
+"Server URL" = "URL du serveur";
+"Location accuracy" = "Precision de la localisation";
+"High" = "Haut";
+"Medium" = "Moyen";
+"Low" = "Bas";
 "Frequency" = "Fréquence";
 "Distance" = "Distance";
 "Angle" = "Angle";

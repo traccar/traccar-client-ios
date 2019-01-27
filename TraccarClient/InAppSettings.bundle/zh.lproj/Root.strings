@@ -1,8 +1,10 @@
-"Service status" = "设备状态";
-"Device identifier" = "设备标识符";
-"Server address" = "服务器地址";
-"Server port" = "服务器端口";
-"Encryption" = "加密";
-"Frequency" = "频率";
+"Service status" = "定位";
+"Device identifier" = "设备编码";
+"Server URL" = "服务器地址";
+"Location accuracy" = "位置精度";
+"High" = "高";
+"Medium" = "中";
+"Low" = "低";
+"Frequency" = "定位频率（秒）";
 "Distance" = "距离";
 "Angle" = "角度";

@@ -1,9 +1,9 @@
 "Traccar Client" = "Traccar Клиент";
-"Service created" = "Сервис создан";
-"Service destroyed" = "Сервис удален";
+"Service created" = "Service created";
+"Service destroyed" = "Service destroyed";
 "Send failed" = "Ошибка отправки";
 "Location update" = "Обновление местоположения";
-"Connectivity change" = "Изменение подключения";
+"Connectivity change" = "Connectivity change";
 "Invalid server address" = "Invalid server address";
 "Invalid server port" = "Invalid server port";
 "Invalid frequency value" = "Invalid frequency value";

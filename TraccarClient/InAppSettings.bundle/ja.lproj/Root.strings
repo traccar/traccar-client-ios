@@ -1,8 +1,10 @@
 "Service status" = "サービスステータス";
 "Device identifier" = "デバイス ID";
-"Server address" = "サーバーアドレス";
-"Server port" = "サーバーポート";
-"Encryption" = "暗号化";
+"Server URL" = "サーバー URL";
+"Location accuracy" = "位置情報の精度";
+"High" = "高";
+"Medium" = "中";
+"Low" = "低";
 "Frequency" = "周期";
 "Distance" = "距離";
 "Angle" = "角度";
