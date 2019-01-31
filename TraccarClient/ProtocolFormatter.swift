@@ -18,23 +18,42 @@ import Foundation
 
 public class ProtocolFormatter: NSObject {
     
-    public static func formatPostion(_ position: Position, url: String) -> URL {
+    public static func formatPostion(_ position: Position, url: String) -> URL? {
         var components = URLComponents(string: url)
 
         var query = String()
-        query += "id=\(position.deviceId!)&"
-        query += "timestamp=\(Int(position.time!.timeIntervalSince1970))&"
-        query += String(format: "lat=%.06f&", position.latitude!.doubleValue)
-        query += String(format: "lon=%.06f&", position.longitude!.doubleValue)
-        query += "speed=\(position.speed!)&"
-        query += "bearing=\(position.course!)&"
-        query += "altitude=\(position.altitude!)&"
-        query += "accuracy=\(position.accuracy!)&"
-        query += "batt=\(position.battery!)"
+        
+        if let deviceId = position.deviceId {
+            query += "id=\(deviceId)&"
+        }
+        if let time = position.time {
+            query += "timestamp=\(Int(time.timeIntervalSince1970))&"
+        }
+        if let latitude = position.latitude {
+            query += String(format: "lat=%.06f&", latitude.doubleValue)
+        }
+        if let longitude = position.longitude {
+            query += String(format: "lon=%.06f&", longitude.doubleValue)
+        }
+        if let speed = position.speed {
+            query += "speed=\(speed)&"
+        }
+        if let course = position.course {
+            query += "bearing=\(course)&"
+        }
+        if let altitude = position.altitude {
+            query += "altitude=\(altitude)&"
+        }
+        if let accuracy = position.accuracy {
+            query += "accuracy=\(accuracy)&"
+        }
+        if let battery = position.battery {
+            query += "batt=\(battery)"
+        }
         components?.query = query
 
         // use queryItems for iOS 8
-        return (components?.url)!
+        return components?.url
     }
 
 }

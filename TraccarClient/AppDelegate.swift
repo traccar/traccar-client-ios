@@ -42,8 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let userDefaults = UserDefaults.standard
         if userDefaults.string(forKey: "device_id_preference") == nil {
-            srandomdev()
-            let identifier = "\(arc4random_uniform(900000) + 100000)"
+            let identifier = "\(Int.random(in: 100000..<1000000))"
             userDefaults.setValue(identifier, forKey: "device_id_preference")
         }
 
@@ -88,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var defaults: [String:Any] = [:]
         
         for item in preferenceSpecifiers {
-            if let key = item.object(forKey: "Key") as! String! {
+            if let key = item.object(forKey: "Key") as? String {
                 defaults[key] = item.object(forKey: "DefaultValue")
             }
         }

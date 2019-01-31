@@ -111,16 +111,19 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
     }
     
     func send(_ position: Position) {
-        let request = ProtocolFormatter.formatPostion(position, url: url)
-        RequestManager.sendRequest(request, completionHandler: {(_ success: Bool) -> Void in
-            if success {
-                self.delete(position)
-            }
-            else {
-                StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
-                self.retry()
-            }
-        })
+        if let request = ProtocolFormatter.formatPostion(position, url: url) {
+            RequestManager.sendRequest(request, completionHandler: {(_ success: Bool) -> Void in
+                if success {
+                    self.delete(position)
+                } else {
+                    StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
+                    self.retry()
+                }
+            })
+        } else {
+            StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
+            self.retry()
+        }
     }
     
     func retry() {
