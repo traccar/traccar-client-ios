@@ -453,7 +453,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/InAppSettingsKit/InAppSettingsKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -466,7 +466,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FCFBF8EE6D7AB7B0579C833F /* [CP] Embed Pods Frameworks */ = {
@@ -475,7 +475,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/InAppSettingsKit/InAppSettingsKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -488,7 +488,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

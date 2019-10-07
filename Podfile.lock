@@ -1,54 +1,67 @@
 PODS:
-  - Crashlytics (3.12.0):
-    - Fabric (~> 1.9.0)
-  - Fabric (1.9.0)
-  - Firebase (5.16.0):
-    - Firebase/Core (= 5.16.0)
-  - Firebase/Core (5.16.0):
+  - Crashlytics (3.14.0):
+    - Fabric (~> 1.10.2)
+  - Fabric (1.10.2)
+  - Firebase (6.9.0):
+    - Firebase/Core (= 6.9.0)
+  - Firebase/Core (6.9.0):
     - Firebase/CoreOnly
-    - FirebaseAnalytics (= 5.5.0)
-  - Firebase/CoreOnly (5.16.0):
-    - FirebaseCore (= 5.2.0)
-  - FirebaseAnalytics (5.5.0):
-    - FirebaseCore (~> 5.2)
-    - FirebaseInstanceID (~> 3.4)
-    - GoogleAppMeasurement (= 5.5.0)
-    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
-    - GoogleUtilities/MethodSwizzler (~> 5.2)
-    - GoogleUtilities/Network (~> 5.2)
-    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - FirebaseAnalytics (= 6.1.2)
+  - Firebase/CoreOnly (6.9.0):
+    - FirebaseCore (= 6.3.0)
+  - FirebaseAnalytics (6.1.2):
+    - FirebaseCore (~> 6.3)
+    - FirebaseInstanceID (~> 4.2)
+    - GoogleAppMeasurement (= 6.1.2)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (~> 0.3)
-  - FirebaseCore (5.2.0):
-    - GoogleUtilities/Logger (~> 5.2)
-  - FirebaseInstanceID (3.4.0):
-    - FirebaseCore (~> 5.2)
-    - GoogleUtilities/Environment (~> 5.3)
-    - GoogleUtilities/UserDefaults (~> 5.3)
-  - GoogleAppMeasurement (5.5.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
-    - GoogleUtilities/MethodSwizzler (~> 5.2)
-    - GoogleUtilities/Network (~> 5.2)
-    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+  - FirebaseCore (6.3.0):
+    - FirebaseCoreDiagnostics (~> 1.0)
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GoogleUtilities/Logger (~> 6.2)
+  - FirebaseCoreDiagnostics (1.1.0):
+    - FirebaseCoreDiagnosticsInterop (~> 1.0)
+    - GoogleDataTransportCCTSupport (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.2)
+    - GoogleUtilities/Logger (~> 6.2)
+  - FirebaseCoreDiagnosticsInterop (1.0.0)
+  - FirebaseInstanceID (4.2.5):
+    - FirebaseCore (~> 6.0)
+    - GoogleUtilities/Environment (~> 6.0)
+    - GoogleUtilities/UserDefaults (~> 6.0)
+  - GoogleAppMeasurement (6.1.2):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (~> 0.3)
-  - GoogleUtilities/AppDelegateSwizzler (5.3.7):
+  - GoogleDataTransport (2.0.0)
+  - GoogleDataTransportCCTSupport (1.1.0):
+    - GoogleDataTransport (~> 2.0)
+    - nanopb
+  - GoogleUtilities/AppDelegateSwizzler (6.3.1):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (5.3.7)
-  - GoogleUtilities/Logger (5.3.7):
+  - GoogleUtilities/Environment (6.3.1)
+  - GoogleUtilities/Logger (6.3.1):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (5.3.7):
+  - GoogleUtilities/MethodSwizzler (6.3.1):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (5.3.7):
+  - GoogleUtilities/Network (6.3.1):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (5.3.7)"
-  - GoogleUtilities/Reachability (5.3.7):
+  - "GoogleUtilities/NSData+zlib (6.3.1)"
+  - GoogleUtilities/Reachability (6.3.1):
     - GoogleUtilities/Logger
-  - GoogleUtilities/UserDefaults (5.3.7):
+  - GoogleUtilities/UserDefaults (6.3.1):
     - GoogleUtilities/Logger
-  - InAppSettingsKit (2.10)
+  - InAppSettingsKit (2.14)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -63,30 +76,38 @@ DEPENDENCIES:
   - InAppSettingsKit
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Crashlytics
     - Fabric
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
+    - FirebaseCoreDiagnostics
+    - FirebaseCoreDiagnosticsInterop
     - FirebaseInstanceID
     - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleDataTransportCCTSupport
     - GoogleUtilities
     - InAppSettingsKit
     - nanopb
 
 SPEC CHECKSUMS:
-  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
-  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
-  Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
-  FirebaseAnalytics: d35d47c03c50c73c14a7fd31463c5775843e78a9
-  FirebaseCore: ea2d1816723ef21492b8e9113303e1350db5e08c
-  FirebaseInstanceID: 97ea7a5dca9afd72c79bfcdddb7a44aa1cbb42a1
-  GoogleAppMeasurement: 621f3bc6211d5ba548debe01fafad30cf5ab6859
-  GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
-  InAppSettingsKit: d965e29be941eb19857271e4625de3fba6e23c9f
+  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  Firebase: 2d750c54cda57d5a6ae31212cfe5cc813c6be7e4
+  FirebaseAnalytics: 5d9ccbf46ed25d3ec9304d263f85bddf1e93e2d2
+  FirebaseCore: 8b2765c445d40db7137989b7146a3aa3f91b5529
+  FirebaseCoreDiagnostics: be4f7a09d02ab305f18de59a470412caddb64c2a
+  FirebaseCoreDiagnosticsInterop: 6829da2b8d1fc795ff1bd99df751d3788035d2cb
+  FirebaseInstanceID: 550df9be1f99f751d8fcde3ac342a1e21a0e6c42
+  GoogleAppMeasurement: 0ae90be1cc4dad40f4a27fc767ef59fa032ec87b
+  GoogleDataTransport: c8617c00e4f3eb9418e42ac0e8ac5241a9d555dd
+  GoogleDataTransportCCTSupport: 9f352523e8785a71f6754f51eeff09f49ec19268
+  GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
+  InAppSettingsKit: 800853da39388780c15191846688c0974c5b13b5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
 PODFILE CHECKSUM: ae41c1d99d4f154f284264b140fba816b46e8038
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.8.1
