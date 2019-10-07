@@ -64,10 +64,10 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
     
     func startUpdates() {
         switch CLLocationManager.authorizationStatus() {
-        case .notDetermined, .restricted, .denied:
-            locationManager.requestAlwaysAuthorization()
-        case .authorizedAlways, .authorizedWhenInUse:
+        case .authorizedAlways:
             locationManager.startUpdatingLocation()
+        default:
+            locationManager.requestAlwaysAuthorization()
         }
     }
     
