@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="4Uy-y2-7bi">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="4Uy-y2-7bi">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,108 +17,16 @@
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="mBp-pp-ezn">
-                        <barButtonItem key="leftBarButtonItem" title="Status" id="eKa-7m-jq1">
+                        <barButtonItem key="rightBarButtonItem" title="Status" id="eKa-7m-jq1">
                             <connections>
                                 <segue destination="LmD-5n-dPz" kind="push" id="iTl-2p-q5b"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="About" id="gEG-ov-HEk">
-                            <connections>
-                                <segue destination="jRT-DT-Bqk" kind="push" id="uZ3-pe-KUK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68Y-02-qka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="123"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="J6t-IB-XqK">
-            <objects>
-                <viewController id="jRT-DT-Bqk" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1gd-ZB-nPA"/>
-                        <viewControllerLayoutGuide type="bottom" id="VHS-KZ-b4k"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hT5-zo-5s1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For more information visit www.traccar.org/client" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jF9-Ub-rRP">
-                                <rect key="frame" x="16" y="207" width="343" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kickstarter backers" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owH-ok-sQ8">
-                                <rect key="frame" x="16" y="273" width="343" height="20"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfT-Qd-zbx">
-                                <rect key="frame" x="16" y="301" width="343" height="57.5"/>
-                                <string key="text">Eoghan Gilboy, Jan Maika Dy, Luke Attard, Ted Holbrook, Anthony Knight, Stewart Brown, Marvin Percival, Jeffrey Streeter, Osman El-Baba, Keith Tallent, Rogier, David Thompson, Rafael Alonso, Rémi de Chazelles</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traccar Client" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDj-2j-wEh">
-                                <rect key="frame" x="16" y="80" width="343" height="20"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real time GPS tracker for iOS devices. Compatible with Traccar Server and other tracking systems." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drL-Ag-IYB">
-                                <rect key="frame" x="16" y="108" width="343" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application is free and open source, source code is licensed under Apache License Version 2.0 and available on GitHub." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hh-sN-c9g">
-                                <rect key="frame" x="16" y="149" width="343" height="50.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brandon Zylstra, Guido Preite, Gonzalo Saloma, Stefaan Bolle, Robert Hercz, Ponthieux" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOT-5f-Bzg">
-                                <rect key="frame" x="16" y="366" width="343" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="jF9-Ub-rRP" firstAttribute="top" secondItem="2Hh-sN-c9g" secondAttribute="bottom" constant="8" symbolic="YES" id="2UF-W3-kiE"/>
-                            <constraint firstItem="drL-Ag-IYB" firstAttribute="top" secondItem="TDj-2j-wEh" secondAttribute="bottom" constant="8" symbolic="YES" id="4O3-CS-xab"/>
-                            <constraint firstItem="WOT-5f-Bzg" firstAttribute="top" secondItem="gfT-Qd-zbx" secondAttribute="bottom" constant="8" symbolic="YES" id="6iX-vc-lSh"/>
-                            <constraint firstItem="gfT-Qd-zbx" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="9YY-SH-PYf"/>
-                            <constraint firstItem="jF9-Ub-rRP" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="ARj-IL-GUo"/>
-                            <constraint firstItem="WOT-5f-Bzg" firstAttribute="trailing" secondItem="hT5-zo-5s1" secondAttribute="trailingMargin" id="C8d-Vv-xXN"/>
-                            <constraint firstItem="gfT-Qd-zbx" firstAttribute="top" secondItem="owH-ok-sQ8" secondAttribute="bottom" constant="8" symbolic="YES" id="Dfy-ez-Uiz"/>
-                            <constraint firstItem="TDj-2j-wEh" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="M9C-r6-1Ka"/>
-                            <constraint firstItem="TDj-2j-wEh" firstAttribute="top" secondItem="1gd-ZB-nPA" secondAttribute="bottom" constant="16" id="MQC-FX-L51"/>
-                            <constraint firstItem="WOT-5f-Bzg" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="N7x-ed-EXU"/>
-                            <constraint firstItem="owH-ok-sQ8" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="Pn4-CK-nNU"/>
-                            <constraint firstItem="2Hh-sN-c9g" firstAttribute="trailing" secondItem="hT5-zo-5s1" secondAttribute="trailingMargin" id="Qvz-wy-yCx"/>
-                            <constraint firstItem="2Hh-sN-c9g" firstAttribute="top" secondItem="drL-Ag-IYB" secondAttribute="bottom" constant="8" symbolic="YES" id="R0s-TV-iKT"/>
-                            <constraint firstItem="TDj-2j-wEh" firstAttribute="trailing" secondItem="hT5-zo-5s1" secondAttribute="trailingMargin" id="V5V-Ax-yyj"/>
-                            <constraint firstItem="drL-Ag-IYB" firstAttribute="trailing" secondItem="hT5-zo-5s1" secondAttribute="trailingMargin" id="e3Q-DM-p7c"/>
-                            <constraint firstItem="owH-ok-sQ8" firstAttribute="top" secondItem="jF9-Ub-rRP" secondAttribute="bottom" constant="32" id="eOu-OZ-oOM"/>
-                            <constraint firstItem="jF9-Ub-rRP" firstAttribute="trailing" secondItem="hT5-zo-5s1" secondAttribute="trailingMargin" id="lSC-Sv-w9H"/>
-                            <constraint firstItem="drL-Ag-IYB" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="mXk-yQ-Xp0"/>
-                            <constraint firstItem="gfT-Qd-zbx" firstAttribute="trailing" secondItem="hT5-zo-5s1" secondAttribute="trailingMargin" id="oGI-Kc-mRU"/>
-                            <constraint firstItem="2Hh-sN-c9g" firstAttribute="leading" secondItem="hT5-zo-5s1" secondAttribute="leadingMargin" id="pOC-IH-Kvs"/>
-                            <constraint firstItem="owH-ok-sQ8" firstAttribute="trailing" secondItem="hT5-zo-5s1" secondAttribute="trailingMargin" id="w8f-rN-Emm"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="v1t-Zh-2SR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M3m-Yw-R8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1133.5" y="122.5"/>
+            <point key="canvasLocation" x="863.768115942029" y="82.366071428571431"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="El5-px-WCe">
@@ -133,7 +38,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StatusCell" id="bOU-VM-Ej4">
-                                <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bOU-VM-Ej4" id="jfy-rh-RFY">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -156,14 +61,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="522-xf-AQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="879"/>
+            <point key="canvasLocation" x="1633" y="82"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kvI-h8-0j0">
             <objects>
                 <navigationController definesPresentationContext="YES" id="4Uy-y2-7bi" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aeM-3M-Z4b">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.263132751" green="0.62866193059999997" blue="0.27687552570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -177,12 +82,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kiw-gD-Vdj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="123"/>
+            <point key="canvasLocation" x="89.855072463768124" y="82.366071428571431"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>

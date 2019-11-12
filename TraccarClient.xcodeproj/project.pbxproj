@@ -634,7 +634,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 54;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YW49KTJKFW;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -643,7 +643,7 @@
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.8;
+				MARKETING_VERSION = 5.9;
 				OTHER_SWIFT_FLAGS = "-D FIREBASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -795,7 +795,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 54;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YW49KTJKFW;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -804,7 +804,7 @@
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.8;
+				MARKETING_VERSION = 5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -825,7 +825,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 53;
+				CURRENT_PROJECT_VERSION = 54;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YW49KTJKFW;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -834,7 +834,7 @@
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.8;
+				MARKETING_VERSION = 5.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
