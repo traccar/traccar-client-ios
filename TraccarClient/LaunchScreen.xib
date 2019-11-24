@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,10 +19,10 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="TfC-6h-A1k"/>
                     </constraints>
-                    <color key="barTintColor" red="0.263132751" green="0.62866193059999997" blue="0.27687552570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="barTintColor" name="Brand"/>
                 </navigationBar>
             </subviews>
-            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="jyO-lQ-xCZ" secondAttribute="trailing" id="BVV-Jp-FLs"/>
                 <constraint firstItem="jyO-lQ-xCZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ra4-bu-wwa"/>
@@ -32,4 +31,9 @@
             <point key="canvasLocation" x="499" y="433"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="Brand">
+            <color red="0.2627450980392157" green="0.62745098039215685" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
