@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true]
         try! persistentStoreCoordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeUrl, options: options)
         
-        managedObjectContext = NSManagedObjectContext()
+        managedObjectContext = NSManagedObjectContext.init(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext?.persistentStoreCoordinator = persistentStoreCoordinator
 
         if userDefaults.bool(forKey: "service_status_preference") {

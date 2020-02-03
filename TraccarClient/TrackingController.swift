@@ -25,17 +25,19 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
     var waiting = false
     var stopped = false
 
-    var positionProvider = PositionProvider()
-    var locationManager = CLLocationManager()
-    var databaseHelper = DatabaseHelper()
-    var networkManager = NetworkManager()
-    var userDefaults = UserDefaults.standard
+    let positionProvider = PositionProvider()
+    let locationManager = CLLocationManager()
+    let databaseHelper = DatabaseHelper()
+    let networkManager = NetworkManager()
+    let userDefaults = UserDefaults.standard
 
-    var url: String
+    let url: String
+    let buffer: Bool
     
     override init() {
         online = networkManager.online()
         url = userDefaults.string(forKey: "server_url_preference")!
+        buffer = userDefaults.bool(forKey: "buffer_preference")
 
         super.init()
 
@@ -63,7 +65,11 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
 
     func didUpdate(position: Position) {
         StatusViewController.addMessage(NSLocalizedString("Location update", comment: ""))
-        write(position)
+        if buffer {
+            write(position)
+        } else {
+            send(position)
+        }
     }
     
     func didUpdateNetwork(online: Bool) {
@@ -114,15 +120,21 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
         if let request = ProtocolFormatter.formatPostion(position, url: url) {
             RequestManager.sendRequest(request, completionHandler: {(_ success: Bool) -> Void in
                 if success {
-                    self.delete(position)
+                    if self.buffer {
+                        self.delete(position)
+                    }
                 } else {
                     StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
-                    self.retry()
+                    if self.buffer {
+                        self.retry()
+                    }
                 }
             })
         } else {
             StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
-            self.retry()
+            if buffer {
+                self.retry()
+            }
         }
     }
     
