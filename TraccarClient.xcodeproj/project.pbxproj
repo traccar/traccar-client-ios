@@ -445,7 +445,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Google\" ]; then\ncp -r \"${PROJECT_DIR}/../traccar-shared/google-services/traccar-client-ios.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\nfi\n";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Google\" ]; then\ncp -r \"${PROJECT_DIR}/../environment/google-services/traccar-client-ios.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\nfi\n";
 		};
 		9B558E5AD0FA8E36113A7098 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
