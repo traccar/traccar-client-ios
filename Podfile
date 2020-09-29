@@ -3,9 +3,8 @@ platform :ios, '8.0'
 target 'TraccarClient' do
   use_frameworks!
   pod 'InAppSettingsKit'
-  pod 'Firebase/Core'
-  pod 'Fabric'
-  pod 'Crashlytics'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
 end
 
 target 'TraccarClientTests' do
