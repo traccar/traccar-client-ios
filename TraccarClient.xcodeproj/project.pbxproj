@@ -432,7 +432,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Google\" ]; then\n\"${PODS_ROOT}/Fabric/run\"\nfi\n";
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Google\" ]; then\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\nfi\n";
 		};
 		5E3175221F692FA600CDF0F5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
