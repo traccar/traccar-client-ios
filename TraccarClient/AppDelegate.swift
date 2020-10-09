@@ -1,5 +1,5 @@
 //
-// Copyright 2013 - 2017 Anton Tananaev (anton.tananaev@gmail.com)
+// Copyright 2013 - 2020 Anton Tananaev (anton.tananaev@gmail.com)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -82,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let settingsBundle = Bundle.main.path(forResource: "InAppSettings", ofType: "bundle")!
         let finalPath = URL(fileURLWithPath: settingsBundle).appendingPathComponent("Root.plist")
         let settingsDictionary = NSDictionary(contentsOf: finalPath)
-        let preferenceSpecifiers = settingsDictionary?.object(forKey: "PreferenceSpecifiers") as! [AnyObject]
+        let preferenceSpecifiers = settingsDictionary?.object(forKey: "PreferenceSpecifiers") as! [NSDictionary]
         
         var defaults: [String:Any] = [:]
         
