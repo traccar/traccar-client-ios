@@ -1,5 +1,5 @@
 //
-// Copyright 2016 - 2017 Anton Tananaev (anton@traccar.org)
+// Copyright 2016 - 2021 Anton Tananaev (anton@traccar.org)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ import Foundation
 
 public class ProtocolFormatter: NSObject {
     
-    public static func formatPostion(_ position: Position, url: String) -> URL? {
+    public static func formatPostion(_ position: Position, url: String, alarm: String? = nil) -> URL? {
         var components = URLComponents(string: url)
 
         var query = String()
@@ -48,9 +48,12 @@ public class ProtocolFormatter: NSObject {
             query += "accuracy=\(accuracy)&"
         }
         if let battery = position.battery {
-            query += "batt=\(battery)"
+            query += "batt=\(battery)&"
         }
-        components?.query = query
+        if let alarm = alarm {
+            query += "alarm=\(alarm)&"
+        }
+        components?.query = String(query.dropLast())
 
         // use queryItems for iOS 8
         return components?.url

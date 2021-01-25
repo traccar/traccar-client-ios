@@ -1,5 +1,5 @@
 //
-// Copyright 2013 - 2020 Anton Tananaev (anton@traccar.org)
+// Copyright 2013 - 2021 Anton Tananaev (anton@traccar.org)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ import CoreData
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate {
     
     var window: UIWindow?
     
@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var persistentStoreCoordinator: NSPersistentStoreCoordinator?
     
     var trackingController: TrackingController?
+    var positionProvider: PositionProvider?
     
     static var instance: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
@@ -68,6 +69,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         return true
+    }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        let userDefaults = UserDefaults.standard
+        
+        switch shortcutItem.type {
+        case "org.traccar.client.start":
+            if !userDefaults.bool(forKey: "service_status_preference") {
+                userDefaults.setValue(true, forKey: "service_status_preference")
+                StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
+                trackingController = TrackingController()
+                trackingController?.start()
+                showToast(message: NSLocalizedString("Service created", comment: ""))
+            }
+        case "org.traccar.client.stop":
+            if userDefaults.bool(forKey: "service_status_preference") {
+                userDefaults.setValue(false, forKey: "service_status_preference")
+                StatusViewController.addMessage(NSLocalizedString("Service destroyed", comment: ""))
+                trackingController?.stop()
+                trackingController = nil
+                showToast(message: NSLocalizedString("Service destroyed", comment: ""))
+            }
+        case "org.traccar.client.sos":
+            positionProvider = PositionProvider()
+            positionProvider?.delegate = self
+            positionProvider?.startUpdates()
+        default:
+            break
+        }
+        
+        completionHandler(true)
+    }
+    
+    func didUpdate(position: Position) {
+
+        positionProvider?.stopUpdates()
+        positionProvider = nil
+
+        let userDefaults = UserDefaults.standard
+        
+        if let request = ProtocolFormatter.formatPostion(position, url: userDefaults.string(forKey: "server_url_preference")!, alarm: "sos") {
+            RequestManager.sendRequest(request, completionHandler: {(_ success: Bool) -> Void in
+                if success {
+                    self.showToast(message: NSLocalizedString("Send successfully", comment: ""))
+                } else {
+                    self.showToast(message: NSLocalizedString("Send failed", comment: ""))
+                }
+            })
+        }
+    }
+    
+    func showToast(message : String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        window?.rootViewController?.present(alert, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            alert.dismiss(animated: true)
+        }
     }
     
     func applicationWillTerminate(_ application: UIApplication) {

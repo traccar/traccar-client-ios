@@ -33,6 +33,8 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
     var distance: Double
     var angle: Double
     
+    var pendingStart = false
+    
     override init() {
         let userDefaults = UserDefaults.standard
         deviceId = userDefaults.string(forKey: "device_id_preference")!
@@ -67,6 +69,7 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
         case .authorizedAlways:
             locationManager.startUpdatingLocation()
         default:
+            pendingStart = true
             locationManager.requestAlwaysAuthorization()
         }
     }
@@ -87,7 +90,10 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedAlways, .authorizedWhenInUse:
-            locationManager.startUpdatingLocation()
+            if pendingStart {
+                pendingStart = false
+                locationManager.startUpdatingLocation()
+            }
         default:
             break
         }
@@ -108,6 +114,9 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
                 lastLocation = location
             }
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
     }
 
 }

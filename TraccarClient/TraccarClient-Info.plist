@@ -66,5 +66,26 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Start service</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>org.traccar.client.start</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Stop service</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>org.traccar.client.stop</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Send SOS</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>org.traccar.client.sos</string>
+		</dict>
+	</array>
 </dict>
 </plist>
