@@ -19,6 +19,8 @@ import InAppSettingsKit
 
 class MainViewController: IASKAppSettingsViewController {
     
+    var settingsObserver: NSObjectProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = NSLocalizedString("Traccar Client", comment: "")
@@ -28,12 +30,16 @@ class MainViewController: IASKAppSettingsViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didChangeSetting), name: Notification.Name("kAppSettingChanged"), object: nil)
+        self.settingsObserver = NotificationCenter.default.addObserver(forName: nil, object: nil, queue: nil) { (notification) in
+            self.didChangeSetting(notification)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
+        if let observer = self.settingsObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
     }
     
     func showError(_ message: String) {
@@ -45,7 +51,7 @@ class MainViewController: IASKAppSettingsViewController {
         present(alert, animated: true)
     }
 
-    @objc func didChangeSetting(_ notification: Notification) {
+    func didChangeSetting(_ notification: Notification) {
         if let status = notification.userInfo?["service_status_preference"] as? Bool {
             if status && AppDelegate.instance.trackingController == nil {
                 let userDefaults = UserDefaults.standard
