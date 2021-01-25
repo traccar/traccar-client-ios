@@ -35,6 +35,27 @@
 	<string>This is a tracking application and therefore requires access to location services</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This is a tracking application and therefore requires access to location services</string>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Start service</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>org.traccar.client.start</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Stop service</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>org.traccar.client.stop</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Send SOS</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>org.traccar.client.sos</string>
+		</dict>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
@@ -66,26 +87,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Start service</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>org.traccar.client.start</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Stop service</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>org.traccar.client.stop</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Send SOS</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>org.traccar.client.sos</string>
-		</dict>
-	</array>
 </dict>
 </plist>
