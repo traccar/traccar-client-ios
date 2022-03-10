@@ -66,6 +66,7 @@
 		25EBC597A94D70D7BA8ED6BC /* Pods-TraccarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.debug.xcconfig"; sourceTree = "<group>"; };
 		38F0D8FE5C1F9044D1486EE4 /* Pods-TraccarClient.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.google.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.google.xcconfig"; sourceTree = "<group>"; };
 		397F4F2888630B0F1F130F19 /* Pods-TraccarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.release.xcconfig"; sourceTree = "<group>"; };
+		504DDC7727D99EC5002A285E /* TraccarClient copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TraccarClient copy-Info.plist"; path = "/Users/acea/Documents/software/traccar-client-ios/TraccarClient copy-Info.plist"; sourceTree = "<absolute>"; };
 		570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D41382D530D86D4E2C36606 /* Pods-TraccarClientTests.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.google.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.google.xcconfig"; sourceTree = "<group>"; };
 		5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
@@ -103,7 +104,7 @@
 		CE4B810A1EC71D4800D1C41D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CE4B810B1EC71D4800D1C41D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE5899C71B115C9100ED70D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CED4871817DB1BF6007FCF57 /* TraccarClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraccarClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED4871817DB1BF6007FCF57 /* FTPTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTPTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4871B17DB1BF6007FCF57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CED4871D17DB1BF6007FCF57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,7 +113,7 @@
 		CED4879817DB1DF4007FCF57 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InAppSettings.bundle; sourceTree = "<group>"; };
 		CEDB048617ED50C1000E7EDF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraccarClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE286CE1B80839700AE7E83 /* FTPTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTPTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE286D11B80839700AE7E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEECE4B91B91AE2B00EB6F4A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEECE4BA1B91AE2C00EB6F4A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -166,14 +167,15 @@
 				CED4871A17DB1BF6007FCF57 /* Frameworks */,
 				CED4871917DB1BF6007FCF57 /* Products */,
 				E8B64AC67D0BDC702E5F02CF /* Pods */,
+				504DDC7727D99EC5002A285E /* TraccarClient copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		CED4871917DB1BF6007FCF57 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CED4871817DB1BF6007FCF57 /* TraccarClient.app */,
-				CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */,
+				CED4871817DB1BF6007FCF57 /* FTPTracker.app */,
+				CEE286CE1B80839700AE7E83 /* FTPTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,9 +266,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CED4871717DB1BF6007FCF57 /* TraccarClient */ = {
+		CED4871717DB1BF6007FCF57 /* FTPTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "TraccarClient" */;
+			buildConfigurationList = CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "FTPTracker" */;
 			buildPhases = (
 				1C45497C39E13645FFE1641E /* [CP] Check Pods Manifest.lock */,
 				CED4871417DB1BF6007FCF57 /* Sources */,
@@ -281,14 +283,14 @@
 			);
 			dependencies = (
 			);
-			name = TraccarClient;
+			name = FTPTracker;
 			productName = TraccarClient;
-			productReference = CED4871817DB1BF6007FCF57 /* TraccarClient.app */;
+			productReference = CED4871817DB1BF6007FCF57 /* FTPTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CEE286CD1B80839600AE7E83 /* TraccarClientTests */ = {
+		CEE286CD1B80839600AE7E83 /* FTPTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "TraccarClientTests" */;
+			buildConfigurationList = CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "FTPTrackerTests" */;
 			buildPhases = (
 				57CB0582E3B3562A782F75C7 /* [CP] Check Pods Manifest.lock */,
 				CEE286CA1B80839600AE7E83 /* Sources */,
@@ -301,9 +303,9 @@
 			dependencies = (
 				CEE286D51B80839700AE7E83 /* PBXTargetDependency */,
 			);
-			name = TraccarClientTests;
+			name = FTPTrackerTests;
 			productName = TraccarClientTests;
-			productReference = CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */;
+			productReference = CEE286CE1B80839700AE7E83 /* FTPTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -313,10 +315,10 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
-				ORGANIZATIONNAME = Traccar;
+				ORGANIZATIONNAME = ftpsolutions;
 				TargetAttributes = {
 					CED4871717DB1BF6007FCF57 = {
-						DevelopmentTeam = YW49KTJKFW;
+						DevelopmentTeam = PYRQ46X5NG;
 						LastSwiftMigration = 1100;
 					};
 					CEE286CD1B80839600AE7E83 = {
@@ -326,7 +328,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CED4871317DB1BF6007FCF57 /* Build configuration list for PBXProject "TraccarClient" */;
+			buildConfigurationList = CED4871317DB1BF6007FCF57 /* Build configuration list for PBXProject "FTP Tracker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -351,8 +353,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CED4871717DB1BF6007FCF57 /* TraccarClient */,
-				CEE286CD1B80839600AE7E83 /* TraccarClientTests */,
+				CED4871717DB1BF6007FCF57 /* FTPTracker */,
+				CEE286CD1B80839600AE7E83 /* FTPTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -533,7 +535,7 @@
 /* Begin PBXTargetDependency section */
 		CEE286D51B80839700AE7E83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CED4871717DB1BF6007FCF57 /* TraccarClient */;
+			target = CED4871717DB1BF6007FCF57 /* FTPTracker */;
 			targetProxy = CEE286D41B80839700AE7E83 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -639,18 +641,19 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YW49KTJKFW;
+				DEVELOPMENT_TEAM = PYRQ46X5NG;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 6.2;
+				MARKETING_VERSION = 1.0.0;
 				OTHER_SWIFT_FLAGS = "-D FIREBASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.84ace.ios.ftptracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -802,17 +805,18 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YW49KTJKFW;
+				DEVELOPMENT_TEAM = PYRQ46X5NG;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 6.2;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.84ace.ios.ftptracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -829,22 +833,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 57;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YW49KTJKFW;
+				DEVELOPMENT_TEAM = PYRQ46X5NG;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 6.2;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.84ace.ios.ftptracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
@@ -926,7 +933,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CED4871317DB1BF6007FCF57 /* Build configuration list for PBXProject "TraccarClient" */ = {
+		CED4871317DB1BF6007FCF57 /* Build configuration list for PBXProject "FTP Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CED4873C17DB1BF6007FCF57 /* Debug */,
@@ -936,7 +943,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "TraccarClient" */ = {
+		CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "FTPTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CED4873F17DB1BF6007FCF57 /* Debug */,
@@ -946,7 +953,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "TraccarClientTests" */ = {
+		CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "FTPTrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEE286D71B80839700AE7E83 /* Debug */,
