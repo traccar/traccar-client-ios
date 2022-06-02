@@ -1,35 +1,30 @@
-# [Traccar Client for iOS](https://www.traccar.org/client)
+# FTP Traccar Client for iOS Based on [Traccar](https://www.traccar.org/client)
 
-[![Download on the App Store](http://www.tananaev.com/badges/app-store.svg)](https://itunes.apple.com/app/traccar-client/id843156974)
 
 ## Overview
 
-Traccar Client is an iOS GPS tracking application. It can work with Traccar open source server software.
+FTP Traccar Client is an iOS GPS tracking application. 
 
-## Build
+## Requirements
 
-Project uses CocoaPods for dependencies management. To build the project you need to download dependencies:
+Project uses [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) for dependencies management. To build the project you need to download dependencies:
 
 ```
 pod install
 ```
 
-## Team
+## Build
+1. Open XCode application
+1. In XCode open 'FTP Tracker.xcworkspace'
+1. Product -> Build For -> Running
 
-- Anton Tananaev ([anton@traccar.org](mailto:anton@traccar.org))
+## Notes 
+This was built on a machine with the follow versions:
+- Darwin Kernel `21.4.0 x86_64` 
+- XCode `13.3.1` 
+- CocoaPods `1.11.3`
+- macOS Monterey `12.3.1`
 
-## License
-
-    Apache License, Version 2.0
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+## TODO
+- Instructions for the working with AppStoreConnect
+- Testing instructions
