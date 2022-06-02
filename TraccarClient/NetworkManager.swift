@@ -17,7 +17,7 @@
 import Foundation
 import SystemConfiguration
 
-protocol NetworkManagerDelegate: class {
+protocol NetworkManagerDelegate: AnyObject {
     func didUpdateNetwork(online: Bool)
 }
 

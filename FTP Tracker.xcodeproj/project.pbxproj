@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24DBFB848BAEC4EFDA733D66 /* Pods_FTPTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879675CE7A610FD84DBB345E /* Pods_FTPTracker.framework */; };
 		5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */; };
 		5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A281F63A45A00A2DBC3 /* RequestManager.swift */; };
 		5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */; };
 		5E716A2E1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */; };
 		5E716A301F63A9F600A2DBC3 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */; };
-		B50DE663A60DF3E1E8C8D47C /* Pods_TraccarClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4F5B2A5BA20598E4129EC1 /* Pods_TraccarClientTests.framework */; };
-		C59D33F716F7A39BBA8CBB00 /* Pods_TraccarClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */; };
+		AF6549D08DD4B2CC5178284C /* Pods_FTPTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF5D8A2B13E961BC89AC2F2 /* Pods_FTPTrackerTests.framework */; };
 		CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197921F674A3E008F301C /* DatabaseHelper.swift */; };
 		CB4197951F675518008F301C /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197941F675518008F301C /* CoreDataTests.swift */; };
 		CB4197971F676B52008F301C /* DatabaseHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197961F676B52008F301C /* DatabaseHelperTests.swift */; };
@@ -63,18 +63,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0ED3E0992C6B9026B43AC4C4 /* Pods-FTPTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FTPTrackerTests/Pods-FTPTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		121C5F49FE36286698B8E6F5 /* Pods-FTPTracker.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPTracker.google.xcconfig"; path = "Pods/Target Support Files/Pods-FTPTracker/Pods-FTPTracker.google.xcconfig"; sourceTree = "<group>"; };
 		25EBC597A94D70D7BA8ED6BC /* Pods-TraccarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.debug.xcconfig"; sourceTree = "<group>"; };
 		38F0D8FE5C1F9044D1486EE4 /* Pods-TraccarClient.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.google.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.google.xcconfig"; sourceTree = "<group>"; };
 		397F4F2888630B0F1F130F19 /* Pods-TraccarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.release.xcconfig"; sourceTree = "<group>"; };
-		504DDC7727D99EC5002A285E /* TraccarClient copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TraccarClient copy-Info.plist"; path = "/Users/acea/Documents/software/traccar-client-ios/TraccarClient copy-Info.plist"; sourceTree = "<absolute>"; };
-		570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B765B758C96A0F126B99545 /* Pods-FTPTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTPTrackerTests/Pods-FTPTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5D41382D530D86D4E2C36606 /* Pods-TraccarClientTests.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.google.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.google.xcconfig"; sourceTree = "<group>"; };
 		5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
 		5E716A281F63A45A00A2DBC3 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatter.swift; sourceTree = "<group>"; };
 		5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatterTests.swift; sourceTree = "<group>"; };
 		5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
-		BF4F5B2A5BA20598E4129EC1 /* Pods_TraccarClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DF5D8A2B13E961BC89AC2F2 /* Pods_FTPTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FTPTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		879675CE7A610FD84DBB345E /* Pods_FTPTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FTPTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6285C52424EE62A3E193AC9 /* Pods-FTPTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FTPTracker/Pods-FTPTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		BBF2B314CB22A18F04C92957 /* Pods-FTPTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTPTracker/Pods-FTPTracker.release.xcconfig"; sourceTree = "<group>"; };
 		CB4197921F674A3E008F301C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		CB4197941F675518008F301C /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		CB4197961F676B52008F301C /* DatabaseHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelperTests.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		CEF643361B91A94600195CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF643381B91A95700195CEA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF643391B91A98300195CEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D34A6DB010D534E0657D15C7 /* Pods-FTPTrackerTests.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPTrackerTests.google.xcconfig"; path = "Pods/Target Support Files/Pods-FTPTrackerTests/Pods-FTPTrackerTests.google.xcconfig"; sourceTree = "<group>"; };
 		DAE6F390D4C81DC3FB5220CF /* Pods-TraccarClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F707BBFCCBED121E44B8B5B7 /* Pods-TraccarClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,7 +149,7 @@
 				CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */,
 				CED4871E17DB1BF6007FCF57 /* Foundation.framework in Frameworks */,
 				CED4872017DB1BF6007FCF57 /* CoreGraphics.framework in Frameworks */,
-				C59D33F716F7A39BBA8CBB00 /* Pods_TraccarClient.framework in Frameworks */,
+				24DBFB848BAEC4EFDA733D66 /* Pods_FTPTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B50DE663A60DF3E1E8C8D47C /* Pods_TraccarClientTests.framework in Frameworks */,
+				AF6549D08DD4B2CC5178284C /* Pods_FTPTrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +172,6 @@
 				CED4871A17DB1BF6007FCF57 /* Frameworks */,
 				CED4871917DB1BF6007FCF57 /* Products */,
 				E8B64AC67D0BDC702E5F02CF /* Pods */,
-				504DDC7727D99EC5002A285E /* TraccarClient copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,8 +194,8 @@
 				CED4871B17DB1BF6007FCF57 /* UIKit.framework */,
 				CED4871D17DB1BF6007FCF57 /* Foundation.framework */,
 				CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */,
-				570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */,
-				BF4F5B2A5BA20598E4129EC1 /* Pods_TraccarClientTests.framework */,
+				879675CE7A610FD84DBB345E /* Pods_FTPTracker.framework */,
+				6DF5D8A2B13E961BC89AC2F2 /* Pods_FTPTrackerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,6 +263,12 @@
 				F707BBFCCBED121E44B8B5B7 /* Pods-TraccarClientTests.release.xcconfig */,
 				38F0D8FE5C1F9044D1486EE4 /* Pods-TraccarClient.google.xcconfig */,
 				5D41382D530D86D4E2C36606 /* Pods-TraccarClientTests.google.xcconfig */,
+				B6285C52424EE62A3E193AC9 /* Pods-FTPTracker.debug.xcconfig */,
+				BBF2B314CB22A18F04C92957 /* Pods-FTPTracker.release.xcconfig */,
+				121C5F49FE36286698B8E6F5 /* Pods-FTPTracker.google.xcconfig */,
+				0ED3E0992C6B9026B43AC4C4 /* Pods-FTPTrackerTests.debug.xcconfig */,
+				4B765B758C96A0F126B99545 /* Pods-FTPTrackerTests.release.xcconfig */,
+				D34A6DB010D534E0657D15C7 /* Pods-FTPTrackerTests.google.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -393,7 +403,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TraccarClient-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FTPTracker-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -411,7 +421,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TraccarClientTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FTPTrackerTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -455,7 +465,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FTPTrackerTests/Pods-FTPTrackerTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/InAppSettingsKit/InAppSettingsKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
@@ -470,7 +480,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FTPTrackerTests/Pods-FTPTrackerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FCFBF8EE6D7AB7B0579C833F /* [CP] Embed Pods Frameworks */ = {
@@ -479,22 +489,26 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-FTPTracker/Pods-FTPTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DataCompression/DataCompression.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/InAppSettingsKit/InAppSettingsKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DataCompression.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InAppSettingsKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FTPTracker/Pods-FTPTracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -634,7 +648,7 @@
 		};
 		5E3175241F69305200CDF0F5 /* Google */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38F0D8FE5C1F9044D1486EE4 /* Pods-TraccarClient.google.xcconfig */;
+			baseConfigurationReference = 121C5F49FE36286698B8E6F5 /* Pods-FTPTracker.google.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -665,7 +679,7 @@
 		};
 		5E3175251F69305200CDF0F5 /* Google */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5D41382D530D86D4E2C36606 /* Pods-TraccarClientTests.google.xcconfig */;
+			baseConfigurationReference = D34A6DB010D534E0657D15C7 /* Pods-FTPTrackerTests.google.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -693,7 +707,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTPTracker.app/FTPTracker";
 			};
 			name = Google;
 		};
@@ -799,7 +813,7 @@
 		};
 		CED4873F17DB1BF6007FCF57 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25EBC597A94D70D7BA8ED6BC /* Pods-TraccarClient.debug.xcconfig */;
+			baseConfigurationReference = B6285C52424EE62A3E193AC9 /* Pods-FTPTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -829,7 +843,7 @@
 		};
 		CED4874017DB1BF6007FCF57 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 397F4F2888630B0F1F130F19 /* Pods-TraccarClient.release.xcconfig */;
+			baseConfigurationReference = BBF2B314CB22A18F04C92957 /* Pods-FTPTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -861,7 +875,7 @@
 		};
 		CEE286D71B80839700AE7E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAE6F390D4C81DC3FB5220CF /* Pods-TraccarClientTests.debug.xcconfig */;
+			baseConfigurationReference = 0ED3E0992C6B9026B43AC4C4 /* Pods-FTPTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -892,13 +906,13 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTPTracker.app/FTPTracker";
 			};
 			name = Debug;
 		};
 		CEE286D81B80839700AE7E83 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F707BBFCCBED121E44B8B5B7 /* Pods-TraccarClientTests.release.xcconfig */;
+			baseConfigurationReference = 4B765B758C96A0F126B99545 /* Pods-FTPTrackerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -926,7 +940,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTPTracker.app/FTPTracker";
 			};
 			name = Release;
 		};

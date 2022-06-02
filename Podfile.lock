@@ -1,4 +1,5 @@
 PODS:
+  - DataCompression (3.6.0)
   - Firebase (6.34.0):
     - Firebase/Core (= 6.34.0)
   - Firebase/Analytics (6.34.0):
@@ -74,15 +75,19 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.10)
+  - SwiftSocket (2.0.2)
 
 DEPENDENCIES:
+  - DataCompression
   - Firebase
   - Firebase/Analytics
   - Firebase/Crashlytics
   - InAppSettingsKit
+  - SwiftSocket
 
 SPEC REPOS:
   trunk:
+    - DataCompression
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -95,8 +100,10 @@ SPEC REPOS:
     - InAppSettingsKit
     - nanopb
     - PromisesObjC
+    - SwiftSocket
 
 SPEC CHECKSUMS:
+  DataCompression: 06628f9c807b6f152e0da37635633f62fc51dc77
   Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
   FirebaseAnalytics: 3bb096873ee0d7fa4b6c70f5e9166b6da413cc7f
   FirebaseCore: d3a978a3cfa3240bf7e4ba7d137fdf5b22b628ec
@@ -109,7 +116,8 @@ SPEC CHECKSUMS:
   InAppSettingsKit: 0d6cf327364085375cbfd8011fd6ae1c0d2c7d1c
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
 
-PODFILE CHECKSUM: caa56cac2a563462f6aed83bf890a9ed2cc3f949
+PODFILE CHECKSUM: cf86333aacb02a17b0a984da6d91166ea8452a81
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

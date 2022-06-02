@@ -15,7 +15,7 @@
 //
 
 import XCTest
-import TraccarClient
+import FTPTracker
 
 class RequestManagerTests: XCTestCase {
 

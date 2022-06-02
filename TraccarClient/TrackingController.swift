@@ -117,6 +117,31 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
     }
     
     func send(_ position: Position) {
+        if let data = ProtocolFormatter.formatPositionIMSMonitor(position) {
+        IMSMonitorClient.sendRequest(
+            (URLComponents(string: url)?.url!)!,
+            data: data,
+            completionHandler: {(_ success: Bool) -> Void in
+                if success {
+                    if self.buffer {
+                        self.delete(position)
+                    }
+                } else {
+                    StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
+                    if self.buffer {
+                        self.retry()
+                    }
+                }
+            })
+        } else {
+            StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
+            if buffer {
+                self.retry()
+            }
+        }
+    }
+    
+    func traccarSend(_ position: Position) {
         if let request = ProtocolFormatter.formatPostion(position, url: url) {
             RequestManager.sendRequest(request, completionHandler: {(_ success: Bool) -> Void in
                 if success {

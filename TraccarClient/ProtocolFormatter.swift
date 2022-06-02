@@ -15,8 +15,56 @@
 //
 
 import Foundation
+import UIKit
+
 
 public class ProtocolFormatter: NSObject {
+    
+    public static func formatPositionIMSMonitor(_ position: Position) -> Data? {
+        var stat = [String:Any]()
+        stat["type"] = "stats"
+        
+        // Add required metadata
+        let userDefaults = UserDefaults.standard
+        
+        var metaData = [String:String]()
+        // If any of this information changes so does the created asset/ipdevice combination in IMS
+        metaData["person_name"] = userDefaults.string(forKey: "name_preference")
+        metaData["person_key"] = userDefaults.string(forKey: "device_id_preference")
+        metaData["device_name"] = UIDevice.current.name // Get the current iPhone name
+        metaData["device_key"] = UIDevice.current.identifierForVendor!.uuidString // Get iPhones unique ID
+        stat["metadata"] = metaData
+        
+        var locationStat = [String:Any]()
+        // Turn our position into a location stat
+        let lon = position.longitude?.doubleValue ?? 0
+        let lat = position.latitude?.doubleValue ?? 0
+        let loc: [Double] = [lon, lat]
+        locationStat["location"] = loc
+        // Format timestamp as ISO8601
+        let formatter = ISO8601DateFormatter()
+        let timestamp = formatter.string(from: position.time! as Date)
+        locationStat["timestamp"] = timestamp
+        // Add rest of keys
+        locationStat["speed"] = position.speed
+        locationStat["altitude"] = position.altitude
+        
+        // Put location stat in stat array
+        var stats = [String:Any]()
+        
+        // Populate stats
+        let locationStats: [Any] = [locationStat]
+        stats["location_stats"] = locationStats
+        
+        stat["body"] = stats
+        do {
+            return try JSONSerialization.data(withJSONObject: stat)
+        }
+        catch {
+            print("unable to serialize to JSON")
+            return nil
+        }
+    }
     
     public static func formatPostion(_ position: Position, url: String, alarm: String? = nil) -> URL? {
         var components = URLComponents(string: url)

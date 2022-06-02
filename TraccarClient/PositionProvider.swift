@@ -17,7 +17,7 @@
 import UIKit
 import CoreLocation
 
-protocol PositionProviderDelegate: class {
+protocol PositionProviderDelegate: AnyObject {
     func didUpdate(position: Position)
 }
 
