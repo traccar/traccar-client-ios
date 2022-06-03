@@ -30,7 +30,7 @@ public class ProtocolFormatter: NSObject {
         var metaData = [String:String]()
         // If any of this information changes so does the created asset/ipdevice combination in IMS
         metaData["person_name"] = userDefaults.string(forKey: "name_preference")
-        metaData["person_key"] = userDefaults.string(forKey: "device_id_preference")
+        metaData["person_key"] = UIDevice.current.identifierForVendor!.uuidString
         metaData["device_name"] = UIDevice.current.name // Get the current iPhone name
         metaData["device_key"] = UIDevice.current.identifierForVendor!.uuidString // Get iPhones unique ID
         stat["metadata"] = metaData
