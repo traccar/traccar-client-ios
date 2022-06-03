@@ -48,7 +48,7 @@
 		</dict>
 		<dict>
 			<key>DefaultValue</key>
-			<string>https://thingsboard.84ace.com:8081</string>
+			<string></string>
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
