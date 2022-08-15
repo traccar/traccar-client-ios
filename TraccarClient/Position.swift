@@ -28,6 +28,7 @@ public class Position: NSManagedObject {
     @NSManaged public var speed: NSNumber?
     @NSManaged public var course: NSNumber?
     @NSManaged public var battery: NSNumber?
+    @NSManaged public var charging: Bool
     @NSManaged public var accuracy: NSNumber?
     
     public convenience init(managedObjectContext context: NSManagedObjectContext) {

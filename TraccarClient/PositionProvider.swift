@@ -1,5 +1,5 @@
 //
-// Copyright 2015 - 2017 Anton Tananaev (anton@traccar.org)
+// Copyright 2015 - 2022 Anton Tananaev (anton@traccar.org)
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 import UIKit
 import CoreLocation
 
-protocol PositionProviderDelegate: class {
+protocol PositionProviderDelegate: AnyObject {
     func didUpdate(position: Position)
 }
 
@@ -78,12 +78,15 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
     }
     
-    func getBatteryLevel() -> Float {
+    func getBatteryStatus() -> BatteryStatus {
         let device = UIDevice.current
         if device.batteryState != .unknown {
-            return device.batteryLevel * 100
+            return BatteryStatus(
+                level: device.batteryLevel * 100,
+                charging: device.batteryState == .charging || device.batteryState == .full
+            )
         } else {
-            return 0
+            return BatteryStatus(level: 0, charging: true)
         }
     }
     
@@ -109,7 +112,9 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
                 let position = Position(managedObjectContext: DatabaseHelper().managedObjectContext)
                 position.deviceId = deviceId
                 position.setLocation(location)
-                position.battery = getBatteryLevel() as NSNumber
+                let batteryStatus = getBatteryStatus()
+                position.battery = batteryStatus.level as NSNumber
+                position.charging = batteryStatus.charging
                 delegate?.didUpdate(position: position)
                 lastLocation = location
             }

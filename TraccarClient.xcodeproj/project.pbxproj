@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */; };
 		5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */; };
 		5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A281F63A45A00A2DBC3 /* RequestManager.swift */; };
 		5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */; };
@@ -68,6 +69,7 @@
 		397F4F2888630B0F1F130F19 /* Pods-TraccarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClient/Pods-TraccarClient.release.xcconfig"; sourceTree = "<group>"; };
 		570942A255189EBB3E863A23 /* Pods_TraccarClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D41382D530D86D4E2C36606 /* Pods-TraccarClientTests.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.google.xcconfig"; path = "Pods/Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.google.xcconfig"; sourceTree = "<group>"; };
+		5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryStatus.swift; sourceTree = "<group>"; };
 		5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
 		5E716A281F63A45A00A2DBC3 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatter.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				CBAA0F7E1F68E807008BBBBE /* MainViewController.swift */,
 				CB4197981F67724F008F301C /* NetworkManager.swift */,
 				CB7ED07F1F6602CD00A33FCF /* Position.swift */,
+				5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */,
 				CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */,
 				5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */,
 				5E716A281F63A45A00A2DBC3 /* RequestManager.swift */,
@@ -507,6 +510,7 @@
 				CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */,
 				CB4197991F67724F008F301C /* NetworkManager.swift in Sources */,
 				CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */,
+				5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */,
 				5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */,
 				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
 				CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */,

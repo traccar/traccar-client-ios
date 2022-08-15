@@ -50,6 +50,9 @@ public class ProtocolFormatter: NSObject {
         if let battery = position.battery {
             query += "batt=\(battery)&"
         }
+        if position.charging {
+            query += "charge=true&"
+        }
         if let alarm = alarm {
             query += "alarm=\(alarm)&"
         }
