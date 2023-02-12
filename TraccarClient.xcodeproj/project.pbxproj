@@ -254,7 +254,6 @@
 				CED4871617DB1BF6007FCF57 /* Resources */,
 				5E3175221F692FA600CDF0F5 /* ShellScript */,
 				CEFA94EF1EA2EE31009B5809 /* Embed Frameworks */,
-				5E1C2B3F2202C10900A6BC78 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -366,24 +365,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5E1C2B3F2202C10900A6BC78 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Google\" ]; then\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\nfi\n";
-		};
 		5E3175221F692FA600CDF0F5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
