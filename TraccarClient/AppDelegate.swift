@@ -51,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate 
         
         migrateLegacyDefaults()
         
+        registerManagedConfiguration()
+        
         let modelUrl = Bundle.main.url(forResource: "TraccarClient", withExtension: "momd")
         managedObjectModel = NSManagedObjectModel(contentsOf: modelUrl!)
         
@@ -63,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate 
         managedObjectContext?.persistentStoreCoordinator = persistentStoreCoordinator
 
         if userDefaults.bool(forKey: "service_status_preference") {
-            StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
+            StatusViewController.addStartMessage()
             trackingController = TrackingController()
             trackingController?.start()
         }
@@ -79,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate 
         case "org.traccar.client.start":
             if !userDefaults.bool(forKey: "service_status_preference") {
                 userDefaults.setValue(true, forKey: "service_status_preference")
-                StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
+                StatusViewController.addStartMessage()
                 trackingController = TrackingController()
                 trackingController?.start()
                 showToast(message: NSLocalizedString("Service created", comment: ""))
@@ -172,5 +174,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate 
             userDefaults.removeObject(forKey: "secure_preference")
         }
     }
-
+    
+    // Override user preferences with configuration provided by an iOS MDM (Mobile Device Management) solution
+    func registerManagedConfiguration() {
+        if let managedConfiguration = UserDefaults.standard.object(forKey: "com.apple.configuration.managed") as? [String: Any?] {
+            for (key, value) in managedConfiguration {
+                // Status cannot be set via managed configuration
+                if value != nil && key != "service_status_preference" {
+                    UserDefaults.standard.setValue(value, forKey: key)
+                }
+            }
+        }
+    }
 }
