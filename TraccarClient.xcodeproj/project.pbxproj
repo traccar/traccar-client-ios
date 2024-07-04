@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58FB0E542C35E708001D55B6 /* StartTrackingIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB0E532C35E708001D55B6 /* StartTrackingIntent.swift */; };
+		58FB0E562C35E90A001D55B6 /* StopTrackingIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FB0E552C35E90A001D55B6 /* StopTrackingIntent.swift */; };
 		5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */; };
 		5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */; };
 		5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A281F63A45A00A2DBC3 /* RequestManager.swift */; };
@@ -65,6 +67,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		58FB0E4F2C35DF7F001D55B6 /* TraccarClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TraccarClient.entitlements; sourceTree = "<group>"; };
+		58FB0E532C35E708001D55B6 /* StartTrackingIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrackingIntent.swift; sourceTree = "<group>"; };
+		58FB0E552C35E90A001D55B6 /* StopTrackingIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTrackingIntent.swift; sourceTree = "<group>"; };
 		5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryStatus.swift; sourceTree = "<group>"; };
 		5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
 		5E716A281F63A45A00A2DBC3 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
@@ -154,6 +159,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58FB0E522C35E6DE001D55B6 /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				58FB0E532C35E708001D55B6 /* StartTrackingIntent.swift */,
+				58FB0E552C35E90A001D55B6 /* StopTrackingIntent.swift */,
+			);
+			name = Intents;
+			sourceTree = "<group>";
+		};
 		CED4870F17DB1BF6007FCF57 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +204,8 @@
 		CED4872117DB1BF6007FCF57 /* TraccarClient */ = {
 			isa = PBXGroup;
 			children = (
+				58FB0E522C35E6DE001D55B6 /* Intents */,
+				58FB0E4F2C35DF7F001D55B6 /* TraccarClient.entitlements */,
 				CE5899C71B115C9100ED70D2 /* Images.xcassets */,
 				CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */,
 				CEF643241B919FFA00195CEA /* LaunchScreen.xib */,
@@ -389,10 +405,12 @@
 			files = (
 				CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */,
 				CBAA0F7F1F68E807008BBBBE /* MainViewController.swift in Sources */,
+				58FB0E562C35E90A001D55B6 /* StopTrackingIntent.swift in Sources */,
 				CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */,
 				CB4197991F67724F008F301C /* NetworkManager.swift in Sources */,
 				CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */,
 				5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */,
+				58FB0E542C35E708001D55B6 /* StartTrackingIntent.swift in Sources */,
 				5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */,
 				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
 				CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */,
@@ -522,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TraccarClient/TraccarClient.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -692,6 +711,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TraccarClient/TraccarClient.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 59;
@@ -723,6 +743,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TraccarClient/TraccarClient.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;

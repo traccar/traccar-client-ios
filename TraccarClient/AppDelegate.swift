@@ -17,6 +17,7 @@
 import UIKit
 import CoreData
 import Firebase
+import IntentsUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate {
