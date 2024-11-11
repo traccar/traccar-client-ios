@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		5EE3CA342998948F002C86E4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA332998948F002C86E4 /* FirebaseAnalytics */; };
 		5EE3CA362998948F002C86E4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA352998948F002C86E4 /* FirebaseCrashlytics */; };
 		5EE3CA39299894B9002C86E4 /* InAppSettingsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA38299894B9002C86E4 /* InAppSettingsKit */; };
+		93F0C4C32CE23FAC00A7D92D /* VehicleTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F0C4C22CE23FAC00A7D92D /* VehicleTrackerViewController.swift */; };
+		93F0C4C52CE24E1700A7D92D /* VehicleTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F0C4C42CE24E1700A7D92D /* VehicleTrackerViewModel.swift */; };
 		CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197921F674A3E008F301C /* DatabaseHelper.swift */; };
 		CB4197951F675518008F301C /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197941F675518008F301C /* CoreDataTests.swift */; };
 		CB4197971F676B52008F301C /* DatabaseHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197961F676B52008F301C /* DatabaseHelperTests.swift */; };
@@ -71,6 +73,8 @@
 		5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatter.swift; sourceTree = "<group>"; };
 		5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatterTests.swift; sourceTree = "<group>"; };
 		5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		93F0C4C22CE23FAC00A7D92D /* VehicleTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTrackerViewController.swift; sourceTree = "<group>"; };
+		93F0C4C42CE24E1700A7D92D /* VehicleTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTrackerViewModel.swift; sourceTree = "<group>"; };
 		CB4197921F674A3E008F301C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		CB4197941F675518008F301C /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		CB4197961F676B52008F301C /* DatabaseHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelperTests.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 				5E716A281F63A45A00A2DBC3 /* RequestManager.swift */,
 				CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */,
 				CBAA0F801F68EB62008BBBBE /* TrackingController.swift */,
+				93F0C4C22CE23FAC00A7D92D /* VehicleTrackerViewController.swift */,
+				93F0C4C42CE24E1700A7D92D /* VehicleTrackerViewModel.swift */,
 			);
 			path = TraccarClient;
 			sourceTree = "<group>";
@@ -395,9 +401,11 @@
 				5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */,
 				5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */,
 				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
+				93F0C4C32CE23FAC00A7D92D /* VehicleTrackerViewController.swift in Sources */,
 				CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */,
 				CBAA0F811F68EB62008BBBBE /* TrackingController.swift in Sources */,
 				5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */,
+				93F0C4C52CE24E1700A7D92D /* VehicleTrackerViewModel.swift in Sources */,
 				5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */,
 				CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */,
 			);
