@@ -50,7 +50,7 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
 
         locationManager.pausesLocationUpdatesAutomatically = false
         
-        switch userDefaults.string(forKey: "accuracy_preference") ?? "medium" {
+        switch userDefaults.string(forKey: "accuracy_preference") ?? "high" {
         case "high":
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
         case "low":

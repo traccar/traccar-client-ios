@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		5EE3CA342998948F002C86E4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA332998948F002C86E4 /* FirebaseAnalytics */; };
 		5EE3CA362998948F002C86E4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA352998948F002C86E4 /* FirebaseCrashlytics */; };
 		5EE3CA39299894B9002C86E4 /* InAppSettingsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA38299894B9002C86E4 /* InAppSettingsKit */; };
+		73D06D7B2CE3513000357CF2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D06D7A2CE3513000357CF2 /* SettingsViewController.swift */; };
+		73D677002CE381E90022F0C0 /* VehicleTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D676FF2CE381E90022F0C0 /* VehicleTrackerRepository.swift */; };
 		93F0C4C32CE23FAC00A7D92D /* VehicleTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F0C4C22CE23FAC00A7D92D /* VehicleTrackerViewController.swift */; };
 		93F0C4C52CE24E1700A7D92D /* VehicleTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F0C4C42CE24E1700A7D92D /* VehicleTrackerViewModel.swift */; };
 		CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197921F674A3E008F301C /* DatabaseHelper.swift */; };
@@ -73,6 +75,8 @@
 		5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatter.swift; sourceTree = "<group>"; };
 		5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatterTests.swift; sourceTree = "<group>"; };
 		5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
+		73D06D7A2CE3513000357CF2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		73D676FF2CE381E90022F0C0 /* VehicleTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTrackerRepository.swift; sourceTree = "<group>"; };
 		93F0C4C22CE23FAC00A7D92D /* VehicleTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTrackerViewController.swift; sourceTree = "<group>"; };
 		93F0C4C42CE24E1700A7D92D /* VehicleTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTrackerViewModel.swift; sourceTree = "<group>"; };
 		CB4197921F674A3E008F301C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -158,6 +162,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73D06D782CE350D100357CF2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				73D06D7A2CE3513000357CF2 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		73D06D792CE350E100357CF2 /* Vehicle Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				93F0C4C22CE23FAC00A7D92D /* VehicleTrackerViewController.swift */,
+				93F0C4C42CE24E1700A7D92D /* VehicleTrackerViewModel.swift */,
+				73D676FF2CE381E90022F0C0 /* VehicleTrackerRepository.swift */,
+			);
+			path = "Vehicle Tracker";
+			sourceTree = "<group>";
+		};
 		CED4870F17DB1BF6007FCF57 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +216,7 @@
 		CED4872117DB1BF6007FCF57 /* TraccarClient */ = {
 			isa = PBXGroup;
 			children = (
+				73D06D782CE350D100357CF2 /* Settings */,
 				CE5899C71B115C9100ED70D2 /* Images.xcassets */,
 				CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */,
 				CEF643241B919FFA00195CEA /* LaunchScreen.xib */,
@@ -211,8 +234,7 @@
 				5E716A281F63A45A00A2DBC3 /* RequestManager.swift */,
 				CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */,
 				CBAA0F801F68EB62008BBBBE /* TrackingController.swift */,
-				93F0C4C22CE23FAC00A7D92D /* VehicleTrackerViewController.swift */,
-				93F0C4C42CE24E1700A7D92D /* VehicleTrackerViewModel.swift */,
+				73D06D792CE350E100357CF2 /* Vehicle Tracker */,
 			);
 			path = TraccarClient;
 			sourceTree = "<group>";
@@ -303,7 +325,6 @@
 				ORGANIZATIONNAME = Traccar;
 				TargetAttributes = {
 					CED4871717DB1BF6007FCF57 = {
-						DevelopmentTeam = YW49KTJKFW;
 						LastSwiftMigration = 1100;
 					};
 					CEE286CD1B80839600AE7E83 = {
@@ -396,10 +417,12 @@
 				CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */,
 				CBAA0F7F1F68E807008BBBBE /* MainViewController.swift in Sources */,
 				CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */,
+				73D677002CE381E90022F0C0 /* VehicleTrackerRepository.swift in Sources */,
 				CB4197991F67724F008F301C /* NetworkManager.swift in Sources */,
 				CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */,
 				5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */,
 				5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */,
+				73D06D7B2CE3513000357CF2 /* SettingsViewController.swift in Sources */,
 				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
 				93F0C4C32CE23FAC00A7D92D /* VehicleTrackerViewController.swift in Sources */,
 				CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */,
@@ -535,11 +558,12 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 59;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YW49KTJKFW;
+				DEVELOPMENT_TEAM = JALBQN5K53;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = trailblazer;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,7 +571,8 @@
 				);
 				MARKETING_VERSION = 7.1;
 				OTHER_SWIFT_FLAGS = "-D FIREBASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "za.co.exonic.--PRODUCT-NAME-rfc1034identifier-";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = za.co.exonic.Trailblazer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -704,18 +729,20 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 59;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YW49KTJKFW;
+				DEVELOPMENT_TEAM = JALBQN5K53;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = trailblazer;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 7.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "za.co.exonic.--PRODUCT-NAME-rfc1034identifier-";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = za.co.exonic.Trailblazer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -736,18 +763,20 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 59;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = YW49KTJKFW;
+				DEVELOPMENT_TEAM = JALBQN5K53;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
 				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = trailblazer;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 7.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "za.co.exonic.--PRODUCT-NAME-rfc1034identifier-";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = za.co.exonic.Trailblazer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

@@ -48,7 +48,7 @@
 			<key>Key</key>
 			<string>accuracy_preference</string>
 			<key>DefaultValue</key>
-			<string>medium</string>
+			<string>high</string>
 			<key>Titles</key>
 			<array>
 				<string>High</string>
@@ -98,16 +98,16 @@
 			<key>Key</key>
 			<string>angle_preference</string>
 		</dict>
-        <dict>
-            <key>Type</key>
-            <string>PSToggleSwitchSpecifier</string>
-            <key>Title</key>
-            <string>Offline buffering</string>
-            <key>Key</key>
-            <string>buffer_preference</string>
-            <key>DefaultValue</key>
-            <true/>
-        </dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Offline buffering</string>
+			<key>Key</key>
+			<string>buffer_preference</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
 	</array>
 </dict>
 </plist>
