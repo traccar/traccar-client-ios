@@ -18,12 +18,12 @@ import Foundation
 
 public class ProtocolFormatter: NSObject {
     
-    public static func formatPostion(_ position: Position, url: String, alarm: String? = nil) -> URL? {
+    public static func formatPostion(_ position: Position, url: String, alarm: String? = nil, deviceId: String? = nil) -> URL? {
         var components = URLComponents(string: url)
 
         var query = String()
         
-        if let deviceId = position.deviceId {
+        if let deviceId = deviceId {
             query += "id=\(deviceId)&"
         }
         if let time = position.time {

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol settingsDelegate {
-    func saveVehicleReg(_ registration: String)
+    func updateIdentifier()
 }
 
 class SettingsViewController: UIViewController {
@@ -45,10 +45,16 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func saveSettings(_ sender: UIButton) {
-        if let registration = vehicleRegistration.text, vehicleRegistration.text != "" {
-            settingsDelegate.saveVehicleReg(registration)
+        if let identifier = vehicleRegistration.text, vehicleRegistration.text != "" {
+            saveUser(identifier)
+            settingsDelegate.updateIdentifier()
             self.navigationController?.popViewController(animated: true)
-            // TODO: send changes to the back-end
         }
+    }
+    
+    private func saveUser(_ identifier: String) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.setValue(identifier, forKey: "device_id_preference")
+        userDefaults.synchronize()
     }
 }

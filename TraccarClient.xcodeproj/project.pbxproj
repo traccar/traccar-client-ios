@@ -17,7 +17,6 @@
 		5EE3CA362998948F002C86E4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA352998948F002C86E4 /* FirebaseCrashlytics */; };
 		5EE3CA39299894B9002C86E4 /* InAppSettingsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA38299894B9002C86E4 /* InAppSettingsKit */; };
 		73D06D7B2CE3513000357CF2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D06D7A2CE3513000357CF2 /* SettingsViewController.swift */; };
-		73D677002CE381E90022F0C0 /* VehicleTrackerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D676FF2CE381E90022F0C0 /* VehicleTrackerRepository.swift */; };
 		93F0C4C32CE23FAC00A7D92D /* VehicleTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F0C4C22CE23FAC00A7D92D /* VehicleTrackerViewController.swift */; };
 		93F0C4C52CE24E1700A7D92D /* VehicleTrackerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F0C4C42CE24E1700A7D92D /* VehicleTrackerViewModel.swift */; };
 		CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197921F674A3E008F301C /* DatabaseHelper.swift */; };
@@ -76,7 +75,6 @@
 		5E716A2D1F63A7A200A2DBC3 /* ProtocolFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatterTests.swift; sourceTree = "<group>"; };
 		5E716A2F1F63A9F600A2DBC3 /* RequestManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
 		73D06D7A2CE3513000357CF2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		73D676FF2CE381E90022F0C0 /* VehicleTrackerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTrackerRepository.swift; sourceTree = "<group>"; };
 		93F0C4C22CE23FAC00A7D92D /* VehicleTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTrackerViewController.swift; sourceTree = "<group>"; };
 		93F0C4C42CE24E1700A7D92D /* VehicleTrackerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTrackerViewModel.swift; sourceTree = "<group>"; };
 		CB4197921F674A3E008F301C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 			children = (
 				93F0C4C22CE23FAC00A7D92D /* VehicleTrackerViewController.swift */,
 				93F0C4C42CE24E1700A7D92D /* VehicleTrackerViewModel.swift */,
-				73D676FF2CE381E90022F0C0 /* VehicleTrackerRepository.swift */,
 			);
 			path = "Vehicle Tracker";
 			sourceTree = "<group>";
@@ -417,7 +414,6 @@
 				CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */,
 				CBAA0F7F1F68E807008BBBBE /* MainViewController.swift in Sources */,
 				CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */,
-				73D677002CE381E90022F0C0 /* VehicleTrackerRepository.swift in Sources */,
 				CB4197991F67724F008F301C /* NetworkManager.swift in Sources */,
 				CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */,
 				5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */,

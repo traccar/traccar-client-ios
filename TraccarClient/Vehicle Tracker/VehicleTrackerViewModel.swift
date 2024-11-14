@@ -18,9 +18,9 @@ struct VehicleTrackerViewModel {
         clockIn ? " Clock out" : " Clock in"
     }
     
-    var deviceIdentifier = "JXM 266 GP" // TODO: fetch from the back-end
-    
-    var repository = VehicleTrackerRepository()
+    var deviceIdentifier: String? {
+        UserDefaults.standard.string(forKey: "device_id_preference")!
+    }
     
     var serverURL: String? {
         UserDefaults.standard.string(forKey: "server_url_preference")!
@@ -28,10 +28,5 @@ struct VehicleTrackerViewModel {
     
     var locationAccuracy: String? {
         UserDefaults.standard.string(forKey: "accuracy_preference")
-    }
-    
-    func loginUser() {
-//        repository.login()
-        repository.getDevices()
     }
 }

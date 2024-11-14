@@ -16,6 +16,7 @@ class VehicleTrackerViewController: UIViewController {
     @IBOutlet weak var vehicleView: UIView!
     @IBOutlet weak var vehicleReg: UILabel!
     @IBOutlet weak var clockInAndOut: UIButton!
+    @IBOutlet weak var settingsView: UIView!
     @IBOutlet weak var settings: UIButton!
     
     var viewModel: VehicleTrackerViewModel?
@@ -26,7 +27,7 @@ class VehicleTrackerViewController: UIViewController {
     var stopped = false
 
     let positionProvider = PositionProvider()
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
     var databaseHelper: DatabaseHelper?
     let networkManager = NetworkManager()
     let userDefaults = UserDefaults.standard
@@ -65,34 +66,48 @@ class VehicleTrackerViewController: UIViewController {
         clockInAndOut.setTitle(self.viewModel?.clockInOrOut, for: .normal)
         clockInAndOut.setImage(UIImage(systemName: "play.fill"), for: .normal)
         
-        settings.layer.cornerRadius = settings.frame.height / 2
+        settingsView.layer.cornerRadius = settingsView.frame.height / 2
     }
 
     @IBAction func clockInOrOut(_ sender: UIButton) {
-//        viewModel?.loginUser()
-        
-        viewModel?.clockIn.toggle()
-        online.toggle()
-        if viewModel?.clockIn == true {
-            start()
-            connectedLabel.backgroundColor = UIColor(named: "trailblazer-light-background")
-            connectedLabel.layer.borderColor = UIColor(named: "trailblazer-light-green")?.cgColor
-            connectedLabel.textColor = UIColor(named: "trailblazer-light-green")
-            clockInAndOut.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+        if viewModel?.deviceIdentifier != "" {
+            if viewModel?.clockIn == true {
+                clockOut()
+            } else {
+                clockin()
+            }
         } else {
-            stop()
-            connectedLabel.layer.borderColor = UIColor.darkGray.cgColor
-            connectedLabel.backgroundColor = UIColor.lightGray
-            connectedLabel.textColor = UIColor.black
-            clockInAndOut.setImage(UIImage(systemName: "play.fill"), for: .normal)
+            performSegue(withIdentifier: "Settings", sender: self)
         }
-        
+    }
+    
+    @IBAction func settingsPressed(_ sender: UIButton) {
+        clockOut()
+        performSegue(withIdentifier: "Settings", sender: self)
+    }
+    
+    private func clockin() {
+        viewModel?.clockIn = true
+        online = true
+        start()
+        connectedLabel.backgroundColor = UIColor(named: "trailblazer-light-background")
+        connectedLabel.layer.borderColor = UIColor(named: "trailblazer-light-green")?.cgColor
+        connectedLabel.textColor = UIColor(named: "trailblazer-light-green")
+        clockInAndOut.setImage(UIImage(systemName: "pause.fill"), for: .normal)
         connectedLabel.text = viewModel?.connectionText
         clockInAndOut.setTitle(self.viewModel?.clockInOrOut, for: .normal)
     }
     
-    @IBAction func settingsPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "Settings", sender: self)
+    private func clockOut() {
+        viewModel?.clockIn = false
+        online = false
+        stop()
+        connectedLabel.layer.borderColor = UIColor.darkGray.cgColor
+        connectedLabel.backgroundColor = UIColor.lightGray
+        connectedLabel.textColor = UIColor.black
+        clockInAndOut.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        connectedLabel.text = viewModel?.connectionText
+        clockInAndOut.setTitle(self.viewModel?.clockInOrOut, for: .normal)
     }
     
     func start() {
@@ -135,11 +150,7 @@ class VehicleTrackerViewController: UIViewController {
     
     func read() {
         if let position = databaseHelper?.selectPosition() {
-            if (position.deviceId == userDefaults.string(forKey: "device_id_preference")) {
-                send(position)
-            } else {
-                delete(position)
-            }
+            send(position)
         } else {
             self.waiting = true
         }
@@ -151,7 +162,8 @@ class VehicleTrackerViewController: UIViewController {
     }
     
     func send(_ position: Position) {
-        let url = ProtocolFormatter.formatPostion(position, url: (viewModel?.serverURL)!)
+        let deviceID = viewModel?.deviceIdentifier?.filter {$0 != " "}.uppercased()
+        let url = ProtocolFormatter.formatPostion(position, url: (viewModel?.serverURL)!, deviceId: deviceID)
         print("INFO SENT: \(String(describing: url))")
         if let request = url {
             RequestManager.sendRequest(request, completionHandler: {(_ success: Bool) -> Void in
@@ -185,8 +197,7 @@ class VehicleTrackerViewController: UIViewController {
 }
 
 extension VehicleTrackerViewController: settingsDelegate, PositionProviderDelegate, NetworkManagerDelegate, CLLocationManagerDelegate {
-    func saveVehicleReg(_ registration: String) {
-        viewModel?.deviceIdentifier = registration
+    func updateIdentifier() {
         vehicleReg.text = viewModel?.deviceIdentifier
     }
     
