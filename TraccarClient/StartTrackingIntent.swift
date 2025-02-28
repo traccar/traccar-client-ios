@@ -4,7 +4,7 @@ import SwiftUI
 @available(iOS 16, *)
 struct StartTrackingIntent: AppIntent {
   
-  static let title: LocalizedStringResource = "Start Tracking Service"
+  static let title: LocalizedStringResource = LocalizedStringResource("Start Tracking Service", comment: "Title for start tracking intent")
     
   func perform() async throws -> some IntentResult & ProvidesDialog {
     var trackingController: TrackingController?
