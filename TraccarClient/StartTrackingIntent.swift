@@ -11,10 +11,10 @@ struct StartTrackingIntent: AppIntent {
     let userDefaults = UserDefaults.standard
     if !userDefaults.bool(forKey: "service_status_preference") {
         userDefaults.setValue(true, forKey: "service_status_preference")
-        await StatusViewController.addMessage(NSLocalizedString("Tracking Service created", comment: ""))
+        await StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
         trackingController = TrackingController()
         trackingController?.start()
     }
-    return .result(dialog: "Tracking Service Started")
+      return .result(dialog: .init(stringLiteral: NSLocalizedString("Service created", comment: "")))
   }
 }
