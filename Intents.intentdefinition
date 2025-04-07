@@ -82,7 +82,7 @@
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>Start Tracking Service</string>
+			<string>Start Service</string>
 			<key>INIntentTitleID</key>
 			<string>kVcJ5o</string>
 			<key>INIntentType</key>
@@ -156,7 +156,7 @@
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>Stop Tracking Service</string>
+			<string>Stop Service</string>
 			<key>INIntentTitleID</key>
 			<string>StpTtl</string>
 			<key>INIntentType</key>
