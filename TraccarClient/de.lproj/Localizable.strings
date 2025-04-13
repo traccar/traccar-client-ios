@@ -7,3 +7,5 @@
 "Invalid server address" = "Invalid server address";
 "Invalid server port" = "Invalid server port";
 "Invalid frequency value" = "Invalid frequency value";
+"Stop Tracking Service" = "Stop Tracking Service";
+"Start Tracking Service" = "Start Tracking Service";
