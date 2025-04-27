@@ -26,6 +26,7 @@ class MainViewController: IASKAppSettingsViewController {
         title = NSLocalizedString("Traccar Client", comment: "")
         showCreditsFooter = false
         neverShowPrivacySettings = true
+        hideManagedSettings()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,7 +66,7 @@ class MainViewController: IASKAppSettingsViewController {
                 } else if frequency <= 0 {
                     self.showError("Invalid frequency value")
                 } else {
-                    StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
+                    StatusViewController.addStartMessage()
                     AppDelegate.instance.trackingController = TrackingController()
                     AppDelegate.instance.trackingController?.start()
                 }
@@ -77,4 +78,13 @@ class MainViewController: IASKAppSettingsViewController {
         }
     }
     
+    // Settings that are configured through a MDM are hidden and cannot be changed by the user
+    func hideManagedSettings() {
+        if let managedConfiguration = UserDefaults.standard.object(forKey: "com.apple.configuration.managed") as? [String: Any?] {
+            let configWithoutNil = managedConfiguration.compactMapValues{ $0 }
+            // Status cannot be set via managed configuration and is always set by user
+            let keysWithoutStatus = configWithoutNil.keys.filter { $0 != "service_status_preference" }
+            setHiddenKeys(Set(keysWithoutStatus), animated: false)
+        }
+    }
 }

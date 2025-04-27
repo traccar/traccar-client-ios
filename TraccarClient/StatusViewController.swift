@@ -23,6 +23,26 @@ class StatusViewController: UITableViewController {
     
     static var messages = [String]()
     
+    class func addStartMessage() {
+        var message = NSLocalizedString("Service created", comment: "")
+        message += "\n\nDevice identifier: "
+        message += UserDefaults.standard.string(forKey: "device_id_preference") ?? ""
+        message += "\nServer URL: "
+        message += UserDefaults.standard.string(forKey: "server_url_preference") ?? ""
+        message += "\nLocation accuracy: "
+        message += UserDefaults.standard.string(forKey: "accuracy_preference") ?? ""
+        message += "\nFrequency: "
+        message += String(UserDefaults.standard.double(forKey: "frequency_preference"))
+        message += "\nDistance: "
+        message += String(UserDefaults.standard.double(forKey: "distance_preference"))
+        message += "\nAngle: "
+        message += String(UserDefaults.standard.double(forKey: "angle_preference"))
+        message += "\nOffline buffering: "
+        message += UserDefaults.standard.bool(forKey: "buffer_preference") ? "On" : "Off"
+        
+        addMessage(message)
+    }
+    
     class func addMessage(_ message: String) {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm - "
@@ -74,6 +94,9 @@ class StatusViewController: UITableViewController {
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
         }
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 24
+        cell?.textLabel?.numberOfLines = 0
         cell?.textLabel?.text = StatusViewController.messages[indexPath.row]
         return cell!
     }

@@ -14,9 +14,31 @@ Project uses CocoaPods for dependencies management. To build the project you nee
 pod install
 ```
 
+## Configure app with an MDM (Mobile Device Management)
+
+When deploying the application with an MDM solution, the parameters can be overloaded with a managed configuration pushed to the phone. The following table shows the keys associated with the parameters.
+
+|Parameter name|Key|Type|
+|---|---|---|
+|Device identifier|device_id_preference|string|
+|Server URL|server_url_preference|string|
+|Location accuracy|accuracy_preference|string|
+|Frequency|frequency_preference|integer|
+|Distance|distance_preference|integer|
+|Angle|angle_preference|integer|
+|Offline buffering|buffer_preference|string|
+
+When a parameter is configured through MDM, it is hidden in UI and cannot be changed by the user.
+
 ## Team
 
+### Main contributors
+
 - Anton Tananaev ([anton@traccar.org](mailto:anton@traccar.org))
+
+### Secondary contributors
+
+- Axel Rieben
 
 ## License
 
